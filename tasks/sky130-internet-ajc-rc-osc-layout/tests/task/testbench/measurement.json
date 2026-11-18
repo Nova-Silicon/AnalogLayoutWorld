@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "source_record": "configs/paper-v1/sources.json (task_id: sky130-internet-ajc-rc-osc-layout)",
+  "processor": "processor.py",
+  "source_geometry_scale": 1e-06,
+  "extracted_geometry_scale": 1e-06,
+  "cases": [
+    {
+      "id": "short_tt_1.8V_-40C",
+      "corner": "tt",
+      "temperature_C": -40,
+      "supply_V": 1.8,
+      "measurement_kind": "rc_osc",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" tt\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp -40\nVDD vdd 0 1.8\nVENA ena 0 PWL(0 0 100u 0 100.01u 1.8 3m 1.8 3.00001m 0 4m 0 4.00001m 1.8 6m 1.8)\nXDUT vdd out ena 0 rc_osc\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(ena) v(out) i(VDD)\ntran 500n 6m 0 500n\nwrdata wave.tsv v(ena) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "frequency_hz": {
+          "min": 10000,
+          "max": 70000,
+          "unit": "Hz"
+        },
+        "period_variation_fraction": {
+          "max": 0.03,
+          "unit": "1"
+        },
+        "duty_cycle_min": {
+          "min": 0.2,
+          "unit": "1"
+        },
+        "duty_cycle_max": {
+          "max": 0.6,
+          "unit": "1"
+        },
+        "startup_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "restart_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "enabled_power_uw": {
+          "max": 150,
+          "unit": "uW"
+        },
+        "disabled_current_na": {
+          "max": 100,
+          "unit": "nA"
+        },
+        "disabled_output_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "short_tt_1.8V_27C",
+      "corner": "tt",
+      "temperature_C": 27,
+      "supply_V": 1.8,
+      "measurement_kind": "rc_osc",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" tt\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 27\nVDD vdd 0 1.8\nVENA ena 0 PWL(0 0 100u 0 100.01u 1.8 3m 1.8 3.00001m 0 4m 0 4.00001m 1.8 6m 1.8)\nXDUT vdd out ena 0 rc_osc\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(ena) v(out) i(VDD)\ntran 500n 6m 0 500n\nwrdata wave.tsv v(ena) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "frequency_hz": {
+          "min": 10000,
+          "max": 70000,
+          "unit": "Hz"
+        },
+        "period_variation_fraction": {
+          "max": 0.03,
+          "unit": "1"
+        },
+        "duty_cycle_min": {
+          "min": 0.2,
+          "unit": "1"
+        },
+        "duty_cycle_max": {
+          "max": 0.6,
+          "unit": "1"
+        },
+        "startup_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "restart_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "enabled_power_uw": {
+          "max": 150,
+          "unit": "uW"
+        },
+        "disabled_current_na": {
+          "max": 100,
+          "unit": "nA"
+        },
+        "disabled_output_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "short_tt_1.8V_125C",
+      "corner": "tt",
+      "temperature_C": 125,
+      "supply_V": 1.8,
+      "measurement_kind": "rc_osc",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" tt\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 125\nVDD vdd 0 1.8\nVENA ena 0 PWL(0 0 100u 0 100.01u 1.8 3m 1.8 3.00001m 0 4m 0 4.00001m 1.8 6m 1.8)\nXDUT vdd out ena 0 rc_osc\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(ena) v(out) i(VDD)\ntran 500n 6m 0 500n\nwrdata wave.tsv v(ena) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "frequency_hz": {
+          "min": 10000,
+          "max": 70000,
+          "unit": "Hz"
+        },
+        "period_variation_fraction": {
+          "max": 0.03,
+          "unit": "1"
+        },
+        "duty_cycle_min": {
+          "min": 0.2,
+          "unit": "1"
+        },
+        "duty_cycle_max": {
+          "max": 0.6,
+          "unit": "1"
+        },
+        "startup_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "restart_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "enabled_power_uw": {
+          "max": 150,
+          "unit": "uW"
+        },
+        "disabled_current_na": {
+          "max": 100,
+          "unit": "nA"
+        },
+        "disabled_output_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "short_ss_1.8V_-40C",
+      "corner": "ss",
+      "temperature_C": -40,
+      "supply_V": 1.8,
+      "measurement_kind": "rc_osc",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ss\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp -40\nVDD vdd 0 1.8\nVENA ena 0 PWL(0 0 100u 0 100.01u 1.8 3m 1.8 3.00001m 0 4m 0 4.00001m 1.8 6m 1.8)\nXDUT vdd out ena 0 rc_osc\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(ena) v(out) i(VDD)\ntran 500n 6m 0 500n\nwrdata wave.tsv v(ena) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "frequency_hz": {
+          "min": 10000,
+          "max": 70000,
+          "unit": "Hz"
+        },
+        "period_variation_fraction": {
+          "max": 0.03,
+          "unit": "1"
+        },
+        "duty_cycle_min": {
+          "min": 0.2,
+          "unit": "1"
+        },
+        "duty_cycle_max": {
+          "max": 0.6,
+          "unit": "1"
+        },
+        "startup_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "restart_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "enabled_power_uw": {
+          "max": 150,
+          "unit": "uW"
+        },
+        "disabled_current_na": {
+          "max": 100,
+          "unit": "nA"
+        },
+        "disabled_output_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "short_ss_1.8V_27C",
+      "corner": "ss",
+      "temperature_C": 27,
+      "supply_V": 1.8,
+      "measurement_kind": "rc_osc",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ss\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 27\nVDD vdd 0 1.8\nVENA ena 0 PWL(0 0 100u 0 100.01u 1.8 3m 1.8 3.00001m 0 4m 0 4.00001m 1.8 6m 1.8)\nXDUT vdd out ena 0 rc_osc\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(ena) v(out) i(VDD)\ntran 500n 6m 0 500n\nwrdata wave.tsv v(ena) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "frequency_hz": {
+          "min": 10000,
+          "max": 70000,
+          "unit": "Hz"
+        },
+        "period_variation_fraction": {
+          "max": 0.03,
+          "unit": "1"
+        },
+        "duty_cycle_min": {
+          "min": 0.2,
+          "unit": "1"
+        },
+        "duty_cycle_max": {
+          "max": 0.6,
+          "unit": "1"
+        },
+        "startup_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "restart_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "enabled_power_uw": {
+          "max": 150,
+          "unit": "uW"
+        },
+        "disabled_current_na": {
+          "max": 100,
+          "unit": "nA"
+        },
+        "disabled_output_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "short_ss_1.8V_125C",
+      "corner": "ss",
+      "temperature_C": 125,
+      "supply_V": 1.8,
+      "measurement_kind": "rc_osc",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ss\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 125\nVDD vdd 0 1.8\nVENA ena 0 PWL(0 0 100u 0 100.01u 1.8 3m 1.8 3.00001m 0 4m 0 4.00001m 1.8 6m 1.8)\nXDUT vdd out ena 0 rc_osc\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(ena) v(out) i(VDD)\ntran 500n 6m 0 500n\nwrdata wave.tsv v(ena) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "frequency_hz": {
+          "min": 10000,
+          "max": 70000,
+          "unit": "Hz"
+        },
+        "period_variation_fraction": {
+          "max": 0.03,
+          "unit": "1"
+        },
+        "duty_cycle_min": {
+          "min": 0.2,
+          "unit": "1"
+        },
+        "duty_cycle_max": {
+          "max": 0.6,
+          "unit": "1"
+        },
+        "startup_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "restart_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "enabled_power_uw": {
+          "max": 150,
+          "unit": "uW"
+        },
+        "disabled_current_na": {
+          "max": 100,
+          "unit": "nA"
+        },
+        "disabled_output_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "short_ff_1.8V_-40C",
+      "corner": "ff",
+      "temperature_C": -40,
+      "supply_V": 1.8,
+      "measurement_kind": "rc_osc",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ff\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp -40\nVDD vdd 0 1.8\nVENA ena 0 PWL(0 0 100u 0 100.01u 1.8 3m 1.8 3.00001m 0 4m 0 4.00001m 1.8 6m 1.8)\nXDUT vdd out ena 0 rc_osc\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(ena) v(out) i(VDD)\ntran 500n 6m 0 500n\nwrdata wave.tsv v(ena) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "frequency_hz": {
+          "min": 10000,
+          "max": 70000,
+          "unit": "Hz"
+        },
+        "period_variation_fraction": {
+          "max": 0.03,
+          "unit": "1"
+        },
+        "duty_cycle_min": {
+          "min": 0.2,
+          "unit": "1"
+        },
+        "duty_cycle_max": {
+          "max": 0.6,
+          "unit": "1"
+        },
+        "startup_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "restart_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "enabled_power_uw": {
+          "max": 150,
+          "unit": "uW"
+        },
+        "disabled_current_na": {
+          "max": 100,
+          "unit": "nA"
+        },
+        "disabled_output_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "short_ff_1.8V_27C",
+      "corner": "ff",
+      "temperature_C": 27,
+      "supply_V": 1.8,
+      "measurement_kind": "rc_osc",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ff\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 27\nVDD vdd 0 1.8\nVENA ena 0 PWL(0 0 100u 0 100.01u 1.8 3m 1.8 3.00001m 0 4m 0 4.00001m 1.8 6m 1.8)\nXDUT vdd out ena 0 rc_osc\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(ena) v(out) i(VDD)\ntran 500n 6m 0 500n\nwrdata wave.tsv v(ena) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "frequency_hz": {
+          "min": 10000,
+          "max": 70000,
+          "unit": "Hz"
+        },
+        "period_variation_fraction": {
+          "max": 0.03,
+          "unit": "1"
+        },
+        "duty_cycle_min": {
+          "min": 0.2,
+          "unit": "1"
+        },
+        "duty_cycle_max": {
+          "max": 0.6,
+          "unit": "1"
+        },
+        "startup_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "restart_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "enabled_power_uw": {
+          "max": 150,
+          "unit": "uW"
+        },
+        "disabled_current_na": {
+          "max": 100,
+          "unit": "nA"
+        },
+        "disabled_output_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "short_ff_1.8V_125C",
+      "corner": "ff",
+      "temperature_C": 125,
+      "supply_V": 1.8,
+      "measurement_kind": "rc_osc",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ff\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 125\nVDD vdd 0 1.8\nVENA ena 0 PWL(0 0 100u 0 100.01u 1.8 3m 1.8 3.00001m 0 4m 0 4.00001m 1.8 6m 1.8)\nXDUT vdd out ena 0 rc_osc\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(ena) v(out) i(VDD)\ntran 500n 6m 0 500n\nwrdata wave.tsv v(ena) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "frequency_hz": {
+          "min": 10000,
+          "max": 70000,
+          "unit": "Hz"
+        },
+        "period_variation_fraction": {
+          "max": 0.03,
+          "unit": "1"
+        },
+        "duty_cycle_min": {
+          "min": 0.2,
+          "unit": "1"
+        },
+        "duty_cycle_max": {
+          "max": 0.6,
+          "unit": "1"
+        },
+        "startup_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "restart_first_edge_s": {
+          "max": 0.001,
+          "unit": "s"
+        },
+        "enabled_power_uw": {
+          "max": 150,
+          "unit": "uW"
+        },
+        "disabled_current_na": {
+          "max": 100,
+          "unit": "nA"
+        },
+        "disabled_output_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        }
+      }
+    }
+  ],
+  "adaptation_notes": [
+    "Original accepted run_checks.py stimuli, voltage/load, time step, time windows and measurement formulas preserved.",
+    "DUT is supplied by include; oscillator fixed-width simulation alias is inlined unchanged.",
+    "Missing transitions/cycles/windows return missing measurements, not a fabricated number or infrastructure success."
+  ],
+  "initialization": "set ngbehavior=hsa\nset num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice",
+  "evaluation_case_ids": [
+    "short_tt_1.8V_27C"
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "task": "sky130-adb-nmos-pass-ldo-0p4v-pvt-mc-layout",
+  "top": "nmos_pass_ldo",
+  "matched_groups": [
+    {
+      "name": "ea_input_pair",
+      "devices": [
+        "XAMP.XPM1",
+        "XAMP.XPM2"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "nmos_diode_loads",
+      "devices": [
+        "XAMP.XNM0",
+        "XAMP.XNM1"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "cross_coupled",
+      "devices": [
+        "XAMP.XNM4",
+        "XAMP.XNM5"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "nmos_out_mirrors",
+      "devices": [
+        "XAMP.XNM2",
+        "XAMP.XNM3"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 1.5
+    },
+    {
+      "name": "pmos_out_mirror",
+      "devices": [
+        "XAMP.XPM4",
+        "XAMP.XPM5"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "bias_mirror",
+      "devices": [
+        "XAMP.XPM3",
+        "XAMP.XPM0"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "loop_out",
+      "pass_gate"
+    ],
+    "victims": [
+      "vref",
+      "XAMP.nleft",
+      "XAMP.nright",
+      "XAMP.ptail",
+      "ibias"
+    ],
+    "critical": [
+      "vref",
+      "XAMP.nleft",
+      "XAMP.nright",
+      "loop_out"
+    ],
+    "diff_pairs": [
+      [
+        "XAMP.nleft",
+        "XAMP.nright"
+      ]
+    ],
+    "power": [
+      "vdd",
+      "vout"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [
+    "XPASS"
+  ],
+  "currents_a": {
+    "vdd": 0.00539,
+    "vout": 0.005,
+    "XPASS": 0.005,
+    "vss": 0.00035
+  },
+  "currents_note": "规格最大负载 5 mA 经 NMOS 源随器 XPASS 从 vdd 流到 vout，负载在测试台外回地；前仿 TT/1.8 V/27 C/1 mA 静态电流 350 uA（-I(VDD)-ILOAD-40 uA）经放大器回 vss；ibias 的 40 uA 由 vdd 经 XAMP.XPM3 从 ibias 脚流出、被测试台吸走，不经 vss；故 vdd≈5+0.35+0.04=5.39 mA。supply_v 给出非 1.8 V 电源轨的标称电压，供 IR 压降百分比换算",
+  "supply_v": {
+    "vout": 0.4
+  },
+  "name_note": "层次器件与内部网络用点号路径，如 XAMP.XPM1 表示子电路实例 XAMP 内的 XPM1"
+}

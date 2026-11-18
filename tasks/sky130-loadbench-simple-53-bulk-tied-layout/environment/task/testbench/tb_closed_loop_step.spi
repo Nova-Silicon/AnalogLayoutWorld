@@ -1,0 +1,19 @@
+* Original independent closed-loop step conditions, TT 27C.
+.lib "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice" tt
+.include "dut.spice"
+VDD vdd 0 1.8
+VIN inp 0 PULSE(0.85 0.95 5u 10n 10n 5u 10u)
+Ibias vdd ibias 10u
+XDUT ibias inp out out 0 vdd SimpleOpAmp53_BulkTied
+CLOAD out 0 1p
+.temp 27
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+set num_threads=1
+tran 1n 20u 0 1n
+wrdata transient.tsv v(inp) v(out)
+quit
+.endc
+.end

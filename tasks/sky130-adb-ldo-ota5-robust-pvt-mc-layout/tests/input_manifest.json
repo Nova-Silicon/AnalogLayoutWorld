@@ -1,0 +1,47 @@
+{
+  "basis": "Trusted private inputs; public_files records the native fixture subset separately.",
+  "files": {
+    "circuit.spice": "40f5806d0eee86e3d9f4f7b78196c03e8e4fcc2443e66d2e6e346f38df3b2658",
+    "constraints.json": "b5cb1a86cd04d0cb6a8b434c99cba52639db2b8823235689f4391a010b5a0f97",
+    "identity.json": "808e1621b5e86433c1fec6eedaf1970ddc711eb8d87bffc25f399121da728680",
+    "testbench/adapter.py": "060556a00609ddfd6984def3380e1fec3af690a3a51dd76c7e5512fef1dea83d",
+    "testbench/measurement.json": "7f4bb552e2bdd268e86cc4d7d8f41419f5c5dcd8ef069082cece1501801790cd",
+    "testbench/upstream/benches/tb_dropout.spi": "fd2e3beecce61c61fc351f327ed423200ff6d6d9395d0a35704427eed5015adb",
+    "testbench/upstream/benches/tb_line_tran.spi": "267c63d0ebe8aba39570fc61a96c274bb2e66a1c63d708962c5f70df5caf0e83",
+    "testbench/upstream/benches/tb_load_tran.spi": "cf6015b2d7da8860a0c4a4a9473ea0a11523f556d1c96f92188e60a84d0b3544",
+    "testbench/upstream/benches/tb_loop.spi": "c383c85428d3e635d233e1d09047bf4ecf76f6088e68c43e836a0d5954beb549",
+    "testbench/upstream/benches/tb_noise.spi": "dc542aaf2ce8163da0ab60ba00a888b0aacfc2ef9913193de2af57a696cbca81",
+    "testbench/upstream/benches/tb_op.spi": "9f6c8385d482cee56424369bf9a5e7e166d168c2801b32312a321ce9b610e35a",
+    "testbench/upstream/benches/tb_psrr.spi": "3254c10fb0aba5a2bf907c2887829375f08e61cdecee60a2ec5a75b5548a2b9d",
+    "testbench/upstream/benches/tb_pvt_dc.spi": "b453ce64a1e7b5511de2e98411aa84bd019641d78206d1215ab13ee3b38abc68",
+    "testbench/upstream/benches/tb_startup.spi": "5704d8d7ef38cd01596b01340ee064d1ef25d38489238991468a5ac870c384ad",
+    "testbench/upstream/verify.py": "257d9b2de9ab76c754bfb3a4625cb99d768d98052e120d0ec56af4d08d3a55bf"
+  },
+  "public_files": {
+    "circuit.spice": "40f5806d0eee86e3d9f4f7b78196c03e8e4fcc2443e66d2e6e346f38df3b2658",
+    "lvs_reference.spice": "992c219296c882a04517f17ca23a0e2678128f87ee943a724dd666e87a3253fd",
+    "testbench/README.md": "fade82b61b7edb6178060fc318b9c6dbec93c207c4bf426aa8a7267474408b4e",
+    "testbench/README.zh-CN.md": "f89700527b910ff4ce83768f000f2f746f758ca427d8835090046156ee4b9791",
+    "testbench/tb_dropout_pvt.spi": "e28efea85b94b3f50b8d67c44f43f95dfb4ea4a88c1a15acc17be72e3eca3e92",
+    "testbench/tb_line_tran_dynamic.spi": "60269ee649b53ddfbd4881ee3daf9d21ff21768c433b766054e4855ae51ffb42",
+    "testbench/tb_line_tran_output_network.spi": "d32f9573dfc8badfb5089425351c96d4503e69d7be87001d3c58d4196b14a7d6",
+    "testbench/tb_load_tran_dynamic.spi": "7525ac4d688629d90895a7a941758863147d99eea9008a55102d824111d75015",
+    "testbench/tb_load_tran_output_network.spi": "aaf3841b5ecf67db1af622a91fcee9ca68ff3d7ee9bb0f74ac8a45d4a9eb6e78",
+    "testbench/tb_loop_nominal.spi": "b0ed1c32dd18897a18c501d0a4f67bc46130e9378b1722ec015e4dd0ac681780",
+    "testbench/tb_loop_output_network.spi": "06f2e16619ce97f3da39e8ad9c7a2c16a1646053b2ef454d319e61754c78c3eb",
+    "testbench/tb_loop_pvt.spi": "b0ed1c32dd18897a18c501d0a4f67bc46130e9378b1722ec015e4dd0ac681780",
+    "testbench/tb_mc.spi": "dd358b3f8c8493d45b5ab5238261bc76862ebd996b1153d77257554210ed88b4",
+    "testbench/tb_noise.spi": "9de2b290d122ec519da5984f4e75b3d9d8cefa002948d4ae3c447d8230db3256",
+    "testbench/tb_psrr_nominal.spi": "8b8ec80dd0c623f466f30009fb7b3d614f57f554dd38c74ee1bc775c0a460734",
+    "testbench/tb_psrr_pvt.spi": "acf4379c5d6e570180d996e81e0c25a62b8f4bb40098fd00748c8a2c2091c011",
+    "testbench/tb_pvt_dc.spi": "a5b57995ee5b0c4ce6d58a1d0923ccbb1dcb7c3010e8267eb119429ad7875e90",
+    "testbench/tb_startup_dynamic.spi": "32b621843724509bbc6f35c8904aaa3cf66b3be81cbbb377976f2ae530686536",
+    "testbench/tb_startup_output_network.spi": "c00da45f644c44f57dac1c8af52f744eace448d7bce6f56810718df3f1c6808b"
+  },
+  "public_projection": {
+    "constraints": "physical fields only, if publicly present",
+    "physical_inputs": "byte-identical DUT and optional LVS reference",
+    "testbench": "published native fixtures and documentation; private graders excluded"
+  },
+  "schema_version": 2
+}

@@ -1,0 +1,202 @@
+Magic-8.3 Command Reference
+
+extresist
+
+Patch the extraction .ext files with detailed route resistance
+information.
+
+Usage:
+
+extresist option
+
+where option may be one of the following:
+
+all
+
+Extract all the nets.
+
+threshold [value]
+
+With no value given, returns the current lumped resistance
+threshold used to determine if a network will or will not be
+analyzed for resistance extraction, in milliohms. The default
+threshold value is 10000 milliohms (10 ohms). If
+value is given, then set the lumped resistance threshold
+to value milliohms.
+
+mindelay [value]
+
+With no value given, returns the current delay time threshold
+used to determine if a network will or will not be analyzed for
+resistance extraction, in picoseconds. The default
+mindelay value is 1ps. If value is given,
+then set the delay threshold to value picoseconds.
+
+minres [value]
+
+With no value given, returns the current absolute resistance
+threshold used to prune small resistances from a network when
+simplifying, in milliohms. The default minres value
+is 1000 milliohms (1 ohm). If value is given, then set
+the absolute resistance threshold to value milliohms.
+Note that resistances smaller than value may still
+appear in the output netlist if the algorithm is unable to
+simplify the network around the resistor.
+
+simplify [on|off]
+
+Turn on/off simplification of resistor nets.
+
+extout [on|off]
+
+Turn on/off writing of the .res.ext file.
+
+lumped [on|off]
+
+Turn on/off writing of updated lumped resistances.
+
+silent [on|off]
+
+Turn off/on printing of nets being processed.
+
+debug [on|off]
+
+Turn off/on additional diagnostic information.
+
+skip mask
+
+Don't extract types indicated in the comma-separated list mask
+
+ignore [netname|none]
+
+Don't extract the net named netname. The list of ignored
+nets is global, cumulative, and persistent; it will only be cleared
+when the extresist ignore none command is issued
+(option available from version 8.3.207).
+
+include [netname|all]
+
+Extract the net named netname. When this option is called
+at least once, the behavior of the extraction changes to extract
+only the nets that have been specified by extresist include
+commands. The list of included nets is global, cumulative, and
+persistent; it will only be cleared when the extresist include
+all command is issued (option available from version 8.3.213).
+
+box type
+
+Extract the signal under the cursor box on layer type
+
+cell cellname
+
+Extract the network for the cell named cellname
+
+geometry
+
+Extract network geometry and present as a collection of line
+elements on the layout.
+
+fasthenry [freq]
+
+Extract subcircuit network geometry into a fasthenry-format
+.fh file. If freq is specified, the file will
+be customized for fasthenry analysis at the indicated
+frequency (in Hz).
+
+tolerance value
+
+Deprecated! This option is no longer used by extresist.
+
+help
+
+Print help information
+
+Summary:
+
+The normal flow through layout extraction into a simulation file
+treats routes as nonphysical entities, that is, with infinitesimal
+impedence through the wires. Standard extraction generates "lumped
+resistance" values, a single resistance per network node that, along
+with the node capacitance
+to substrate, provides an RC time constant to approximately
+model the delay from point to point in the network node. The
+lumped resistance model is inappropriate for analog (i.e., SPICE)
+simulation, and for digital simulation, is a poor approximation
+for branching networks, where the delay between endpoints is
+different for each pair of endpoints in the network node.
+
+The extresist command provides a method for generating
+a more detailed model of resistance, in which long network
+routes and branching routes are replaced with resistor devices
+and device networks. This is known as "full R-C extraction".
+
+Using extresist as a standalone command is a multi-step
+process. It is first necessary to run extract to get
+the initial netlist. After a .ext file has been generated,
+the extresist command may be run. The output is a file
+.res.ext for each cell in the hierarchy.
+Finally, with the option extresist on set, ext2spice
+will generate the final, detailed simulation file.
+
+Prior to magic version 8.3.597, it was also necessary to run
+ext2sim labels on and ext2sim to write out a
+.sim and a .node file before running
+extresist. This is no longer necessary. There is since
+magic version 8.3.597 an option extract do resistance
+that runs the resistance extraction in sequence with the regular
+extraction, producing both the .ext and .res.ext
+files. When extract do resistance is used, there is no need
+to run extresist as a separate command. However,
+extresist may be run prior to extract to set the
+options that affect resistance network extraction, such as
+extresist threshold, extresist minres, etc.
+
+As of magic version 8.3.653, the extresist tolerance option
+is deprecated and has no effect on network resistance extraction.
+Instead, extraction is controlled by three main options:
+
+extresist threshold (value in milliohms) sets a cutoff for
+considering a network for detailed resistance extraction based on
+the lumped resistance estimate (see above). For point-to-point
+wires, the lumped resistance is approximately equal to the actual
+wire resistance. For branching networks, it will generally be an
+over-estimate. The default threshold value is set to
+10 ohms.
+
+extresist minres (value in milliohms) sets a cutoff for
+individual resistors in the detailed resistor network. Resistors
+below this threshold will get pruned out of the network if the
+simplification algorithm is able to remove them. The default
+minres value is set to 1 ohm.
+
+extresist mindelay (value in picoseconds) sets a cutoff for
+considering a network for detailed resistance extraction based on
+the end-to-end delay calculated from the lumped resistance
+estimate. Once the network has been extracted, the mindelay
+value is again evaluated against a revised calculation of the
+delay to determine if the extracted detailed network should be
+output. The default mindelay value is set to 0, indicating
+that only the lumped resistance threshold should be used for
+determining when to extract a detailed resistance network.
+mindelay may be used in place of threshold, or both
+may be used together, in which case a network is only extracted
+if both threshold and mindelay are exceeded.
+
+More details on using extresist can be found in
+magic Tutorial number 8.
+
+Implementation Notes:
+
+extresist is implemented as a built-in command in magic.
+
+See Also:
+
+extract
+
+ext2sim
+
+ext2spice
+
+Return to command index
+
+Last updated: May 29, 2026 at 11:33am

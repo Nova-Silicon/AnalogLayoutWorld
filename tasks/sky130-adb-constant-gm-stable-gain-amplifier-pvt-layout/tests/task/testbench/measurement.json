@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "suite": "adapter.py",
+  "initialization": "set ngbehavior=hsa\nset ng_nomodcheck\nset num_threads=1\n",
+  "solver_policy": "sparse",
+  "solver_policy_reason": "Sparse supports the startup .ic matrix entries in this ngspice testbench.",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice",
+  "evaluation_case_ids": [
+    "lin__tt__1.8__27",
+    "pvt__tt__1.8__27",
+    "startup__tt__1.8__27"
+  ]
+}

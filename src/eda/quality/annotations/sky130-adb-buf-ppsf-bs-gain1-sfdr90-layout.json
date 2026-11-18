@@ -1,0 +1,180 @@
+{
+  "task": "sky130-adb-buf-ppsf-bs-gain1-sfdr90-layout",
+  "top": "buf_ppsf_bs",
+  "matched_groups": [
+    {
+      "name": "n_followers",
+      "devices": [
+        "XNM0",
+        "XNM2"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 3
+    },
+    {
+      "name": "p_followers",
+      "devices": [
+        "XPM0",
+        "XPM2"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 3
+    },
+    {
+      "name": "n_bootstrap",
+      "devices": [
+        "XNM1",
+        "XNM3"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 2
+    },
+    {
+      "name": "p_bootstrap",
+      "devices": [
+        "XPM1",
+        "XPM3"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 2
+    },
+    {
+      "name": "input_caps",
+      "devices": [
+        "XC0",
+        "XC4",
+        "XC2",
+        "XC6"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 2
+    },
+    {
+      "name": "bootstrap_caps",
+      "devices": [
+        "XC1",
+        "XC5",
+        "XC3",
+        "XC7"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "bias_resistors",
+      "devices": [
+        "XR1",
+        "XR5",
+        "XR2",
+        "XR6",
+        "XR0",
+        "XR4",
+        "XR3",
+        "XR7"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "iref_mirror",
+      "devices": [
+        "XNM7",
+        "XNM6",
+        "XNM5",
+        "XNM8"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "pbias_mirror",
+      "devices": [
+        "XPM7",
+        "XPM6",
+        "XPM10"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "VOP",
+      "VON"
+    ],
+    "victims": [
+      "VIP",
+      "VIN",
+      "net7",
+      "net5",
+      "net11",
+      "net10",
+      "net8",
+      "net6",
+      "net12",
+      "net9",
+      "VBN1",
+      "VBP1",
+      "VBN2",
+      "VBP2",
+      "IREF"
+    ],
+    "critical": [
+      "VIP",
+      "VIN",
+      "net7",
+      "net5",
+      "net11",
+      "net10",
+      "VOP",
+      "VON"
+    ],
+    "diff_pairs": [
+      [
+        "VIP",
+        "VIN"
+      ],
+      [
+        "VOP",
+        "VON"
+      ],
+      [
+        "net7",
+        "net11"
+      ],
+      [
+        "net5",
+        "net10"
+      ],
+      [
+        "net8",
+        "net12"
+      ],
+      [
+        "net6",
+        "net9"
+      ]
+    ],
+    "power": [
+      "VDD"
+    ],
+    "ground": [
+      "VSS"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "VDD": 0.00037,
+    "VSS": 0.00039
+  },
+  "currents_note": "前仿 TT 功耗 0.702 mW（VDD、VCM、VIN、VIP 绝对功率之和）/ 1.8 V = 0.39 mA；VCM 上复制支路的流入、流出电流近似相抵；IREF 20 uA 由外部 vdd 节点注入，DUT VDD 脚约 0.37 mA；按复制比估算推挽输出支路每侧约 0.15 mA"
+}

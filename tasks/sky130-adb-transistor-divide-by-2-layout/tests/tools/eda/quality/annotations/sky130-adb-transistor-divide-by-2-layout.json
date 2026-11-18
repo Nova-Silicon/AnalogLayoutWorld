@@ -1,0 +1,58 @@
+{
+  "task": "sky130-adb-transistor-divide-by-2-layout",
+  "top": "divide_by_2",
+  "matched_groups": [],
+  "nets": {
+    "aggressors": [
+      "clk",
+      "ckb",
+      "cki",
+      "qb",
+      "clkout"
+    ],
+    "victims": [
+      "XFF.mm",
+      "XFF.sm"
+    ],
+    "critical": [
+      "clk",
+      "ckb",
+      "cki",
+      "qstate",
+      "qb",
+      "clkout"
+    ],
+    "diff_pairs": [
+      [
+        "ckb",
+        "cki"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [
+    "XCLK0.XP",
+    "XCLK0.XN",
+    "XCLK1.XP",
+    "XCLK1.XN",
+    "XBUF1.XP",
+    "XBUF1.XN"
+  ],
+  "currents_a": {
+    "vdd": 0.00024,
+    "vss": 0.00024,
+    "XCLK0.XP": 0.0015,
+    "XCLK0.XN": 0.0018,
+    "XCLK1.XP": 0.0011,
+    "XCLK1.XN": 0.0012,
+    "XBUF1.XP": 0.0011,
+    "XBUF1.XN": 0.0018
+  },
+  "currents_note": "前仿未测功耗。本机 ngspice（本机分档模型，nf 拆成单指并联）按 tb_divide 条件（TT 1.8 V/27 C、1 GHz 时钟、20 fF 负载）测得 vdd 平均 0.24 mA、总峰值 1.9 mA；功率器件数值为同一仿真中的开关峰值电流，属估算",
+  "name_note": "静态 CMOS 触发器，占空比由上下拉强度平衡决定，没有模拟匹配要求，故不列匹配组；ckb/cki 互补时钟的负载对称（diff_pairs）与时钟、输出缓冲的供电通路更重要。触发器内部存储节点用点号路径 XFF.mm、XFF.sm"
+}

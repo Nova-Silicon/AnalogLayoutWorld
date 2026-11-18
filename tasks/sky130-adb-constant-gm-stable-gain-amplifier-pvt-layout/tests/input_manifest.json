@@ -1,0 +1,30 @@
+{
+  "basis": "Trusted private inputs; public_files records the native fixture subset separately.",
+  "files": {
+    "circuit.spice": "20a4e0a80315988db7ba7bb6c5c515a89995f5e42ccf7b954114889def061ae2",
+    "constraints.json": "d598beb1b0412041bbaef5866db3144c82e41ea7da012d86a940f0900d276d1c",
+    "identity.json": "a4bc91b4ce0c1b18e4119ef1dcee2f6ecd2f6ec724adfc014a2d9c7ea69ed2ae",
+    "testbench/adapter.py": "dfbfcb36a9ee7e148e0530e3d7294e27e1c475261a3b25d8df096ac61f1c4ac2",
+    "testbench/measurement.json": "e415c3256b31b971c13f7d7c00b6a6f2bf8eb8f56ed3d2fb1db67c028553b985",
+    "testbench/upstream/benches/tb_lin.spi": "8098a1d13f3273811ae7e4dcfd483d83dc8fb6194a0faec2c3795c913b312131",
+    "testbench/upstream/benches/tb_pvt.spi": "6e8d37875b76f855a7c23d1aeebd386c636ba6d373d974696bb10aa832d39fb6",
+    "testbench/upstream/benches/tb_startup.spi": "15c10c75bcada681ee71f6ebcc69d8cc3e167332cb521378b9d1c7c8a0fb735b",
+    "testbench/upstream/utils.py": "8f9909aa283429e11d3d5b55b33d5e55d5c54f4bad33aaa599f1c8a35a99e299",
+    "testbench/upstream/verify.py": "32d094279659c91ef7d50a23857540f0ee972e07f026363683f91ed0a353fa38"
+  },
+  "public_files": {
+    "circuit.spice": "20a4e0a80315988db7ba7bb6c5c515a89995f5e42ccf7b954114889def061ae2",
+    "lvs_reference.spice": "dab07ae7b3ffef0057d0549e854a06a784de881431724052848bc8d6deec76cb",
+    "testbench/README.md": "a6a3e7016df65dc6e4867759efa49d9abb5d9bc2022480fda6d222c6a228b65e",
+    "testbench/README.zh-CN.md": "96aa6a573885408cae1d73ace3f442e930e957a3a70dbc89c808b169b1a4687d",
+    "testbench/tb_lin.spi": "6005422121ba5d6c85074f67b7f7eb6648bccea5f074a8738635b61e56c7ffe5",
+    "testbench/tb_pvt.spi": "bf3377a3ef8aeb018189f5f77341490528b1f37e8daad082682d4248a79e1b77",
+    "testbench/tb_startup.spi": "307ea819a839bb56e96af78f24780bb29ae6015b7c15771e2701c6bcc319c86a"
+  },
+  "public_projection": {
+    "constraints": "physical fields only, if publicly present",
+    "physical_inputs": "byte-identical DUT and optional LVS reference",
+    "testbench": "published native fixtures and documentation; private graders excluded"
+  },
+  "schema_version": 2
+}

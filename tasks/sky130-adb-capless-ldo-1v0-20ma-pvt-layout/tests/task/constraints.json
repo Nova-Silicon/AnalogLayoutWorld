@@ -1,0 +1,12 @@
+{
+  "top": "capless_ldo",
+  "ports": [
+    "vin",
+    "vout",
+    "vss",
+    "vref"
+  ],
+  "substrate": "vss",
+  "schema_version": 1,
+  "lvs_mim_geometry_view": "mim_geometry_literal_um"
+}

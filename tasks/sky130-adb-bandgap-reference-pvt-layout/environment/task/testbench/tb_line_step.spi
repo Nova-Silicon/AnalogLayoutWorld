@@ -1,0 +1,13 @@
+* Topology-independent closed-loop stability: full-range VDD steps while
+* VREF drives the selected capacitive load.
+.lib "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice" tt
+.include "dut.spice"
+.options filetype=ascii method=gear reltol=1e-4 abstol=1e-14 vntol=1e-8
+.temp 27
+VSS vss 0 0
+VDD vdd vss PWL(0 1.8 5e-06 1.8 5.01e-06 1.98 2.5e-05 1.98 2.501e-05 1.62 4.5e-05 1.62)
+XBG vss vdd vref bandgap_reference
+CLOAD vref vss 5e-12
+.save v(vdd) v(vref) i(vdd)
+.tran 10n 4.5e-05
+.end

@@ -1,0 +1,13 @@
+{
+  "top": "folded_cascode_ota",
+  "ports": [
+    "vinp",
+    "vinn",
+    "vout",
+    "ibias",
+    "vdd",
+    "vss"
+  ],
+  "substrate": "vss",
+  "schema_version": 1
+}

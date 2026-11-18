@@ -1,0 +1,140 @@
+{
+  "task": "sky130-adb-regulated-charge-pump-10mhz-pvt-layout",
+  "top": "charge_pump_regulated",
+  "matched_groups": [
+    {
+      "name": "amp_input_pair",
+      "devices": [
+        "XNM7",
+        "XNM8"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "amp_load_mirror",
+      "devices": [
+        "XPM2",
+        "XPM3"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 1.5
+    },
+    {
+      "name": "divider_ratio",
+      "devices": [
+        "XR0",
+        "XR1",
+        "XR2",
+        "XR3"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "bias_mirror",
+      "devices": [
+        "XNM5",
+        "XNM6"
+      ],
+      "kind": "mirror",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "pump_halves",
+      "devices": [
+        "XI6.XNM3",
+        "XI6.XNM4",
+        "XI6.XNM1",
+        "XI6.XNM0",
+        "XI6.XC1",
+        "XI6.XC0",
+        "XI6.XPM1",
+        "XI6.Xmp0",
+        "XI6.XNM2",
+        "XI6.Xmn0"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "CLK",
+      "XI6.net011",
+      "XI6.net06",
+      "XI6.net26",
+      "XI6.net19",
+      "XI6.net23",
+      "XI6.net012",
+      "XI6.net018"
+    ],
+    "victims": [
+      "AMP_VP",
+      "AMP_VN",
+      "ICTR",
+      "IBN1U"
+    ],
+    "critical": [
+      "AMP_VP",
+      "AMP_VN",
+      "ICTR"
+    ],
+    "diff_pairs": [
+      [
+        "AMP_VP",
+        "AMP_VN"
+      ],
+      [
+        "XI6.net012",
+        "XI6.net018"
+      ],
+      [
+        "XI6.net19",
+        "XI6.net23"
+      ]
+    ],
+    "power": [
+      "AVDD",
+      "VOUT"
+    ],
+    "ground": [
+      "AVSS"
+    ]
+  },
+  "power_devices": [
+    "XI6.XNM3",
+    "XI6.XNM4",
+    "XI6.XNM0",
+    "XI6.XNM1",
+    "XI6.XPM0",
+    "XI6.XPM1",
+    "XI6.Xmp0",
+    "XI6.XNM2",
+    "XI6.Xmn0"
+  ],
+  "currents_a": {
+    "AVDD": 0.000124,
+    "VOUT": 5e-05,
+    "AVSS": 7.5e-05,
+    "XI6.XNM3": 2.5e-05,
+    "XI6.XNM4": 2.5e-05,
+    "XI6.XNM0": 2.5e-05,
+    "XI6.XNM1": 2.5e-05,
+    "XI6.XPM0": 5e-05,
+    "XI6.XPM1": 2.5e-05,
+    "XI6.Xmp0": 2.5e-05,
+    "XI6.XNM2": 2.5e-05,
+    "XI6.Xmn0": 2.5e-05
+  },
+  "currents_note": "规格最大负载 50 uA；前仿 FF/1.98 V/125 C/50 uA：AVDD 平均 124 uA、VOUT 2.577 V。开关与底板驱动电流按倍压泵电荷守恒估算（每相飞电容平均 Iout/2=25 uA，XI6.XPM0 为两路底板驱动供电约 50 uA）；AVSS≈AVDD+1 uA 偏置-50 uA 负载≈75 uA（估算）；均为平均值。supply_v 给出非 1.8 V 电源轨的标称电压，供 IR 压降百分比换算（VOUT 标称 1.3·1.8 V）",
+  "supply_v": {
+    "VOUT": 2.34
+  },
+  "name_note": "子电路 XI6（泵核心）内的器件与网络用点号路径，如 XI6.XNM3、XI6.net012"
+}

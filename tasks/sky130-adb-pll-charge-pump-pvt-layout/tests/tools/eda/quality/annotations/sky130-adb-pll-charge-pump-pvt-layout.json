@@ -1,0 +1,106 @@
+{
+  "task": "sky130-adb-pll-charge-pump-pvt-layout",
+  "top": "pll_charge_pump",
+  "matched_groups": [
+    {
+      "name": "nmos_iref_mirror",
+      "devices": [
+        "XN0",
+        "XN1",
+        "XN2",
+        "XNM"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 3
+    },
+    {
+      "name": "pmos_up_mirror",
+      "devices": [
+        "XP0",
+        "XPM"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 3
+    },
+    {
+      "name": "pmos_cascodes",
+      "devices": [
+        "XPC0",
+        "XPC"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1.5
+    },
+    {
+      "name": "nmos_cascodes",
+      "devices": [
+        "XNC1",
+        "XNC"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1.5
+    },
+    {
+      "name": "up_steering",
+      "devices": [
+        "XSUP",
+        "XSDU"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 2
+    },
+    {
+      "name": "dn_steering",
+      "devices": [
+        "XSDN",
+        "XSDD"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 2
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "up",
+      "dn",
+      "upb",
+      "upd",
+      "dnb"
+    ],
+    "victims": [
+      "vout",
+      "iref",
+      "vbp",
+      "vbpc",
+      "vbnc"
+    ],
+    "critical": [
+      "vout",
+      "nc",
+      "nd",
+      "upb",
+      "upd",
+      "dn",
+      "dnb"
+    ],
+    "diff_pairs": [],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.000161,
+    "vss": 0.000161
+  },
+  "currents_note": "前仿 TT 1.8 V/27 C 脉冲台平均功耗 289 uW / 1.8 V = 161 uA（含 25 uA iref、偏置支路以及 UP/DN 各约 51 uA 的常通电流）；本机 ngspice 测得控制反相器开关峰值 XIP1 约 1.3 mA、vdd 总峰值约 1.7 mA（估算），持续仅数十 ps，不设功率器件"
+}

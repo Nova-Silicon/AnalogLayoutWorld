@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "suite": "adapter.py",
+  "initialization": "set ngbehavior=hsa\nset num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice",
+  "public_case_mapping": {
+    "tb_ac_tt.spi": "ac_power__tt__27",
+    "tb_noise_tt.spi": "noise__tt__27",
+    "tb_sfdr_tt.spi": "sfdr__tt__27"
+  },
+  "evaluation_case_ids": [
+    "ac_power__tt__27",
+    "noise__tt__27",
+    "sfdr__tt__27"
+  ]
+}

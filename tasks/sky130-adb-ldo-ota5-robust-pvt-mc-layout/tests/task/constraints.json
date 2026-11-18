@@ -1,0 +1,16 @@
+{
+  "top": "ldo_ota5",
+  "ports": [
+    "vin",
+    "vout",
+    "vss",
+    "vref",
+    "ibias",
+    "fb",
+    "gate_drive",
+    "gate"
+  ],
+  "substrate": "vss",
+  "schema_version": 1,
+  "lvs_reference_normalization": "supported_model_instance_names_only"
+}

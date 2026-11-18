@@ -1,0 +1,332 @@
+Magic-8.3 Command Reference
+
+ext, extract
+
+Circuit netlist extractor
+
+Usage:
+
+extract option
+
+where option may be one of the following:
+
+all
+
+Extract the root cell and all its children. This bypasses
+the incremental extraction and ensures that a new .ext
+file is written for every cell definition.
+
+cell name
+
+Extract the currently selected cell into file name
+
+do|no [option]
+
+Enable or disable an extractor option, where option
+may be one of the following:
+
+capacitance
+
+Extract local parasitic capacitance values to substrate
+
+coupling
+
+Extract the parasitic coupling capacitance between
+nodes.
+
+corners [value]
+
+(Added in magic version 8.3.672) Extract the fringe
+capacitance at the corners of shapes. The fringe
+capacitance model measures capacitance outward from
+shape edges, which does not account for the part of
+the fringe field at a convex corner that couples to
+shapes diagonal to the corner, or for the
+double-counting of the fringe field from the two
+edges meeting at a concave corner. With this option
+enabled, the corner fringe capacitance is modeled as
+a superposition of the fields of the two edges
+meeting at each corner, and is added to (convex) or
+subtracted from (concave) both the substrate
+capacitance and the coupling capacitance.
+The optional value (default 1.0) is a
+dimensionless scale factor on the corner capacitance
+model. This is a second-order correction which
+increases extraction time, so it is disabled by
+default, and is not included in the options enabled
+by "all".
+
+lumped
+
+Extract lumped resistance values.
+The values extracted are "lumped" resistance and
+indicate the value for which the delay through the
+net can be computed with R times C, where R is the
+lumped resistance and C is the parasitic capacitance.
+This is a very coarse approximation, as it assumes
+equal delay from the driver to any receiver. For
+full R-C extraction, see the extresist
+command. Lumped resistances have no meaning in
+SPICE netlists and will only be used when running
+ext2sim to generate a .sim netlist.
+Prior to magic version 8.3.597, this option was
+resistance, but as that was often confused
+with full parasitic resistance extraction, it has
+been changed.
+
+length
+
+Extract the length of the shortest path from a driver
+to a receiver, for computing more accurate parasitic
+resistances.
+
+adjust
+
+Adjust all capacitances for overlap between a parent
+cell and child instance, or between instances in an
+array. Parasitic capacitance is removed to account
+for the amount of overlap. Note that this method
+can produce negative capacitors in the parent. When
+the netlist is flattened for simulation, the total
+of all capacitances in parent and child, or between
+array instances, is guaranteed to be strictly positive.
+
+all
+
+Apply all standard options (does not include options
+"local", "labelcheck", "aliases", or "resistance").
+
+local
+
+Write all .ext files to the current working directory.
+If not specified, each .ext file will be placed in the
+same directory as the .mag file from which it is
+derived, unless the .mag file is in a directory which
+is not writable. In that case, the .ext file will also
+be written to the current working directory.
+
+Note: As of magic version 8.3.404, "extract
+do local" effectively implements "extract path ."
+and "extract no local" implements " extract
+path none".
+
+labelcheck
+
+Check for labels which have zero area and connect
+to a subcell on the edge; this case is rare but is
+computationally expensive to check for, so the feature
+is disabled by default.
+
+aliases
+
+By default (starting with version 8.3.217), magic only
+extracts a single name for a net, unless the net connects
+to a port, in which case the port name is extracted as
+well. With the aliases option enabled, all names
+for a net are extracted; this can be useful for debugging
+but will usually just slow down processing by commands
+like "ext2spice" that use the .ext file contents, so it
+is disabled by default.
+
+unique [notopports]
+
+(Added in magic version 8.3.594) This setting replaces
+the use of the command option "extract unique" (and
+"extract unique notopports"). Instead of changing labels
+in the design, unique labels are generated for the duration
+of the extraction, and then reverted back to the original
+text. The "extract unique" command option is maintained
+for backwards compatibility. Note the difference:
+"extract unique" is a command that runs immediately, and
+cannot be undone; "extract do unique" is an option setting
+for "extract".
+
+resistance
+
+(Added in magic version 8.3.597) This setting replaces
+the use of the standalone command "extresist". The
+effect is the same: Magic performs full R-C extraction,
+generating a .res.ext file that annotates the
+existing .ext file (see the "extresist" command
+documentation). The "extresist" command options can
+still be used to set options such as tolerance for the
+R-C extraction.
+Note that prior to magic version 8.3.597, this option
+name would produce the lumped resistance approximation
+(see lumped, above).
+
+These options (except for "local") determine how much
+information is written to the output file. By default,
+all options are selected. Normally, the options in
+ext2spice or ext2sim are used to select
+which information from the .ext file is used in the
+resulting netlist. There is no need to restrict the
+information being extracted. All options add relatively
+little overhead to the extraction time. The output file
+size can be reduced by not generating some extraction
+information.
+
+length [option]
+
+Control pathlength extraction information, where option
+may be one of the following:
+
+driver termname
+
+receiver termname
+
+clear
+
+halo [distance]
+
+Return or set the maximum distance between shapes for which
+sidewall coupling is considered. distance is in
+the units of snap distance (lambda, by default), but like
+all distances may be specified with a suffix like "um" for
+physical distance. The default value is set by the technology
+file. Smaller values will decrease the parasitic capacitance
+extraction time at the expense of accuracy. When distance
+is not specified, the value returned is always in internal
+units.
+
+help
+
+Print help information
+
+path [pathname|none]
+
+Extract locally into the directory pathname. If
+pathname does not exist, then magic will attempt to
+create it. If it cannot be created, then the behavior will
+be to save extract files in the current working directory.
+If no path is set, or if none is specified as the
+path, then the behavior will be to extract files in the
+same directory as where the magic database (.mag)
+file is located, unless that directory is unwritable by
+the user, in which case the file is extracted to the
+current working diretory. Note that "extract do local"
+is the same as "extract path ." and "extract no local"
+is the same as "extract path none". Also note that
+netlist generation is independent of extraction, and needs to
+specify the same path as used by extract path, e.g.,
+"ext2spice -p pathname".
+
+parents
+
+Extract the selected cell and all its parents
+
+showparents
+
+List the cell and all parents of selected cell. Note that
+this is not really an extract option and is superceded by
+the cellname command.
+
+stepsize [distance]
+
+Return or set the step size used when breaking a layout into
+smaller parts for more efficient extraction. distance
+is in the units of snap distance (lambda, by default), but like
+all distances may be specified with a suffix like "um" for
+physical distance. The default value is set by the technology
+file. Both large and small values make extraction inefficient,
+and finding the optimal step size is largely trial-and-error.
+The step size in a tech file has most likely already been
+optimized for extraction speed. When distance is not
+specified, the value returned is always in internal units.
+
+[list|listall] style [stylename]
+
+Set the current extraction style to stylename.
+Without arguments, print the current extraction style.
+With keyword list, return the current extraction
+style as a Tcl result. With keyword listall, return
+all valid extraction styles for the technology as a Tcl
+list.
+
+unique [#]
+
+Generate unique names when different nodes have the same name.
+When option "#" is present, only make unique names for
+labels tagged by ending with the "#" character.
+
+Warning: This operation immediately modifies the
+existing layout in preparation for extraction. Label
+modifications are permanent, and cannot be undone. All
+cells in the hierarchy may potentially be modified.
+
+unique [option]
+
+(From Magic 8.1.24) With no option, generate unique names
+when different nodes have the same name. option may
+be one of the following:
+
+all
+
+Equivalent to no option; all labels with the same
+name on different nets are given unique names.
+
+#
+
+Labels that are tagged by ending with the character
+"#" are made unique for each instance on an
+electrically unique node.
+
+noports
+
+Labels that are not ports are made unique when on
+different nets. Ports, however, are ignored. This
+option is useful for standard cells which may be
+hiding internal connectivity.
+
+notopports
+
+This option behaves like extract unique noports
+on the topmost cell in the hierarchy, and otherwise
+behaves like extract unique all on all cells
+below the top (available from magic 8.3.205).
+
+Warning: This operation immediately modifies the
+existing layout in preparation for extraction. Label
+modifications are permanent, and cannot be undone. All
+cells in the hierarchy may potentially be modified. To avoid
+this issue, use the "extract do unique" option instead (see
+above).
+
+warn [[no] option]
+
+Enable/disable reporting of non-fatal errors, where option
+may be one of the following:
+
+fets
+
+labels
+
+dup
+
+all
+
+Summary:
+
+With no options given, the extract command incrementally
+extracts the root cell and all its children into separate
+.ext files. With options, the effect is as described
+in the Usage section above.
+
+Implementation Notes:
+
+extract is implemented as a built-in magic command.
+
+ext is an alias for command extract (allowed
+abbreviation where the usage would otherwise be ambiguous).
+
+See Also:
+
+extresist
+
+ext2spice
+
+ext2sim
+
+Return to command index
+
+Last updated: October 8, 2021 at 4:56pm

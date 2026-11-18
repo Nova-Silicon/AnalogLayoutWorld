@@ -1,0 +1,105 @@
+{
+  "task": "sky130-adb-capless-ldo-1v0-20ma-pvt-layout",
+  "top": "capless_ldo",
+  "matched_groups": [
+    {
+      "name": "ea_input_pair",
+      "devices": [
+        "XM1A",
+        "XM1B"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "ea_mirror",
+      "devices": [
+        "XM3",
+        "XM4"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "second_mirror",
+      "devices": [
+        "XM5",
+        "XM6"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 1.5
+    },
+    {
+      "name": "pmos_mirror_degen",
+      "devices": [
+        "XM7",
+        "XM8",
+        "XRd7",
+        "XRd8"
+      ],
+      "kind": "mirror",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "bias_pair",
+      "devices": [
+        "XMPA",
+        "XMPB",
+        "XRda",
+        "XRdb"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "feedback_divider",
+      "devices": [
+        "XR1",
+        "XR2"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "gate",
+      "vout"
+    ],
+    "victims": [
+      "fb",
+      "vref",
+      "d3",
+      "d4"
+    ],
+    "critical": [
+      "fb",
+      "vref",
+      "gate"
+    ],
+    "diff_pairs": [],
+    "power": [
+      "vin",
+      "vout"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [
+    "XMP"
+  ],
+  "currents_a": {
+    "vin": 0.0201,
+    "vout": 0.02,
+    "XMP": 0.02,
+    "vss": 0.0001
+  },
+  "currents_note": "满载 20 mA 经功率管 XMP 从 vin 流到 vout；静态电流 87.7 uA（前仿）；负载电流在测试台外部回到地"
+}

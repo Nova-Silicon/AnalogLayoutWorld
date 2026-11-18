@@ -1,0 +1,212 @@
+{
+  "task": "sky130-adb-fd-sampling-feedback-ota-gain8-settling10ns-noise1mv-pvt-mc-layout",
+  "top": "sampling_feedback_ota",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XINP",
+        "XINN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "fold_sources",
+      "devices": [
+        "XSOURCEP1",
+        "XSOURCEN1"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "sinks",
+      "devices": [
+        "XSINKP",
+        "XSINKN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "second_stage",
+      "devices": [
+        "XSECOND_P",
+        "XSECOND_N"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 2
+    },
+    {
+      "name": "output_loads",
+      "devices": [
+        "XLOAD_P",
+        "XLOAD_N"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "p_cascodes",
+      "devices": [
+        "XPCASP",
+        "XPCASN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "n_cascodes",
+      "devices": [
+        "XNCASP",
+        "XNCASN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "compensation",
+      "devices": [
+        "XRZP",
+        "XRZN",
+        "XCCP",
+        "XCCN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "cm_sense",
+      "devices": [
+        "XRCMP",
+        "XRCMN",
+        "XCCMP",
+        "XCCMN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "cmfb_pair",
+      "devices": [
+        "XCMREF",
+        "XCMSENSE"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "cmfb_load",
+      "devices": [
+        "XCMDIO",
+        "XCMMIRROR"
+      ],
+      "kind": "mirror",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "iref_mirror",
+      "devices": [
+        "XREF",
+        "XNBP",
+        "XPCBIAS",
+        "XNCSOURCE",
+        "XOBIASN",
+        "XCMTAIL",
+        "XTAIL1"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "vbp_mirror",
+      "devices": [
+        "XPBP",
+        "XSOURCEP1",
+        "XSOURCEN1",
+        "XPCSOURCE",
+        "XNCLOAD"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "voutp",
+      "voutn"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "fp",
+      "fn",
+      "vcms",
+      "vcmfb",
+      "vbp",
+      "vpc",
+      "vcn",
+      "vbpout",
+      "iref"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "fp",
+      "fn",
+      "stagep",
+      "stagen"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ],
+      [
+        "fp",
+        "fn"
+      ],
+      [
+        "stagep",
+        "stagen"
+      ],
+      [
+        "voutp",
+        "voutn"
+      ],
+      [
+        "zp",
+        "zn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [
+    "XTAIL1"
+  ],
+  "currents_a": {
+    "vdd": 0.00304,
+    "vss": 0.00309,
+    "XTAIL1": 0.0019
+  },
+  "currents_note": "前仿 TT 功耗 5.567 mW / 1.8 V = 3.09 mA（IREF 50 uA 由外部 vdd 节点注入，DUT vdd 脚约 3.04 mA）；按镜像比估算：尾电流约 1.9 mA（XTAIL1-4 并联，LVS 合并为 XTAIL1，列为功率器件以检查 tail 网络线宽），输入管各约 0.95 mA、每侧折叠源约 0.98 mA、输出级每侧约 0.5 mA，均未单独列入"
+}

@@ -1,0 +1,14 @@
+{
+  "top": "two_stage_ota",
+  "ports": [
+    "vinp",
+    "vinn",
+    "vout",
+    "ibias",
+    "vdd",
+    "vss"
+  ],
+  "substrate": "vss",
+  "schema_version": 1,
+  "lvs_mim_geometry_view": "mim_geometry_literal_um"
+}

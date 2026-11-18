@@ -1,0 +1,87 @@
+{
+  "task": "sky130-adb-current-starved-ring-vco-pvt-layout",
+  "top": "current_starved_ring_vco",
+  "matched_groups": [
+    {
+      "name": "pmos_starve_mirror",
+      "devices": [
+        "XPDIO",
+        "XPSRC",
+        "XPS1",
+        "XPS2",
+        "XPS3",
+        "XPS4",
+        "XPS5"
+      ],
+      "kind": "mirror",
+      "intent": "interdigitated",
+      "weight": 2.5
+    },
+    {
+      "name": "nmos_starve_mirror",
+      "devices": [
+        "XNDIO",
+        "XNS1",
+        "XNS2",
+        "XNS3",
+        "XNS4",
+        "XNS5"
+      ],
+      "kind": "mirror",
+      "intent": "interdigitated",
+      "weight": 2.5
+    },
+    {
+      "name": "stage_caps",
+      "devices": [
+        "XCS1",
+        "XCS2",
+        "XCS3",
+        "XCS4",
+        "XCS5"
+      ],
+      "kind": "array",
+      "intent": "common_centroid",
+      "weight": 2
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "bo1",
+      "vout"
+    ],
+    "victims": [
+      "vctrl",
+      "pdio",
+      "ndio",
+      "ndeg"
+    ],
+    "critical": [
+      "n1",
+      "n2",
+      "n3",
+      "n4",
+      "n5",
+      "bo1"
+    ],
+    "diff_pairs": [],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 4.25e-05,
+    "vss": 4.25e-05
+  },
+  "currents_note": "前仿 TT 1.8 V/27 C、vctrl=1.2 V 平均功耗 76.4 uW / 1.8 V = 42.5 uA；限流结构的峰值受限，本机 ngspice（分档模型）测得 vdd 峰值约 0.37 mA（估算），不设功率器件",
+  "name_note": "“各级一致”由限流镜像组与负载电容组体现；反相器开关管 XPI*/XNI* 很小，在按级成列的常规版图中被大尺寸限流管隔开（间距约为自身尺寸的 4 倍），按相邻度评分会误判，且限流型级延迟主要由限流电流与负载电容决定，故不单列"
+}

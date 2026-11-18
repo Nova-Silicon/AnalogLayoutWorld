@@ -1,0 +1,1802 @@
+{
+  "schema_version": 1,
+  "source_geometry_scale": 1e-06,
+  "cases": [
+    {
+      "id": "refined_temp_tt_1.71",
+      "kind": "temperature",
+      "corner": "tt",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "tt__v1.71__t27"
+    },
+    {
+      "id": "refined_temp_tt_1.8",
+      "kind": "temperature",
+      "corner": "tt",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "tt__v1.8__t27"
+    },
+    {
+      "id": "refined_temp_tt_1.89",
+      "kind": "temperature",
+      "corner": "tt",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "tt__v1.89__t27"
+    },
+    {
+      "id": "refined_temp_ff_1.71",
+      "kind": "temperature",
+      "corner": "ff",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "ff__v1.71__t27"
+    },
+    {
+      "id": "refined_temp_ff_1.8",
+      "kind": "temperature",
+      "corner": "ff",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "ff__v1.8__t27"
+    },
+    {
+      "id": "refined_temp_ff_1.89",
+      "kind": "temperature",
+      "corner": "ff",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "ff__v1.89__t27"
+    },
+    {
+      "id": "refined_temp_ss_1.71",
+      "kind": "temperature",
+      "corner": "ss",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "ss__v1.71__t27"
+    },
+    {
+      "id": "refined_temp_ss_1.8",
+      "kind": "temperature",
+      "corner": "ss",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "ss__v1.8__t27"
+    },
+    {
+      "id": "refined_temp_ss_1.89",
+      "kind": "temperature",
+      "corner": "ss",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "ss__v1.89__t27"
+    },
+    {
+      "id": "refined_temp_sf_1.71",
+      "kind": "temperature",
+      "corner": "sf",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "sf__v1.71__t27"
+    },
+    {
+      "id": "refined_temp_sf_1.8",
+      "kind": "temperature",
+      "corner": "sf",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "sf__v1.8__t27"
+    },
+    {
+      "id": "refined_temp_sf_1.89",
+      "kind": "temperature",
+      "corner": "sf",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "sf__v1.89__t27"
+    },
+    {
+      "id": "refined_temp_fs_1.71",
+      "kind": "temperature",
+      "corner": "fs",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "fs__v1.71__t27"
+    },
+    {
+      "id": "refined_temp_fs_1.8",
+      "kind": "temperature",
+      "corner": "fs",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "fs__v1.8__t27"
+    },
+    {
+      "id": "refined_temp_fs_1.89",
+      "kind": "temperature",
+      "corner": "fs",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "fs__v1.89__t27"
+    },
+    {
+      "id": "refined_passive_temp_ll_1.71",
+      "kind": "temperature",
+      "corner": "ll",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ll\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "ll__v1.71__t27"
+    },
+    {
+      "id": "refined_passive_temp_ll_1.8",
+      "kind": "temperature",
+      "corner": "ll",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ll\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "ll__v1.8__t27"
+    },
+    {
+      "id": "refined_passive_temp_ll_1.89",
+      "kind": "temperature",
+      "corner": "ll",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ll\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "ll__v1.89__t27"
+    },
+    {
+      "id": "refined_passive_temp_hh_1.71",
+      "kind": "temperature",
+      "corner": "hh",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" hh\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "hh__v1.71__t27"
+    },
+    {
+      "id": "refined_passive_temp_hh_1.8",
+      "kind": "temperature",
+      "corner": "hh",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" hh\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "hh__v1.8__t27"
+    },
+    {
+      "id": "refined_passive_temp_hh_1.89",
+      "kind": "temperature",
+      "corner": "hh",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" hh\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "hh__v1.89__t27"
+    },
+    {
+      "id": "refined_passive_temp_hl_1.71",
+      "kind": "temperature",
+      "corner": "hl",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" hl\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "hl__v1.71__t27"
+    },
+    {
+      "id": "refined_passive_temp_hl_1.8",
+      "kind": "temperature",
+      "corner": "hl",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" hl\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "hl__v1.8__t27"
+    },
+    {
+      "id": "refined_passive_temp_hl_1.89",
+      "kind": "temperature",
+      "corner": "hl",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" hl\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "hl__v1.89__t27"
+    },
+    {
+      "id": "refined_passive_temp_lh_1.71",
+      "kind": "temperature",
+      "corner": "lh",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" lh\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "lh__v1.71__t27"
+    },
+    {
+      "id": "refined_passive_temp_lh_1.8",
+      "kind": "temperature",
+      "corner": "lh",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" lh\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "lh__v1.8__t27"
+    },
+    {
+      "id": "refined_passive_temp_lh_1.89",
+      "kind": "temperature",
+      "corner": "lh",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" lh\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nop\nprint v(ref) i(vdd)\ndc TEMP -40 125 5\nmeas dc ref_min MIN v(ref)\nmeas dc ref_max MAX v(ref)\nmeas dc ref_25 FIND v(ref) AT=25\nwrdata temp_curve.dat v(ref) i(vdd)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "curve_min_V": {
+          "min": 1.17
+        },
+        "curve_max_V": {
+          "max": 1.23
+        },
+        "temperature_coefficient_ppm_K": {
+          "min": 0,
+          "max": 100
+        },
+        "iq_max_A": {
+          "min": 0,
+          "max": 5e-05
+        }
+      },
+      "score_group": "lh__v1.89__t27"
+    },
+    {
+      "id": "final_startup_tt_-40_1.8",
+      "kind": "startup",
+      "corner": "tt",
+      "temperature_C": -40,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "tt__v1.8__t-40"
+    },
+    {
+      "id": "final_startup_tt_-40_1.89",
+      "kind": "startup",
+      "corner": "tt",
+      "temperature_C": -40,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "tt__v1.89__t-40"
+    },
+    {
+      "id": "final_startup_tt_27_1.71",
+      "kind": "startup",
+      "corner": "tt",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "tt__v1.71__t27"
+    },
+    {
+      "id": "final_startup_tt_27_1.8",
+      "kind": "startup",
+      "corner": "tt",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "tt__v1.8__t27"
+    },
+    {
+      "id": "final_startup_tt_27_1.89",
+      "kind": "startup",
+      "corner": "tt",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "tt__v1.89__t27"
+    },
+    {
+      "id": "final_startup_tt_125_1.71",
+      "kind": "startup",
+      "corner": "tt",
+      "temperature_C": 125,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "tt__v1.71__t125"
+    },
+    {
+      "id": "final_startup_tt_125_1.8",
+      "kind": "startup",
+      "corner": "tt",
+      "temperature_C": 125,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "tt__v1.8__t125"
+    },
+    {
+      "id": "final_startup_tt_125_1.89",
+      "kind": "startup",
+      "corner": "tt",
+      "temperature_C": 125,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "tt__v1.89__t125"
+    },
+    {
+      "id": "final_startup_ff_-40_1.8",
+      "kind": "startup",
+      "corner": "ff",
+      "temperature_C": -40,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ff__v1.8__t-40"
+    },
+    {
+      "id": "final_startup_ff_-40_1.89",
+      "kind": "startup",
+      "corner": "ff",
+      "temperature_C": -40,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ff__v1.89__t-40"
+    },
+    {
+      "id": "final_startup_ff_27_1.71",
+      "kind": "startup",
+      "corner": "ff",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ff__v1.71__t27"
+    },
+    {
+      "id": "final_startup_ff_27_1.8",
+      "kind": "startup",
+      "corner": "ff",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ff__v1.8__t27"
+    },
+    {
+      "id": "final_startup_ff_27_1.89",
+      "kind": "startup",
+      "corner": "ff",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ff__v1.89__t27"
+    },
+    {
+      "id": "final_startup_ff_125_1.71",
+      "kind": "startup",
+      "corner": "ff",
+      "temperature_C": 125,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ff__v1.71__t125"
+    },
+    {
+      "id": "final_startup_ff_125_1.8",
+      "kind": "startup",
+      "corner": "ff",
+      "temperature_C": 125,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ff__v1.8__t125"
+    },
+    {
+      "id": "final_startup_ff_125_1.89",
+      "kind": "startup",
+      "corner": "ff",
+      "temperature_C": 125,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ff__v1.89__t125"
+    },
+    {
+      "id": "final_startup_ss_-40_1.8",
+      "kind": "startup",
+      "corner": "ss",
+      "temperature_C": -40,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ss__v1.8__t-40"
+    },
+    {
+      "id": "final_startup_ss_-40_1.89",
+      "kind": "startup",
+      "corner": "ss",
+      "temperature_C": -40,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ss__v1.89__t-40"
+    },
+    {
+      "id": "final_startup_ss_27_1.71",
+      "kind": "startup",
+      "corner": "ss",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ss__v1.71__t27"
+    },
+    {
+      "id": "final_startup_ss_27_1.8",
+      "kind": "startup",
+      "corner": "ss",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ss__v1.8__t27"
+    },
+    {
+      "id": "final_startup_ss_27_1.89",
+      "kind": "startup",
+      "corner": "ss",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ss__v1.89__t27"
+    },
+    {
+      "id": "final_startup_ss_125_1.71",
+      "kind": "startup",
+      "corner": "ss",
+      "temperature_C": 125,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ss__v1.71__t125"
+    },
+    {
+      "id": "final_startup_ss_125_1.8",
+      "kind": "startup",
+      "corner": "ss",
+      "temperature_C": 125,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ss__v1.8__t125"
+    },
+    {
+      "id": "final_startup_ss_125_1.89",
+      "kind": "startup",
+      "corner": "ss",
+      "temperature_C": 125,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ss__v1.89__t125"
+    },
+    {
+      "id": "final_startup_sf_-40_1.8",
+      "kind": "startup",
+      "corner": "sf",
+      "temperature_C": -40,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "sf__v1.8__t-40"
+    },
+    {
+      "id": "final_startup_sf_-40_1.89",
+      "kind": "startup",
+      "corner": "sf",
+      "temperature_C": -40,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "sf__v1.89__t-40"
+    },
+    {
+      "id": "final_startup_sf_27_1.71",
+      "kind": "startup",
+      "corner": "sf",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "sf__v1.71__t27"
+    },
+    {
+      "id": "final_startup_sf_27_1.8",
+      "kind": "startup",
+      "corner": "sf",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "sf__v1.8__t27"
+    },
+    {
+      "id": "final_startup_sf_27_1.89",
+      "kind": "startup",
+      "corner": "sf",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "sf__v1.89__t27"
+    },
+    {
+      "id": "final_startup_sf_125_1.71",
+      "kind": "startup",
+      "corner": "sf",
+      "temperature_C": 125,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "sf__v1.71__t125"
+    },
+    {
+      "id": "final_startup_sf_125_1.8",
+      "kind": "startup",
+      "corner": "sf",
+      "temperature_C": 125,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "sf__v1.8__t125"
+    },
+    {
+      "id": "final_startup_sf_125_1.89",
+      "kind": "startup",
+      "corner": "sf",
+      "temperature_C": 125,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "sf__v1.89__t125"
+    },
+    {
+      "id": "final_startup_fs_-40_1.8",
+      "kind": "startup",
+      "corner": "fs",
+      "temperature_C": -40,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "fs__v1.8__t-40"
+    },
+    {
+      "id": "final_startup_fs_-40_1.89",
+      "kind": "startup",
+      "corner": "fs",
+      "temperature_C": -40,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "fs__v1.89__t-40"
+    },
+    {
+      "id": "final_startup_fs_27_1.71",
+      "kind": "startup",
+      "corner": "fs",
+      "temperature_C": 27,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "fs__v1.71__t27"
+    },
+    {
+      "id": "final_startup_fs_27_1.8",
+      "kind": "startup",
+      "corner": "fs",
+      "temperature_C": 27,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "fs__v1.8__t27"
+    },
+    {
+      "id": "final_startup_fs_27_1.89",
+      "kind": "startup",
+      "corner": "fs",
+      "temperature_C": 27,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 27\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "fs__v1.89__t27"
+    },
+    {
+      "id": "final_startup_fs_125_1.71",
+      "kind": "startup",
+      "corner": "fs",
+      "temperature_C": 125,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "fs__v1.71__t125"
+    },
+    {
+      "id": "final_startup_fs_125_1.8",
+      "kind": "startup",
+      "corner": "fs",
+      "temperature_C": 125,
+      "VDD_V": 1.8,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.8\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.8 2m 1.8 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "fs__v1.8__t125"
+    },
+    {
+      "id": "final_startup_fs_125_1.89",
+      "kind": "startup",
+      "corner": "fs",
+      "temperature_C": 125,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "fs__v1.89__t125"
+    },
+    {
+      "id": "final_startup_ll_-40_1.71",
+      "kind": "startup",
+      "corner": "ll",
+      "temperature_C": -40,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ll\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ll__v1.71__t-40"
+    },
+    {
+      "id": "final_startup_ll_125_1.89",
+      "kind": "startup",
+      "corner": "ll",
+      "temperature_C": 125,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ll\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ll__v1.89__t125"
+    },
+    {
+      "id": "final_startup_hh_-40_1.71",
+      "kind": "startup",
+      "corner": "hh",
+      "temperature_C": -40,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" hh\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "hh__v1.71__t-40"
+    },
+    {
+      "id": "final_startup_hh_125_1.89",
+      "kind": "startup",
+      "corner": "hh",
+      "temperature_C": 125,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" hh\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "hh__v1.89__t125"
+    },
+    {
+      "id": "final_startup_hl_-40_1.71",
+      "kind": "startup",
+      "corner": "hl",
+      "temperature_C": -40,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" hl\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "hl__v1.71__t-40"
+    },
+    {
+      "id": "final_startup_hl_125_1.89",
+      "kind": "startup",
+      "corner": "hl",
+      "temperature_C": 125,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" hl\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "hl__v1.89__t125"
+    },
+    {
+      "id": "final_startup_lh_-40_1.71",
+      "kind": "startup",
+      "corner": "lh",
+      "temperature_C": -40,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" lh\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "lh__v1.71__t-40"
+    },
+    {
+      "id": "final_startup_lh_125_1.89",
+      "kind": "startup",
+      "corner": "lh",
+      "temperature_C": 125,
+      "VDD_V": 1.89,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" lh\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp 125\nVDD vdd 0 1.89\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.89 2m 1.89 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "lh__v1.89__t125"
+    },
+    {
+      "id": "cold_low_2ms_tt",
+      "kind": "startup",
+      "corner": "tt",
+      "temperature_C": -40,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" tt\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "tt__v1.71__t-40"
+    },
+    {
+      "id": "cold_low_2ms_ff",
+      "kind": "startup",
+      "corner": "ff",
+      "temperature_C": -40,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ff\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ff__v1.71__t-40"
+    },
+    {
+      "id": "cold_low_2ms_ss",
+      "kind": "startup",
+      "corner": "ss",
+      "temperature_C": -40,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" ss\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "ss__v1.71__t-40"
+    },
+    {
+      "id": "cold_low_2ms_sf",
+      "kind": "startup",
+      "corner": "sf",
+      "temperature_C": -40,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" sf\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "sf__v1.71__t-40"
+    },
+    {
+      "id": "cold_low_2ms_fs",
+      "kind": "startup",
+      "corner": "fs",
+      "temperature_C": -40,
+      "VDD_V": 1.71,
+      "deck": "* Diagnostic characterization\n.lib \"__MODEL_LIB__\" fs\n* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.\n* L comes from the extracted instance; no schematic length or resistance is substituted.\n.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1\nXR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}\n.ends sky130_fd_pr__res_high_po_0p35\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6\n.temp -40\nVDD vdd 0 1.71\nXDUT vdd 0 ref bandgap\nCLOAD ref 0 10p\nRLOAD ref 0 100Meg\n.control\nset num_threads=1\nalter @VDD[pwl] [ 0 0 10u 1.71 2m 1.71 ]\ntran 200n 2m UIC\nmeas tran ref_start FIND v(ref) AT=1u\nmeas tran ref_end FIND v(ref) AT=1m\nmeas tran ref_min_steady MIN v(ref) FROM=1m TO=2m\nmeas tran ref_max_steady MAX v(ref) FROM=1m TO=2m\nwrdata startup.dat v(ref)\nquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "ref_end": {
+          "min": 1.17,
+          "max": 1.23
+        },
+        "ref_min_steady": {
+          "min": 1.17
+        },
+        "ref_max_steady": {
+          "max": 1.23
+        }
+      },
+      "score_group": "fs__v1.71__t-40"
+    }
+  ],
+  "provenance": "Original accepted case decks and bounds; only PVT grouping and DUT/model substitution are added.",
+  "processor": "processor.py",
+  "initialization": "set ngbehavior=hsa\nset num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice",
+  "evaluation_case_ids": [
+    "final_startup_tt_27_1.8",
+    "refined_temp_tt_1.8"
+  ]
+}

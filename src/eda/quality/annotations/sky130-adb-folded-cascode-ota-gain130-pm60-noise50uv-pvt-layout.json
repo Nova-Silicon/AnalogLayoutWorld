@@ -1,0 +1,179 @@
+{
+  "task": "sky130-adb-folded-cascode-ota-gain130-pm60-noise50uv-pvt-layout",
+  "top": "folded_cascode_ota",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XINP",
+        "XINN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "input_degen",
+      "devices": [
+        "XRINP",
+        "XRINN"
+      ],
+      "kind": "pair",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "fold_sources",
+      "devices": [
+        "XFP",
+        "XFN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "p_cascodes",
+      "devices": [
+        "XFCP",
+        "XFCN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "nmos_mirror",
+      "devices": [
+        "XCD",
+        "XCO"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "pboost_pair",
+      "devices": [
+        "XPA",
+        "XPB"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 1
+    },
+    {
+      "name": "pboost_level_shift",
+      "devices": [
+        "XHS1F",
+        "XHR1F",
+        "XHS1I",
+        "XHR1I"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "nboost_pair",
+      "devices": [
+        "XNA",
+        "XNB"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 1
+    },
+    {
+      "name": "nboost_level_shift",
+      "devices": [
+        "XRNRD",
+        "XRN2D",
+        "XNRD",
+        "XN2D"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "pcb_mirror",
+      "devices": [
+        "XPCB",
+        "XPB2"
+      ],
+      "kind": "mirror",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XREF",
+        "XTAIL",
+        "XNBP",
+        "XNPC",
+        "XOBN"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "vout"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "p1",
+      "p2",
+      "mirror",
+      "nfirst",
+      "hs1",
+      "hr1",
+      "n2h",
+      "nrh",
+      "vbp",
+      "vpc",
+      "ncb",
+      "obias",
+      "iref"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "p1",
+      "p2",
+      "mirror",
+      "nfirst",
+      "nout"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [
+    "XLOAD",
+    "XOUTC",
+    "XOUT"
+  ],
+  "currents_a": {
+    "vdd": 0.00244,
+    "vss": 0.00244,
+    "XLOAD": 0.0012,
+    "XOUTC": 0.0012,
+    "XOUT": 0.0012
+  },
+  "currents_note": "前仿 TT/1.8 V/27 °C 功耗 4.40 mW / 1.8 V ≈ 2.44 mA，含测试台从 vdd 注入 iref 的 50 uA；输出级 XLOAD→XOUTC→XOUT 支路约 1.2 mA 为估算（总电流减去按镜像比估算的其余支路约 1.2 mA，与 XOBP:XLOAD 的 W/L 比推得的约 1.1 mA 一致）"
+}

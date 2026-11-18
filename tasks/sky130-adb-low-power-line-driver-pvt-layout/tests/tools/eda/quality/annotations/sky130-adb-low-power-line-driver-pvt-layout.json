@@ -1,0 +1,110 @@
+{
+  "task": "sky130-adb-low-power-line-driver-pvt-layout",
+  "top": "low_power_line_driver",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XM1",
+        "XM2"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "pmos_load_mirrors",
+      "devices": [
+        "XMP3",
+        "XMP4",
+        "XMP5",
+        "XMP6"
+      ],
+      "kind": "array",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "nmos_mirror",
+      "devices": [
+        "XMN7",
+        "XMN8"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 1.5
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XMB0",
+        "XMBT",
+        "XMB1",
+        "XMB2"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "pbias_mirror",
+      "devices": [
+        "XMPB0",
+        "XMPB1"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "vout",
+      "gp",
+      "gn"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "tail",
+      "iref",
+      "pbias",
+      "vbn",
+      "vbp"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "gp",
+      "gn",
+      "vout"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ],
+      [
+        "x3",
+        "x5"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [
+    "XMPO",
+    "XMNO"
+  ],
+  "currents_a": {
+    "vdd": 0.0008,
+    "vss": 0.0008,
+    "XMPO": 0.002,
+    "XMNO": 0.002
+  },
+  "currents_note": "前仿 TT/1.8 V/27 C 静态功耗 281 uW（约 156 uA）；20 kHz、0.6 V 峰值正弦驱动 300 Ω 线路时电源峰值电流 2.19 mA（前仿），XMPO/XMNO 各在半个周期输出约 2 mA 峰值；vdd/vss 平均电流按静态 0.16 mA 加半波平均 2 mA/π≈0.64 mA 估算为 0.8 mA；负载经 1 uF 耦合电容在测试台外回地"
+}

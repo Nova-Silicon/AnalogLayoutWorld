@@ -1,0 +1,41 @@
+* Hidden LDO load transient.
+.lib "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice" ss
+.include "dut.spice"
+.options filetype=ascii method=gear reltol=2e-4 abstol=1e-12 vntol=1e-6
+.temp 125
+VSS vss 0 0
+VIN vin vss 1.62
+VREF vref vss 0.8
+IBIAS vin ibias 50u
+XLDO vin vout vss vref ibias fb_div gate_drive gate ldo_ota5
+RFBTOP vout fb_div 300k
+RFBBOT fb_div vss 600k
+VLOOP gate_drive gate 0
+RESR vout vcap 0.02
+COUT vcap vss 8e-07
+* Load: ILOAD is the ideal reference current (its value/waveform is the
+* commanded load) of a test-bench 1:1 NMOS cascode current mirror.  The two
+* stacked diode-connected reference devices set both gate voltages; the matched
+* output stack draws the load from vout through the 0 V meter VLMEAS.  Unlike
+* an ideal current source, a transistor mirror cannot pull vout below ground,
+* which removes the unphysical negative-output DC solution.
+* (placed after the DUT so the DUT devices draw the same mismatch samples
+* per seed as before the test-bench mirror was added)
+ILOAD vss tbld_ref PULSE(1m 25m 20u 200n 200n 20u 100u)
+XTBLD_REFC tbld_ref tbld_ref tbld_g vss sky130_fd_pr__nfet_01v8_lvt l=1 w=50 nf=1 m=120 mult=120
+XTBLD_REF tbld_g tbld_g vss vss sky130_fd_pr__nfet_01v8_lvt l=1 w=50 nf=1 m=120 mult=120
+VLMEAS vout tbld_d 0
+XTBLD_OUTC tbld_d tbld_ref tbld_m vss sky130_fd_pr__nfet_01v8_lvt l=1 w=50 nf=1 m=120 mult=120
+XTBLD_OUT tbld_m tbld_g vss vss sky130_fd_pr__nfet_01v8_lvt l=1 w=50 nf=1 m=120 mult=120
+.save v(vout)
+.tran 50n 70u
+.control
+* Operating points from a transient power-up (ngspice 46 optran): skip the
+* Newton, gmin-stepping and source-stepping DC attempts and integrate from
+* all-zero node voltages with every source at its t=0 value; the final state
+* is the operating point.  Gear integration (method=gear in .options) keeps the
+* DC branch currents read from that state free of trapezoidal ringing.
+optran 0 0 0 1u 1m 0
+run
+.endc
+.end

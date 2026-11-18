@@ -1,0 +1,22 @@
+* SKY130 porting DRAFT: topology and W/L/m preserved; NOT qualified.
+* MOS W/L below are micrometres; use .option scale=1e-6 in testbench.
+* m is explicit parallel multiplicity; nf=1. No sizing optimization.
+.subckt comparator clk gnd vdd net0 net1 net069 intern interp crossp crossn outm outp
+XMM7 net069 clk gnd gnd sky130_fd_pr__nfet_01v8 w=1.7 l=0.28 m=8 nf=1
+XMM5 intern net0 net069 gnd sky130_fd_pr__nfet_01v8 w=1 l=0.28 m=8 nf=1
+XMM6 interp net1 net069 gnd sky130_fd_pr__nfet_01v8 w=1 l=0.28 m=8 nf=1
+XMM18 intern clk vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.28 m=2 nf=1
+XMM2 interp clk vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.28 m=2 nf=1
+XMM4 crossn crossp intern gnd sky130_fd_pr__nfet_01v8 w=1.15 l=0.28 m=4 nf=1
+XMM3 crossp crossn interp gnd sky130_fd_pr__nfet_01v8 w=1.15 l=0.28 m=4 nf=1
+XMM14 crossn crossp vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.28 m=8 nf=1
+XMM13 crossp crossn vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.28 m=8 nf=1
+XMM1 crossn clk vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.28 m=2 nf=1
+XMM12 crossp clk vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.28 m=2 nf=1
+XMM16 outm crossp gnd gnd sky130_fd_pr__nfet_01v8 w=1 l=0.28 m=4 nf=1
+XMM8 outm crossp vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.28 m=4 nf=1
+XMM17 outp crossn gnd gnd sky130_fd_pr__nfet_01v8 w=1 l=0.28 m=4 nf=1
+XMM15 outp crossn vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.28 m=4 nf=1
+XMM0 gnd intern gnd gnd sky130_fd_pr__nfet_01v8 w=1.4 l=1 m=2 nf=1
+XMM22 gnd interp gnd gnd sky130_fd_pr__nfet_01v8 w=1.4 l=1 m=2 nf=1
+.ends comparator

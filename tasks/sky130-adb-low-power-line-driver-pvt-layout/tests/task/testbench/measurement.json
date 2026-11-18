@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "suite": "adapter.py",
+  "initialization": "set num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice",
+  "evaluation_case_ids": [
+    "loopgain__tt__1.8__27",
+    "swing__tt__1.8__27",
+    "thd__tt__1.8__27"
+  ]
+}

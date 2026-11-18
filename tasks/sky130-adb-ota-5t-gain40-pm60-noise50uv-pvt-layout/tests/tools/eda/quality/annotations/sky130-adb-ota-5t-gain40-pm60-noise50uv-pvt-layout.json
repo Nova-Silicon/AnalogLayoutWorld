@@ -1,0 +1,69 @@
+{
+  "task": "sky130-adb-ota-5t-gain40-pm60-noise50uv-pvt-layout",
+  "top": "ota_5t",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XM1",
+        "XM2"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "load_mirror",
+      "devices": [
+        "XM3",
+        "XM4"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "tail_mirror",
+      "devices": [
+        "XM5",
+        "XM6"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "vout"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "tail",
+      "ibias"
+    ],
+    "critical": [
+      "vinp",
+      "vinn"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.00021,
+    "vss": 0.00021
+  },
+  "currents_note": "前仿 TT 功耗 0.377 mW / 1.8 V"
+}

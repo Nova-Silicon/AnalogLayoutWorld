@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "suite": "adapter.py",
+  "initialization": "set num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice",
+  "evaluation_case_ids": [
+    "1g__tt__1.8__27",
+    "power__tt__1.8__27"
+  ]
+}

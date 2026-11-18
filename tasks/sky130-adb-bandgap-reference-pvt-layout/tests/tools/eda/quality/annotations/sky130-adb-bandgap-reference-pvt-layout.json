@@ -1,0 +1,101 @@
+{
+  "task": "sky130-adb-bandgap-reference-pvt-layout",
+  "top": "bandgap_reference",
+  "matched_groups": [
+    {
+      "name": "pmos_mirror",
+      "devices": [
+        "XM0",
+        "XM1",
+        "XM2"
+      ],
+      "kind": "ratio",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "bjt_1to8",
+      "devices": [
+        "XQ0",
+        "XQ1A"
+      ],
+      "kind": "ratio",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "r_ratio",
+      "devices": [
+        "XRPTAT",
+        "XRREF"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "ea_input_pair",
+      "devices": [
+        "XINA",
+        "XINB"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "ea_load_mirror",
+      "devices": [
+        "XLOADD",
+        "XLOADM"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "tail_mirror",
+      "devices": [
+        "XNBIAS",
+        "XTAIL"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [],
+    "victims": [
+      "va",
+      "vb",
+      "pctrl",
+      "vref",
+      "nbias"
+    ],
+    "critical": [
+      "va",
+      "vb",
+      "pctrl",
+      "vref"
+    ],
+    "diff_pairs": [
+      [
+        "va",
+        "vb"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 3.84e-05,
+    "vss": 3.84e-05
+  },
+  "currents_note": "前仿 TT/1.8 V/27 C 功耗 69.1 uW，即 vdd 约 38.4 uA（1.62/1.98 V 时 60.1/78.5 uW）；无外部直流负载，电流全部经器件回到 vss"
+}

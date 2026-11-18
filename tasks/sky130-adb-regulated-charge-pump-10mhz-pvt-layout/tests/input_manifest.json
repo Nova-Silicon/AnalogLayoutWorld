@@ -1,0 +1,23 @@
+{
+  "basis": "Trusted private inputs; public_files records the native fixture subset separately.",
+  "files": {
+    "circuit.spice": "920e8bdba614debc664a454cc7e4c110fd1641d7a72ea5fe9621d6863a4add0b",
+    "constraints.json": "3688640db29f97dcd3d2cf6ed7be2c823da9ec42839b501f7b8aac0bd5b9f1f6",
+    "identity.json": "b5fdf67ef008a25192f2d1b894da1c23241cde848f46d4f2d57feb13d9f26304",
+    "testbench/measurement.json": "6da79b6b797252336fa280d1ed85a09bab40a5f52ae04234ac1cc17fdc9a9833",
+    "testbench/processor.py": "c7eb49cfb2a035057b2a7250b05edab5215016e4f0ebc77a8450d62aa876fec1"
+  },
+  "public_files": {
+    "circuit.spice": "920e8bdba614debc664a454cc7e4c110fd1641d7a72ea5fe9621d6863a4add0b",
+    "lvs_reference.spice": "816dcbbf90f3bc4ac65b11447e336025585b611138db1cc23a583c40c79b6eb2",
+    "testbench/README.md": "040ec1a41348741e0a4d69cd3c947badce71452de23cb4e9aff87ed90be07317",
+    "testbench/README.zh-CN.md": "c5857e5fed41333732f0235474c7425baedf57f158364d670de53593eaa4ebe4",
+    "testbench/tb_charge_pump_regulated_ff_hot.spi": "2248f7704a361d02a8bfad0abb69c7c5c996a017b5c8f5168b88fedb54a1b4b9"
+  },
+  "public_projection": {
+    "constraints": "physical fields only, if publicly present",
+    "physical_inputs": "byte-identical DUT and optional LVS reference",
+    "testbench": "published native fixtures and documentation; private graders excluded"
+  },
+  "schema_version": 2
+}

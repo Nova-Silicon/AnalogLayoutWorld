@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "top": "test_fct",
+  "ports": [
+    "cinn",
+    "cinp",
+    "coutn",
+    "coutp",
+    "ib",
+    "sam",
+    "transfer",
+    "vcm",
+    "vddana",
+    "vdddig",
+    "vssana",
+    "vssdig"
+  ],
+  "substrate": "vssana",
+  "lvs_backend": "magic_netgen"
+}

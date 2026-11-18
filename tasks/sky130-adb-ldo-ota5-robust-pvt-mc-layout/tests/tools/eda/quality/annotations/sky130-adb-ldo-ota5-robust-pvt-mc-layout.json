@@ -1,0 +1,76 @@
+{
+  "task": "sky130-adb-ldo-ota5-robust-pvt-mc-layout",
+  "top": "ldo_ota5",
+  "matched_groups": [
+    {
+      "name": "ea_input_pair",
+      "devices": [
+        "XINP",
+        "XINN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "ea_load_mirror",
+      "devices": [
+        "XLOAD",
+        "XLOUT"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "bias_mirror",
+      "devices": [
+        "XBIAS",
+        "XTAIL"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "gate",
+      "gate_drive"
+    ],
+    "victims": [
+      "fb",
+      "vref",
+      "nleft",
+      "tail",
+      "ibias"
+    ],
+    "critical": [
+      "fb",
+      "vref",
+      "gate_drive",
+      "gate"
+    ],
+    "diff_pairs": [],
+    "power": [
+      "vin",
+      "vout"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [
+    "XPASS"
+  ],
+  "currents_a": {
+    "vin": 0.0301,
+    "vout": 0.03,
+    "XPASS": 0.03,
+    "vss": 0.00014
+  },
+  "currents_note": "规格最大负载 30 mA 经功率管 XPASS 从 vin 流到 vout，负载在测试台外回地；前仿 TT/1.8 V/27 C 静态电流 138 uA，其中 50 uA 是测试台从 vin 注入 ibias 的偏置（不经 vin 脚，经 XBIAS 回 vss），扣除外部分压 1.3 uA 后约 87 uA 为 OTA 尾电流（vin 经负载、输入对、XTAIL 回 vss，按静态电流推算），故 vin≈30.09 mA、vss≈0.14 mA。supply_v 给出非 1.8 V 电源轨的标称电压，供 IR 压降百分比换算",
+  "supply_v": {
+    "vout": 1.2
+  }
+}

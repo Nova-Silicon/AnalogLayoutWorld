@@ -1,0 +1,64 @@
+{
+  "task": "sky130-adb-beta-multiplier-reference-pvt-mc-layout",
+  "top": "beta_multiplier_reference",
+  "matched_groups": [
+    {
+      "name": "nmos_ratio_core",
+      "devices": [
+        "XM1",
+        "XM2"
+      ],
+      "kind": "ratio",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "pmos_mirror",
+      "devices": [
+        "XM3",
+        "XM4"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "output_mirror",
+      "devices": [
+        "XM1",
+        "XM5"
+      ],
+      "kind": "ratio",
+      "intent": "common_centroid",
+      "weight": 1.5
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "iout"
+    ],
+    "victims": [
+      "vref",
+      "na",
+      "nr"
+    ],
+    "critical": [
+      "vref",
+      "na",
+      "nr"
+    ],
+    "diff_pairs": [],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 9.7e-06,
+    "vss": 4.58e-05
+  },
+  "currents_note": "前仿 TT/1.8 V/27 C：iout=36.1 uA（测试台把 iout 固定在 0.9 V，电流经 XM5 流到 vss）；总功耗 49.9 uW 扣除 iout 端 0.9 V×36.1 uA=32.5 uW 后 vdd 约 17.4 uW，即 vdd≈9.7 uA；vss≈vdd 电流+iout≈45.8 uA"
+}

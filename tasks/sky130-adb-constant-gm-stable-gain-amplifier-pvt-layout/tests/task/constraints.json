@@ -1,0 +1,15 @@
+{
+  "top": "cgm_amp",
+  "ports": [
+    "vss",
+    "iref",
+    "vdd",
+    "vinp",
+    "vinn",
+    "voutp",
+    "voutn"
+  ],
+  "substrate": "vss",
+  "schema_version": 1,
+  "lvs_reference_normalization": "supported_model_instance_names_only"
+}

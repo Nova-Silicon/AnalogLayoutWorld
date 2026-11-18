@@ -1,0 +1,12 @@
+{
+  "top": "bandgap_reference",
+  "ports": [
+    "vss",
+    "vdd",
+    "vref"
+  ],
+  "substrate": "vss",
+  "schema_version": 1,
+  "lvs_reference_normalization": "supported_model_instance_names_only",
+  "lvs_mim_geometry_view": "mim_geometry_literal_um"
+}

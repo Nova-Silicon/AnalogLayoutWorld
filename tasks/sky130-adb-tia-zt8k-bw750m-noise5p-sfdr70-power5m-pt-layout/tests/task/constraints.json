@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "top": "tia",
+  "ports": [
+    "IREF",
+    "IN",
+    "VCM",
+    "VDD",
+    "VOUT",
+    "VSS"
+  ],
+  "substrate": "VSS",
+  "lvs_reference_normalization": "supported_model_instance_names_only"
+}

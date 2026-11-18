@@ -1,0 +1,11 @@
+{
+  "top": "schmitt_trigger",
+  "ports": [
+    "dvdd",
+    "in",
+    "out",
+    "dvss"
+  ],
+  "substrate": "dvss",
+  "schema_version": 1
+}

@@ -1,0 +1,83 @@
+{
+  "task": "sky130-local-two-stage-ota-layout",
+  "top": "two_stage_ota",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XMP1",
+        "XMP2"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "load_mirror",
+      "devices": [
+        "XMN3",
+        "XMN4"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "pbias_mirror",
+      "devices": [
+        "XMPBIAS",
+        "XMPTAIL"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XMNBIAS",
+        "XMNSINKP"
+      ],
+      "kind": "mirror",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "vout"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "vx_l",
+      "vx",
+      "vbias_p",
+      "ibias"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "vx_l",
+      "vx"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.000229,
+    "vss": 0.000229
+  },
+  "currents_note": "前仿 TT/1.8 V/27 °C 功耗 0.413 mW / 1.8 V ≈ 0.229 mA，含测试台从 vdd 注入 ibias 的 5 uA"
+}

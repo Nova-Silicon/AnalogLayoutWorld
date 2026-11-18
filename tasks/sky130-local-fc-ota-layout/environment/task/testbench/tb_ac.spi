@@ -1,0 +1,26 @@
+* Diagnostic characterization
+.lib "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice" tt
+.include "dut.spice"
+.option scale=1e-6
+.temp 27
+VDD vdd 0 1.8
+IREF vdd ibias 1e-05
+VIN stim 0 DC 0.9 AC 1
+LFB out fb 1G
+CFB fb 0 1
+XDUT stim fb out ibias vdd 0 folded_cascode_ota
+CLOAD out 0 2e-12
+.control
+set num_threads=1
+op
+print v(out) i(vdd)
+ac dec 60 1 1G
+let gain_db=vdb(out)
+let phase_deg=180/PI*cph(v(out))
+meas ac gain_dc FIND gain_db AT=1
+meas ac ugb WHEN gain_db=0 FALL=1
+meas ac phase_ugb FIND phase_deg WHEN gain_db=0 FALL=1
+quit
+.endc
+
+.end

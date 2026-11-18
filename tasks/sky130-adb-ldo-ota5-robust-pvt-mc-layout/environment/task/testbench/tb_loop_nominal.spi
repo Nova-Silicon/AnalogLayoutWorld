@@ -1,0 +1,60 @@
+* Hidden LDO differential return-ratio loop gain.
+* Middlebrook double injection at the gate_drive/gate loop break.
+* A series voltage source alone measures Tv = T*(1+Zs/Zl) + Zs/Zl, where Zs is
+* the OTA output impedance driving gate_drive and Zl is the pass-device gate
+* impedance. Tv equals T only when Zs << Zl. Near crossover the high-impedance
+* OTA output and the large PMOS gate capacitance violate that, so voltage
+* injection alone overstates phase margin and understates UGB.
+* Run 1: VLOOP ac=1, IINJ ac=0; Tv = -v(gate_drive)/v(gate)
+* Run 2: VLOOP ac=0, IINJ ac=1; Ti = -i(vloop)/(i(vloop)+1)
+*   IINJ drives 1 A into gate; i(vloop) flows from gate_drive through VLOOP
+*   into gate, so 1+i(vloop) is the current into the pass-device gate.
+* T = (Tv*Ti - 1)/(Tv + Ti + 2) is exact for any Zs/Zl.
+* The control block appends both AC plots, in this order, to analysis.raw.
+.lib "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice" tt
+.include "dut.spice"
+.options filetype=ascii reltol=2e-4 abstol=1e-12 vntol=1e-6 method=gear
+.temp 27
+VSS vss 0 0
+VIN vin vss 1.8
+VREF vref vss 0.8
+IBIAS vin ibias 50u
+XLDO vin vout vss vref ibias fb_div gate_drive gate ldo_ota5
+RFBTOP vout fb_div 300k
+RFBBOT fb_div vss 600k
+VLOOP gate_drive gate DC 0 AC 1
+IINJ 0 gate DC 0 AC 0
+RESR vout vcap 0.05
+COUT vcap vss 1e-06
+* Load: ILOAD is the ideal reference current (its value/waveform is the
+* commanded load) of a test-bench 1:1 NMOS cascode current mirror.  The two
+* stacked diode-connected reference devices set both gate voltages; the matched
+* output stack draws the load from vout through the 0 V meter VLMEAS.  Unlike
+* an ideal current source, a transistor mirror cannot pull vout below ground,
+* which removes the unphysical negative-output DC solution.
+* (placed after the DUT so the DUT devices draw the same mismatch samples
+* per seed as before the test-bench mirror was added)
+ILOAD vss tbld_ref 0.001
+XTBLD_REFC tbld_ref tbld_ref tbld_g vss sky130_fd_pr__nfet_01v8_lvt l=1 w=50 nf=1 m=120 mult=120
+XTBLD_REF tbld_g tbld_g vss vss sky130_fd_pr__nfet_01v8_lvt l=1 w=50 nf=1 m=120 mult=120
+VLMEAS vout tbld_d 0
+XTBLD_OUTC tbld_d tbld_ref tbld_m vss sky130_fd_pr__nfet_01v8_lvt l=1 w=50 nf=1 m=120 mult=120
+XTBLD_OUT tbld_m tbld_g vss vss sky130_fd_pr__nfet_01v8_lvt l=1 w=50 nf=1 m=120 mult=120
+.save v(gate_drive) v(gate) i(vloop)
+.control
+* Operating points from a transient power-up (ngspice 46 optran): skip the
+* Newton, gmin-stepping and source-stepping DC attempts and integrate from
+* all-zero node voltages with every source at its t=0 value; the final state
+* is the operating point.  Gear integration (method=gear in .options) keeps the
+* DC branch currents read from that state free of trapezoidal ringing.
+optran 0 0 0 1u 1m 0
+set appendwrite
+ac dec 50 1 100Meg
+write analysis.raw v(gate_drive) v(gate) i(vloop)
+alter VLOOP ac = 0
+alter IINJ ac = 1
+ac dec 50 1 100Meg
+write analysis.raw v(gate_drive) v(gate) i(vloop)
+quit
+.endc
+.end

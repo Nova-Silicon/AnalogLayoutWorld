@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "suite": "adapter.py",
+  "initialization": "set num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice",
+  "evaluation_case_ids": [
+    "cmrr__tt__1.8__27",
+    "op_ac_noise__tt__1.8__27",
+    "psrr_minus__tt__1.8__27",
+    "psrr_plus__tt__1.8__27"
+  ]
+}

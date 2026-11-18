@@ -1,0 +1,286 @@
+{
+  "protocol": "paper-v1",
+  "task_count": 40,
+  "tasks": [
+    {
+      "number": 1,
+      "task_id": "sky130-adb-ahuja-compensated-two-stage-load-range-pvt-layout",
+      "title": "10:1容性负载范围两级OTA版图",
+      "source": "adb",
+      "runtime_profile": "binned"
+    },
+    {
+      "number": 2,
+      "task_id": "sky130-adb-buf-ppsf-bs-gain1-sfdr90-layout",
+      "title": "差分推挽源随缓冲器版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 3,
+      "task_id": "sky130-adb-bandgap-reference-pvt-layout",
+      "title": "高阻输出一阶带隙基准核心版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 4,
+      "task_id": "sky130-adb-beta-multiplier-reference-pvt-mc-layout",
+      "title": "Beta-multiplier 电流基准版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 5,
+      "task_id": "sky130-adb-capless-ldo-1v0-20ma-pvt-layout",
+      "title": "1.0 V / 20 mA 无片外输出电容 LDO 版图",
+      "source": "adb",
+      "runtime_profile": "binned"
+    },
+    {
+      "number": 6,
+      "task_id": "sky130-adb-cml-divider-div2-range1gto10g-layout",
+      "title": "静态 CML 二分频器版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 7,
+      "task_id": "sky130-adb-complementary-folded-cascode-ab-opamp-pvt-layout",
+      "title": "互补轨到轨 Class-AB 折叠共源共栅运放版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 8,
+      "task_id": "sky130-adb-constant-gm-stable-gain-amplifier-pvt-layout",
+      "title": "跨 PVT 增益稳定差分放大器版图",
+      "source": "adb",
+      "runtime_profile": "binned"
+    },
+    {
+      "number": 9,
+      "task_id": "sky130-adb-current-starved-ring-vco-pvt-layout",
+      "title": "电流饥饿环形 VCO 版图",
+      "source": "adb",
+      "runtime_profile": "binned"
+    },
+    {
+      "number": 10,
+      "task_id": "sky130-adb-fct-residue-amplifier-900msps-layout",
+      "title": "900 MS/s 浮动电荷转移余量放大器版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 11,
+      "task_id": "sky130-adb-fd-sampling-feedback-ota-gain1-settling40ns-noise300uv-pvt-mc-layout",
+      "title": "增益1、40 ns建立的全差分采样反馈OTA版图",
+      "source": "adb",
+      "runtime_profile": "binned"
+    },
+    {
+      "number": 12,
+      "task_id": "sky130-adb-fd-sampling-feedback-ota-gain8-settling10ns-noise1mv-pvt-mc-layout",
+      "title": "增益8、10 ns建立的全差分采样反馈OTA版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 13,
+      "task_id": "sky130-adb-fd-two-stage-miller-opamp-gain60-pm60-noise50uv-pvt-layout",
+      "title": "SKY130 版图任务：fd-two-stage-miller-opamp-gain60-pm60-noise50uv-pvt",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 14,
+      "task_id": "sky130-adb-folded-cascode-ota-gain130-pm60-noise50uv-pvt-layout",
+      "title": "130 dB增益增强折叠共源共栅OTA版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 15,
+      "task_id": "sky130-adb-gmr-degen-amp-constant-gm-pvt-layout",
+      "title": "恒增益源退化GM-R差分放大器版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 16,
+      "task_id": "sky130-adb-gmr-degenerated-diff-amp-gain2-bw70m-power1p2mw-sdr60-layout",
+      "title": "GM-R 源极退化差分放大器版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 17,
+      "task_id": "sky130-adb-ldo-ota5-robust-pvt-mc-layout",
+      "title": "覆盖 PVT 与失配的 PMOS 功率管 LDO 版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 18,
+      "task_id": "sky130-adb-low-power-line-driver-pvt-layout",
+      "title": "低功耗线驱动器版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 19,
+      "task_id": "sky130-adb-low-power-oscillator-2mhz-pvt-layout",
+      "title": "2 MHz 低功耗振荡器版图",
+      "source": "adb",
+      "runtime_profile": "binned"
+    },
+    {
+      "number": 20,
+      "task_id": "sky130-adb-nmos-pass-ldo-0p4v-pvt-mc-layout",
+      "title": "0.4 V NMOS 功率管 LDO 版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 21,
+      "task_id": "sky130-adb-ota-5t-gain40-pm60-noise50uv-pvt-layout",
+      "title": "电流偏置五管 OTA 版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 22,
+      "task_id": "sky130-adb-pll-charge-pump-pvt-layout",
+      "title": "50 µA 匹配 UP/DN 电流的 PLL 电荷泵版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 23,
+      "task_id": "sky130-adb-programmable-icc-iptat-current-mirror-pvt-layout",
+      "title": "可编程 ICC/IPTAT NMOS 电流镜版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 24,
+      "task_id": "sky130-adb-regulated-charge-pump-10mhz-pvt-layout",
+      "title": "10 MHz 稳压电荷泵版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 25,
+      "task_id": "sky130-adb-telescopic-cascode-ota-pvt-fix-layout",
+      "title": "套筒式共源共栅全差分 OTA 版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 26,
+      "task_id": "sky130-adb-three-stage-nested-miller-ota-pvt-layout",
+      "title": "驱动 200 pF 的三级嵌套米勒补偿放大器版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 27,
+      "task_id": "sky130-adb-tia-zt8k-bw750m-noise5p-sfdr70-power5m-pt-layout",
+      "title": "SKY130 版图任务：tia-zt8k-bw750m-noise5p-sfdr70-power5m-pt",
+      "source": "adb",
+      "runtime_profile": "binned"
+    },
+    {
+      "number": 28,
+      "task_id": "sky130-adb-transistor-divide-by-2-layout",
+      "title": "1 GHz 二分频触发器版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 29,
+      "task_id": "sky130-adb-two-stage-miller-opamp-gain60-ugb200-pm60-noise50uv-pvt-layout",
+      "title": "60 dB、200 MHz 两级米勒运放版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 30,
+      "task_id": "sky130-adb-two-stage-miller-opamp-gain70-ugb20-pm60-noise50uv-pvt-layout",
+      "title": "70 dB、20 MHz 电流偏置两级米勒运放版图",
+      "source": "adb",
+      "runtime_profile": "binned"
+    },
+    {
+      "number": 31,
+      "task_id": "sky130-adb-unregulated-charge-pump-10mhz-pvt-layout",
+      "title": "非稳压电荷泵版图",
+      "source": "adb",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 32,
+      "task_id": "sky130-internet-ajc-rc-osc-layout",
+      "title": "可使能 RC 振荡器版图",
+      "source": "internet",
+      "runtime_profile": "binned"
+    },
+    {
+      "number": 33,
+      "task_id": "sky130-internet-ajc-schmitt-layout",
+      "title": "八管施密特触发器版图",
+      "source": "internet",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 34,
+      "task_id": "sky130-loadbench-simple-53-bulk-tied-layout",
+      "title": "15 管 NMOS 输入折叠共源共栅运放版图",
+      "source": "LOADBench / Zenodo 21759759",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 35,
+      "task_id": "sky130-loadbench-sym3-layout",
+      "title": "15 管对称电流分支运放版图",
+      "source": "LOADBench / Zenodo 21759759",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 36,
+      "task_id": "sky130-loadbench-two-stage-47-9-bulk-tied-layout",
+      "title": "23 管两级折叠输入补偿运放版图",
+      "source": "LOADBench / Zenodo 21759759",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 37,
+      "task_id": "sky130-local-bandgap-layout",
+      "title": "绘制 1.2 V 带隙基准版图",
+      "source": "local",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 38,
+      "task_id": "sky130-local-comparator-layout",
+      "title": "动态锁存比较器版图",
+      "source": "local",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 39,
+      "task_id": "sky130-local-fc-ota-layout",
+      "title": "折叠级联 OTA版图",
+      "source": "local",
+      "runtime_profile": "continuous"
+    },
+    {
+      "number": 40,
+      "task_id": "sky130-local-two-stage-ota-layout",
+      "title": "两级米勒补偿 OTA版图",
+      "source": "local",
+      "runtime_profile": "continuous"
+    }
+  ]
+}

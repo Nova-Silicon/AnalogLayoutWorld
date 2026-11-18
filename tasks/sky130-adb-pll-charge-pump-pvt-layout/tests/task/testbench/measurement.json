@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "suite": "adapter.py",
+  "initialization": "set num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice",
+  "evaluation_case_ids": [
+    "dc__tt__1.8__27",
+    "pulse__tt__1.8__27"
+  ],
+  "qualification_case_ids": [
+    "mm__seed31001",
+    "mm__seed31002",
+    "mm__seed31003",
+    "mm__seed31004",
+    "mm__seed31005",
+    "mm__seed31006",
+    "mm__seed31007",
+    "mm__seed31008",
+    "mm__seed31009",
+    "mm__seed31010",
+    "mm__seed31011",
+    "mm__seed31012",
+    "mm__seed31013",
+    "mm__seed31014",
+    "mm__seed31015",
+    "mm__seed31016",
+    "mm__seed31017",
+    "mm__seed31018",
+    "mm__seed31019",
+    "mm__seed31020"
+  ],
+  "qualification_note": "Mismatch/Monte Carlo analyses run only in reference presimulation as circuit qualification (complete fixed seed set, original statistical or per-sample limits). They are not part of post-layout scoring, because fixed seeds do not map to the same samples in an extracted netlist."
+}

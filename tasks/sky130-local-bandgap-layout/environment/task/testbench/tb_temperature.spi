@@ -1,0 +1,27 @@
+* Diagnostic characterization
+.lib "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice" tt
+* Bind native extracted 0.35um high-poly geometry to the frozen continuous model.
+* L comes from the extracted instance; no schematic length or resistance is substituted.
+.subckt sky130_fd_pr__res_high_po_0p35 p n b l=1 mult=1
+XR p n b sky130_fd_pr__res_high_po w=0.35 l={l} mult={mult}
+.ends sky130_fd_pr__res_high_po_0p35
+.include "dut.spice"
+.option scale=1e-6
+.temp 27
+VDD vdd 0 1.8
+XDUT vdd 0 ref bandgap
+CLOAD ref 0 10p
+RLOAD ref 0 100Meg
+.control
+set num_threads=1
+op
+print v(ref) i(vdd)
+dc TEMP -40 125 5
+meas dc ref_min MIN v(ref)
+meas dc ref_max MAX v(ref)
+meas dc ref_25 FIND v(ref) AT=25
+wrdata temp_curve.dat v(ref) i(vdd)
+quit
+.endc
+
+.end

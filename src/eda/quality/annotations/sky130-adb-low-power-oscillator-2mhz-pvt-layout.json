@@ -1,0 +1,76 @@
+{
+  "task": "sky130-adb-low-power-oscillator-2mhz-pvt-layout",
+  "top": "osc_2m",
+  "matched_groups": [
+    {
+      "name": "pmos_starve_mirror",
+      "devices": [
+        "XBPREF",
+        "XPS1",
+        "XPS2",
+        "XPS3"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "nmos_starve_mirror",
+      "devices": [
+        "XBNREF",
+        "XBNBP",
+        "XNS1",
+        "XNS2",
+        "XNS3"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "timing_caps",
+      "devices": [
+        "XC1",
+        "XC2",
+        "XC3"
+      ],
+      "kind": "array",
+      "intent": "common_centroid",
+      "weight": 1.5
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "N1",
+      "N2",
+      "N3",
+      "CLKO",
+      "SP",
+      "SN"
+    ],
+    "victims": [
+      "IBN2U",
+      "VBP"
+    ],
+    "critical": [
+      "N1",
+      "N2",
+      "N3",
+      "CLKO"
+    ],
+    "diff_pairs": [],
+    "power": [
+      "AVDD"
+    ],
+    "ground": [
+      "AVSS"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "AVDD": 1.05e-05,
+    "AVSS": 1.05e-05
+  },
+  "currents_note": "前仿 TT 1.8 V/27 C 稳态平均电源电流 10.5 uA（含 2 uA 偏置输入与 1 pF 负载充放电，即 19.0 uW）；本机 ngspice 测得峰值约 34 uA（估算），不设功率器件",
+  "name_note": "三级延迟由限流镜像与定时电容决定，二者已列组；反相器开关管 XPU*/XPD* 不单列（理由同限流环振：小管被大器件隔开时相邻度评分会误判）。XSTART 是有意的不对称启动管，不参与匹配"
+}

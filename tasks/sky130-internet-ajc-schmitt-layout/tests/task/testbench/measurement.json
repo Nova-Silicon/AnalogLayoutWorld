@@ -1,0 +1,488 @@
+{
+  "schema_version": 1,
+  "source_record": "configs/paper-v1/sources.json (task_id: sky130-internet-ajc-schmitt-layout)",
+  "processor": "processor.py",
+  "source_geometry_scale": 1e-06,
+  "extracted_geometry_scale": 1e-06,
+  "cases": [
+    {
+      "id": "tt_1.8V_-40C",
+      "corner": "tt",
+      "temperature_C": -40,
+      "supply_V": 1.8,
+      "measurement_kind": "schmitt_trigger",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" tt\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp -40\nVDD vdd 0 1.8\nVIN in 0 PWL(0 0 1u 0 11u 1.8 12u 1.8 22u 0 23u 0 33u 1.8 34u 1.8 44u 0 45u 0)\nXDUT vdd in out 0 schmitt_trigger\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(in) v(out) i(VDD)\ntran 10n 45u 0 10n\nwrdata wave.tsv v(in) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "vth_rise_v__0": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_rise_v__1": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_fall_v__0": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "vth_fall_v__1": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "hysteresis_v__0": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "hysteresis_v__1": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "high_level_min_v": {
+          "min": 1.62,
+          "unit": "V"
+        },
+        "low_level_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        },
+        "average_power_uw": {
+          "max": 50,
+          "unit": "uW"
+        }
+      }
+    },
+    {
+      "id": "tt_1.8V_27C",
+      "corner": "tt",
+      "temperature_C": 27,
+      "supply_V": 1.8,
+      "measurement_kind": "schmitt_trigger",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" tt\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 27\nVDD vdd 0 1.8\nVIN in 0 PWL(0 0 1u 0 11u 1.8 12u 1.8 22u 0 23u 0 33u 1.8 34u 1.8 44u 0 45u 0)\nXDUT vdd in out 0 schmitt_trigger\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(in) v(out) i(VDD)\ntran 10n 45u 0 10n\nwrdata wave.tsv v(in) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "vth_rise_v__0": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_rise_v__1": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_fall_v__0": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "vth_fall_v__1": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "hysteresis_v__0": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "hysteresis_v__1": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "high_level_min_v": {
+          "min": 1.62,
+          "unit": "V"
+        },
+        "low_level_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        },
+        "average_power_uw": {
+          "max": 50,
+          "unit": "uW"
+        }
+      }
+    },
+    {
+      "id": "tt_1.8V_125C",
+      "corner": "tt",
+      "temperature_C": 125,
+      "supply_V": 1.8,
+      "measurement_kind": "schmitt_trigger",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" tt\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 125\nVDD vdd 0 1.8\nVIN in 0 PWL(0 0 1u 0 11u 1.8 12u 1.8 22u 0 23u 0 33u 1.8 34u 1.8 44u 0 45u 0)\nXDUT vdd in out 0 schmitt_trigger\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(in) v(out) i(VDD)\ntran 10n 45u 0 10n\nwrdata wave.tsv v(in) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "vth_rise_v__0": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_rise_v__1": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_fall_v__0": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "vth_fall_v__1": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "hysteresis_v__0": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "hysteresis_v__1": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "high_level_min_v": {
+          "min": 1.62,
+          "unit": "V"
+        },
+        "low_level_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        },
+        "average_power_uw": {
+          "max": 50,
+          "unit": "uW"
+        }
+      }
+    },
+    {
+      "id": "ss_1.8V_-40C",
+      "corner": "ss",
+      "temperature_C": -40,
+      "supply_V": 1.8,
+      "measurement_kind": "schmitt_trigger",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ss\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp -40\nVDD vdd 0 1.8\nVIN in 0 PWL(0 0 1u 0 11u 1.8 12u 1.8 22u 0 23u 0 33u 1.8 34u 1.8 44u 0 45u 0)\nXDUT vdd in out 0 schmitt_trigger\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(in) v(out) i(VDD)\ntran 10n 45u 0 10n\nwrdata wave.tsv v(in) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "vth_rise_v__0": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_rise_v__1": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_fall_v__0": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "vth_fall_v__1": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "hysteresis_v__0": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "hysteresis_v__1": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "high_level_min_v": {
+          "min": 1.62,
+          "unit": "V"
+        },
+        "low_level_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        },
+        "average_power_uw": {
+          "max": 50,
+          "unit": "uW"
+        }
+      }
+    },
+    {
+      "id": "ss_1.8V_27C",
+      "corner": "ss",
+      "temperature_C": 27,
+      "supply_V": 1.8,
+      "measurement_kind": "schmitt_trigger",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ss\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 27\nVDD vdd 0 1.8\nVIN in 0 PWL(0 0 1u 0 11u 1.8 12u 1.8 22u 0 23u 0 33u 1.8 34u 1.8 44u 0 45u 0)\nXDUT vdd in out 0 schmitt_trigger\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(in) v(out) i(VDD)\ntran 10n 45u 0 10n\nwrdata wave.tsv v(in) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "vth_rise_v__0": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_rise_v__1": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_fall_v__0": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "vth_fall_v__1": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "hysteresis_v__0": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "hysteresis_v__1": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "high_level_min_v": {
+          "min": 1.62,
+          "unit": "V"
+        },
+        "low_level_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        },
+        "average_power_uw": {
+          "max": 50,
+          "unit": "uW"
+        }
+      }
+    },
+    {
+      "id": "ss_1.8V_125C",
+      "corner": "ss",
+      "temperature_C": 125,
+      "supply_V": 1.8,
+      "measurement_kind": "schmitt_trigger",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ss\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 125\nVDD vdd 0 1.8\nVIN in 0 PWL(0 0 1u 0 11u 1.8 12u 1.8 22u 0 23u 0 33u 1.8 34u 1.8 44u 0 45u 0)\nXDUT vdd in out 0 schmitt_trigger\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(in) v(out) i(VDD)\ntran 10n 45u 0 10n\nwrdata wave.tsv v(in) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "vth_rise_v__0": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_rise_v__1": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_fall_v__0": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "vth_fall_v__1": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "hysteresis_v__0": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "hysteresis_v__1": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "high_level_min_v": {
+          "min": 1.62,
+          "unit": "V"
+        },
+        "low_level_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        },
+        "average_power_uw": {
+          "max": 50,
+          "unit": "uW"
+        }
+      }
+    },
+    {
+      "id": "ff_1.8V_-40C",
+      "corner": "ff",
+      "temperature_C": -40,
+      "supply_V": 1.8,
+      "measurement_kind": "schmitt_trigger",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ff\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp -40\nVDD vdd 0 1.8\nVIN in 0 PWL(0 0 1u 0 11u 1.8 12u 1.8 22u 0 23u 0 33u 1.8 34u 1.8 44u 0 45u 0)\nXDUT vdd in out 0 schmitt_trigger\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(in) v(out) i(VDD)\ntran 10n 45u 0 10n\nwrdata wave.tsv v(in) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "vth_rise_v__0": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_rise_v__1": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_fall_v__0": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "vth_fall_v__1": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "hysteresis_v__0": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "hysteresis_v__1": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "high_level_min_v": {
+          "min": 1.62,
+          "unit": "V"
+        },
+        "low_level_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        },
+        "average_power_uw": {
+          "max": 50,
+          "unit": "uW"
+        }
+      }
+    },
+    {
+      "id": "ff_1.8V_27C",
+      "corner": "ff",
+      "temperature_C": 27,
+      "supply_V": 1.8,
+      "measurement_kind": "schmitt_trigger",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ff\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 27\nVDD vdd 0 1.8\nVIN in 0 PWL(0 0 1u 0 11u 1.8 12u 1.8 22u 0 23u 0 33u 1.8 34u 1.8 44u 0 45u 0)\nXDUT vdd in out 0 schmitt_trigger\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(in) v(out) i(VDD)\ntran 10n 45u 0 10n\nwrdata wave.tsv v(in) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "vth_rise_v__0": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_rise_v__1": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_fall_v__0": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "vth_fall_v__1": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "hysteresis_v__0": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "hysteresis_v__1": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "high_level_min_v": {
+          "min": 1.62,
+          "unit": "V"
+        },
+        "low_level_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        },
+        "average_power_uw": {
+          "max": 50,
+          "unit": "uW"
+        }
+      }
+    },
+    {
+      "id": "ff_1.8V_125C",
+      "corner": "ff",
+      "temperature_C": 125,
+      "supply_V": 1.8,
+      "measurement_kind": "schmitt_trigger",
+      "deck": "* Accepted standalone POR-subblock measurement fixture.\n.lib \"__MODEL_LIB__\" ff\n\n.include \"__DUT_NETLIST__\"\n.option scale=1e-6 reltol=1e-4 abstol=1e-14\n.temp 125\nVDD vdd 0 1.8\nVIN in 0 PWL(0 0 1u 0 11u 1.8 12u 1.8 22u 0 23u 0 33u 1.8 34u 1.8 44u 0 45u 0)\nXDUT vdd in out 0 schmitt_trigger\nCLOAD out 0 50f\n\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset numdgt=12\nsave v(in) v(out) i(VDD)\ntran 10n 45u 0 10n\nwrdata wave.tsv v(in) v(out) i(VDD)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "vth_rise_v__0": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_rise_v__1": {
+          "min": 1.1,
+          "max": 1.35,
+          "unit": "V"
+        },
+        "vth_fall_v__0": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "vth_fall_v__1": {
+          "min": 0.02,
+          "max": 0.4,
+          "unit": "V"
+        },
+        "hysteresis_v__0": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "hysteresis_v__1": {
+          "min": 0.85,
+          "max": 1.2,
+          "unit": "V"
+        },
+        "high_level_min_v": {
+          "min": 1.62,
+          "unit": "V"
+        },
+        "low_level_max_v": {
+          "max": 0.18,
+          "unit": "V"
+        },
+        "average_power_uw": {
+          "max": 50,
+          "unit": "uW"
+        }
+      }
+    }
+  ],
+  "adaptation_notes": [
+    "Original accepted run_checks.py stimuli, voltage/load, time step, time windows and measurement formulas preserved.",
+    "The DUT is supplied by include.",
+    "Schmitt threshold/hysteresis bounds are checked independently for both ramp repetitions; no averaging.",
+    "Missing transitions/cycles/windows return missing measurements, not a fabricated number or infrastructure success."
+  ],
+  "initialization": "set ngbehavior=hsa\nset num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice",
+  "evaluation_case_ids": [
+    "tt_1.8V_27C"
+  ]
+}

@@ -1,0 +1,14 @@
+* Gain-split Sky130 TIA optimized for the 750 MHz P/T requirement.
+.subckt tia IREF IN VCM VDD VOUT VSS
+XMN1 N1 IN VSS VSS sky130_fd_pr__nfet_01v8_lvt l=0.18 w=24 nf=4 m=1
+XMP1 N1 IN VDD VDD sky130_fd_pr__pfet_01v8 l=0.18 w=48 nf=4 m=1
+XRF1 N1 IN VSS sky130_fd_pr__res_high_po_1p41 l=22.99 m=1
+XRB IN VCM VSS sky130_fd_pr__res_xhigh_po_0p35 l=174.90 m=1
+
+XMN2 VOUT NBUF VSS VSS sky130_fd_pr__nfet_01v8_lvt l=0.15 w=15 nf=4 m=1
+XMP2 VOUT NBUF VDD VDD sky130_fd_pr__pfet_01v8 l=0.15 w=30 nf=4 m=1
+XRIN2 N1 NBUF VSS sky130_fd_pr__res_high_po_1p41 l=22.78 m=1
+XRFB2 VOUT NBUF VSS sky130_fd_pr__res_high_po_1p41 l=56.26 m=1
+
+XMREF IREF IREF VSS VSS sky130_fd_pr__nfet_01v8_lvt l=0.5 w=4 nf=1 m=1
+.ends tia

@@ -1,0 +1,106 @@
+{
+  "task": "sky130-adb-three-stage-nested-miller-ota-pvt-layout",
+  "top": "three_stage_nmc_ota",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XI1",
+        "XI2"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "load_mirror",
+      "devices": [
+        "XM1A",
+        "XM1B"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "stage2_mirror",
+      "devices": [
+        "XPD2",
+        "XPM2"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "pbias_mirror",
+      "devices": [
+        "XPDM",
+        "XS2B"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "vbn_mirror",
+      "devices": [
+        "XVBN",
+        "XS2"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XREF",
+        "XTAIL",
+        "XBP1"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "vout"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "na",
+      "nb",
+      "pdm",
+      "vbn",
+      "iref"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "n1",
+      "nb",
+      "n2"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.000122,
+    "vss": 0.000122
+  },
+  "currents_note": "前仿 TT/1.8 V/27 °C 功耗 0.219 mW / 1.8 V ≈ 0.122 mA，含测试台从 vdd 注入 iref 的 5 uA；输出级 XL3 按 20:1 镜像估算约 0.1 mA，没有 ≥1 mA 的功率器件"
+}

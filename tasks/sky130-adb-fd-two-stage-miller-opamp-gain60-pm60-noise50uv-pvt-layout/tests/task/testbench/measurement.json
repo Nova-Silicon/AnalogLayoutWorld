@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "suite": "adapter.py",
+  "initialization": "set num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice",
+  "public_case_mapping": {
+    "tb_ac_tt.spi": "op_ac__tt__1.8__27",
+    "tb_ac_ss.spi": "op_ac__ss__1.62__125",
+    "tb_noise_ff.spi": "noise__ff__1.98__-40",
+    "tb_swing_tt.spi": "swing__tt__1.8__27",
+    "tb_settling_ss.spi": "settling__ss__1.62__125",
+    "tb_cm_recovery_ff.spi": "cm_recovery__ff__1.98__-40",
+    "tb_mismatch_tt.spi": "mc__tt__1.8__27__41000"
+  },
+  "evaluation_case_ids": [
+    "op_ac__tt__1.8__27",
+    "op_ac__ss__1.62__125",
+    "noise__ff__1.98__-40",
+    "swing__tt__1.8__27",
+    "settling__ss__1.62__125",
+    "cm_recovery__ff__1.98__-40"
+  ],
+  "qualification_case_ids": [
+    "mc__tt__1.8__27__41000",
+    "mc__tt__1.8__27__41001",
+    "mc__tt__1.8__27__41002",
+    "mc__tt__1.8__27__41003",
+    "mc__tt__1.8__27__41004",
+    "mc__tt__1.8__27__41005",
+    "mc__tt__1.8__27__41006",
+    "mc__tt__1.8__27__41007",
+    "mc__tt__1.8__27__41008",
+    "mc__tt__1.8__27__41009",
+    "mc__tt__1.8__27__41010",
+    "mc__tt__1.8__27__41011",
+    "mc__tt__1.8__27__41012",
+    "mc__tt__1.8__27__41013",
+    "mc__tt__1.8__27__41014",
+    "mc__tt__1.8__27__41015",
+    "mc__tt__1.8__27__41016",
+    "mc__tt__1.8__27__41017",
+    "mc__tt__1.8__27__41018",
+    "mc__tt__1.8__27__41019"
+  ],
+  "qualification_note": "Mismatch/Monte Carlo analyses run only in reference presimulation as circuit qualification (complete fixed seed set, original statistical or per-sample limits). They are not part of post-layout scoring, because fixed seeds do not map to the same samples in an extracted netlist."
+}

@@ -1,0 +1,22 @@
+* Accepted standalone POR-subblock measurement fixture.
+.lib "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+.include "dut.spice"
+.option scale=1e-6 reltol=1e-4 abstol=1e-14
+.temp 27
+VDD vdd 0 1.8
+VENA ena 0 PWL(0 0 100u 0 100.01u 1.8 3m 1.8 3.00001m 0 4m 0 4.00001m 1.8 6m 1.8)
+XDUT vdd out ena 0 rc_osc
+CLOAD out 0 50f
+
+.control
+set noaskquit
+set wr_singlescale
+set wr_vecnames
+set numdgt=12
+save v(ena) v(out) i(VDD)
+tran 500n 6m 0 500n
+wrdata wave.tsv v(ena) v(out) i(VDD)
+quit
+.endc
+.end

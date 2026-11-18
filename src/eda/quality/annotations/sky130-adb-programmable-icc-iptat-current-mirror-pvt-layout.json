@@ -1,0 +1,67 @@
+{
+  "task": "sky130-adb-programmable-icc-iptat-current-mirror-pvt-layout",
+  "top": "programmable_current_mirror",
+  "matched_groups": [
+    {
+      "name": "icc_mirror",
+      "devices": [
+        "XD_ICC",
+        "XLEG_ICC00",
+        "XLEG_ICC01",
+        "XLEG_ICC10",
+        "XLEG_ICC11"
+      ],
+      "kind": "ratio",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "iptat_mirror",
+      "devices": [
+        "XD_IPTAT",
+        "XLEG_IPTAT00",
+        "XLEG_IPTAT01",
+        "XLEG_IPTAT10",
+        "XLEG_IPTAT11"
+      ],
+      "kind": "ratio",
+      "intent": "common_centroid",
+      "weight": 3
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "ratio_b0",
+      "ratio_b1",
+      "nb0",
+      "nb1",
+      "iout"
+    ],
+    "victims": [
+      "icc_ref",
+      "iptat_ref",
+      "ncb1"
+    ],
+    "critical": [
+      "isum",
+      "icc_ref",
+      "iptat_ref"
+    ],
+    "diff_pairs": [],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [
+    "XCASC"
+  ],
+  "currents_a": {
+    "vdd": 2.5e-06,
+    "vss": 0.0011,
+    "XCASC": 0.001
+  },
+  "currents_note": "前仿 TT/1.8 V/27 C 四种码输出均约 0.97 mA，从 iout 经 XCASC、选通开关、输出管流到 vss；两路参考各 50 uA 由测试台注入 icc_ref/iptat_ref，经二极管回 vss；vdd 脚静态电流 2.5 uA（XRCASC 偏置支路），故 vss≈1.1 mA。vss 上的 IR 压降直接加在输出管与参考二极管源极之间，会改变镜像比"
+}

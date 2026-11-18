@@ -1,0 +1,144 @@
+{
+  "task": "sky130-adb-cml-divider-div2-range1gto10g-layout",
+  "top": "cml_div2",
+  "matched_groups": [
+    {
+      "name": "master_data_pair",
+      "devices": [
+        "XMDP",
+        "XMDN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "master_regen_pair",
+      "devices": [
+        "XMRP",
+        "XMRN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "master_clock_pair",
+      "devices": [
+        "XMTC",
+        "XMTRC"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "master_loads",
+      "devices": [
+        "XRMP",
+        "XRMN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "slave_data_pair",
+      "devices": [
+        "XSDP",
+        "XSDN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "slave_regen_pair",
+      "devices": [
+        "XSRP",
+        "XSRN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "slave_clock_pair",
+      "devices": [
+        "XSTC",
+        "XSRTC"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "slave_loads",
+      "devices": [
+        "XRSP",
+        "XRSN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "tail_mirror",
+      "devices": [
+        "XBIAS",
+        "XMTD",
+        "XSTD"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1.5
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "clkp",
+      "clkn"
+    ],
+    "victims": [
+      "iref",
+      "mp",
+      "mn",
+      "outp",
+      "outn"
+    ],
+    "critical": [
+      "clkp",
+      "clkn",
+      "mp",
+      "mn",
+      "outp",
+      "outn"
+    ],
+    "diff_pairs": [
+      [
+        "clkp",
+        "clkn"
+      ],
+      [
+        "mp",
+        "mn"
+      ],
+      [
+        "outp",
+        "outn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.000614,
+    "vss": 0.000764
+  },
+  "currents_note": "前仿 TT 1.8 V/27 C 静态功耗 1.105 mW / 1.8 V = 0.614 mA（两级尾电流各约 0.31 mA）；vss 另加外部注入 iref 的 0.15 mA，约 0.76 mA。CML 为恒流结构，峰值与平均值接近（估算）"
+}

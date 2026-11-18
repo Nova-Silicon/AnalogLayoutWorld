@@ -1,0 +1,11 @@
+services:
+  main:
+    build:
+      context: ..
+      dockerfile: tests/Dockerfile
+    network_mode: none
+    cap_drop:
+      - NET_RAW
+      - NET_ADMIN
+    security_opt:
+      - no-new-privileges:true

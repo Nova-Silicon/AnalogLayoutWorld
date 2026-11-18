@@ -1,0 +1,205 @@
+{
+  "schema_version": 1,
+  "processor": "processor.py",
+  "source_geometry_scale": 1e-06,
+  "extracted_geometry_scale": 1e-06,
+  "source_record": "configs/paper-v1/sources.json (task_id: sky130-loadbench-sym3-layout)",
+  "measurement_id_prefix": "spec_",
+  "cases": [
+    {
+      "id": "tt_1p8v_0c_cl1pf__source_combined",
+      "score_group": "tt_1p8v_0c_cl1pf",
+      "corner": "tt",
+      "temperature_C": 0,
+      "measurement_kind": "source_combined",
+      "source_condition_id": "tt_1p8v_0c_cl1pf",
+      "deck": "** combined opamp testbenches\n* Exact decimal fields from FinalPOFfull.csv data row 466 (1-based, excluding header).\n.param param_lDiodeTransistorNmos1=3.2\n.param param_wDiodeTransistorNmos1=27.28\n.param param_mDiodeTransistorNmos1=1.0\n.param param_lDiodeTransistorNmos2=3.2\n.param param_wDiodeTransistorNmos2=27.28\n.param param_mDiodeTransistorNmos2=1.0\n.param param_lDiodeTransistorNmos3=0.25\n.param param_wDiodeTransistorNmos3=25.590000000000003\n.param param_mDiodeTransistorNmos3=1.0\n.param param_lDiodeTransistorPmos4=1.5099999999999998\n.param param_wDiodeTransistorPmos4=714.6999999999999\n.param param_mDiodeTransistorPmos4=1.0\n.param param_lDiodeTransistorPmos5=0.35\n.param param_wDiodeTransistorPmos5=8.08\n.param param_mDiodeTransistorPmos5=1.0\n.param param_lDiodeTransistorPmos6=2.8200000000000003\n.param param_wDiodeTransistorPmos6=117.87\n.param param_mDiodeTransistorPmos6=1.0\n.param param_lNormalTransistorNmos7=3.2\n.param param_wNormalTransistorNmos7=129.81\n.param param_mNormalTransistorNmos7=1.0\n.param param_lNormalTransistorNmos8=3.2\n.param param_wNormalTransistorNmos8=18.200000000000003\n.param param_mNormalTransistorNmos8=1.0\n.param param_lNormalTransistorNmos9=0.25\n.param param_wNormalTransistorNmos9=73.68\n.param param_mNormalTransistorNmos9=1.0\n.param param_lNormalTransistorPmos10=0.4399999999999999\n.param param_wNormalTransistorPmos10=615.74\n.param param_mNormalTransistorPmos10=1.0\n.param param_lNormalTransistorPmos11=6.89\n.param param_wNormalTransistorPmos11=503.0\n.param param_mNormalTransistorPmos11=1.0\n.param param_lNormalTransistorPmos12=0.4399999999999999\n.param param_wNormalTransistorPmos12=615.74\n.param param_mNormalTransistorPmos12=1.0\n.param param_lNormalTransistorPmos13=0.35\n.param param_wNormalTransistorPmos13=139.85\n.param param_mNormalTransistorPmos13=1.0\n.param param_lNormalTransistorPmos14=0.35\n.param param_wNormalTransistorPmos14=328.45000000000005\n.param param_mNormalTransistorPmos14=1.0\n.param param_lNormalTransistorPmos15=1.5099999999999998\n.param param_wNormalTransistorPmos15=102.91\n.param param_mNormalTransistorPmos15=1.0\n\n.param vdd=1.8\n.param Cload=1e-12\n.param ibias=10u\n\n.lib \"__MODEL_LIB__\" tt\n.include \"__DUT_NETLIST__\"\n\n\n\n*** Testbench 1 unity feedback for transient, op, icmr ***\n.subckt tb_tran net_vtran_vdc\nXOpAmp net_ibias inp inn out 0 vdd! SymmetricalOpAmp3\n\t* Voltage sources *\n\tvdd vdd! 0 DC {vdd}\n\tvtran inp net_vtran_vdc PULSE({-vdd/2} {vdd/2} .01u 1n 1n .5u 1u) DC 0\n\n\tvconnect inn out DC 0\n\n\t* Capacitor *\n\tCload out 0 {Cload}\n\n\t* Current source *\n\t*Ibias net_ibias 0 DC {ibias}\n\tIbias net_ibias 0 DC {ibias}\n.ends\nxtb_tran vdcin_xtb_vtran tb_tran\nvdc_xtb_tran vdcin_xtb_vtran 0 DC {vdd/2}\n*** end Testbench 1 ***\n\n*** Testbench 2 open loop for gain, ft, phase, psrr, cmrr ***\n.subckt tb_ac_vtran vdd! offset_point\n\t* OPAMP *\n\tXOpAmp net_ibias inp inn out 0 vdd! SymmetricalOpAmp3\n\n\t****Config AC****\n\t* Voltage sources *\n\t* DC-only servo: inn follows out through 1 GH at DC; 1 F holds inn at\n\t* offset_point above ~1 Hz (open loop). Replaces measured-offset cancellation.\n\tLFB out inn 1G\n\tCFB inn offset_point 1\n\tVtran inp offset_point AC 1 DC 0\n\t* Capacitor *\n\tCload out 0 {Cload}\n\t* Current source *\n\t*Ibias net_ibias 0 DC {ibias}\n\tIbias net_ibias 0 DC {ibias}\n\t*Rbias vdd! net_ibias 250M\n.ends\n\nVdd_source_tb_ac_vtran vdd_tb_ac_tran 0 DC {vdd} AC 0\nVdc_source_tb_ac_vtran offset_point_tb_ac_tran 0 DC {vdd/2} AC 0\nxtb_ac_vtran vdd_tb_ac_tran offset_point_tb_ac_tran tb_ac_vtran\n*** end Testbench 2 ***\n\n*** Testbench 3 for vout min/max ***\nvdc_sweep_tb_dc_vo vsweepin 0 DC {vdd/2}\n.subckt tb_dc_vo vsweepin\n\tXOpAmp net_ibias inp inn out 0 vdd! SymmetricalOpAmp3\n\n\t* Voltage sources *\n\tvdc_inp inp 0 DC {vdd/2}\n\tvdd vdd! 0 DC {vdd}\n\n\n\t* Capacitor *\n\tCload out 0 {Cload}\n\n\t* Current source *\n\t*Ibias net_ibias 0 DC {ibias}\n\tIbias net_ibias 0 DC {ibias}\n\n\t* Resistors for inverting amplifier\n\tR1 vsweepin inn 1G\n\tR2 inn out 10G\n.ends\nxtb_dc_vo vsweepin tb_dc_vo\n*** end Testbench 3 ***\n\n* SimulationInterface Setup *\n.control\n    echo \"remove old result_op.raw file if it exists\"\n    echo \"remove old result_dc.raw file if it exists\"\n    echo \"remove old result_ac_vtran.raw file if it exists\"\n    echo \"remove old result_ac_vdd.raw file if it exists\"\n    echo \"remove old result_ac_vdc.raw file if it exists\"\n    echo \"remove old result_dc_vout.raw file if it exists\"\n    echo \"remove old result_tran.raw file if it exists\"\n\n\n\t*set alternative display mode,so that (device) names do not get truncated like in tabular mode*\n\tset altshow\n\toption reltol=1e-3 vntol=1e-6 abstol=1e-12 temp=0 tnom=27 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3\n\toption maxextiter=5\n\n***Operating Point Calculation***\n    echo \"***\\n\\nCalculate Operating Point***\"\n\top\n\twrite result_op.raw v(xtb_tran.out) i(v.xtb_tran.vdd) v(xtb_tran.inn) xtb_tran.vdd!\n\n***Offset***\n    echo \"***\\n\\nCalculate Offset***\"\n    let offset=-(v(xtb_tran.inn)-v(xtb_tran.inp))\n\tprint $&offset\n\n\t* use offset voltage to net have trouble with some offset going into rail\n\t* configuration for sources inside of subcircuit can be found with the command \"listing e\"\n\n***ICMR***\n    echo \"***\\n\\nCalculate ICMR***\"\n\tdc vdc_xtb_tran 0 1.8 0.01\n\tlet vdiff=abs(xtb_tran.out-vdcin_xtb_vtran)\n\tmeas DC icmr_min FIND xtb_tran.out WHEN vdiff=0.01 FALL=1\n\tmeas DC icmr_max FIND xtb_tran.out WHEN vdiff=0.01 RISE=1\n\twrite result_dc.raw xtb_tran.out icmr_min icmr_max\n\n***Gain, FT, Phase***\n    echo \"***\\n\\nCalculate Gain, Ft, Phase***\"\n\tac dec 20 1 1G\n\t*print vdb(out) ph(out)\n\t* print mag(ac.out)\n\n\twrite result_ac_vtran.raw vdb(xtb_ac_vtran.out) ph(xtb_ac_vtran.out)\n\t\n\tlet dc_gain=xtb_ac_vtran.out[0]\n\tlet dc_gain_db=db(dc_gain)\n\techo \"dc_gain: $&dc_gain\"\n\techo \"dc_gain_db: $&dc_gain_db\"\n\t* calculate the theoretical dc-sweep-voltage derivative for the tb configuration of output voltage range sim with a 5% accuracy range\n\tlet threshold_outputrange_vec=1/(1/dc_gain + 1/10 + 1/dc_gain/10) * 0.95\n\t* switch to variable, so we don't have to bother with plots\n\tset threshold_outputrange=$&threshold_outputrange_vec\n\tset dc_gain_var=$&dc_gain_db\n\n***PSRR***\n    echo \"***\\n\\nCalculate PSRR***\"\n\t* 1 Hz AC (open loop under the DC-only servo) replaces the DC tf analysis.\n\talter @v.xtb_ac_vtran.vtran[acmag] = 0\n\talter @Vdd_source_tb_ac_vtran[acmag] = 1\n\tac lin 1 1 1\n\tlet gain_vdd=db(mag(v(xtb_ac_vtran.out)))\n\techo \"gain_vdd: $&gain_vdd\"\n\tlet psrr=$dc_gain_var - gain_vdd\n\techo \"psrr: $&psrr\"\n\twrite result_ac_vdd.raw gain_vdd psrr\n\n***CMRR***\n    echo \"***\\n\\nCalculate CMRR***\"\n\talter @Vdd_source_tb_ac_vtran[acmag] = 0\n\talter @Vdc_source_tb_ac_vtran[acmag] = 1\n\tac lin 1 1 1\n\tlet gain_commonmode=db(mag(v(xtb_ac_vtran.out)))\n\techo \"gain_commonmode: $&gain_commonmode\"\n\tlet cmrr=$dc_gain_var - gain_commonmode\n\techo \"cmrr: $&cmrr\"\n\twrite result_ac_vdc.raw gain_commonmode cmrr\n\t\n\n\t*reset *->this resets also alter commands!\n***vout_min/vout_max***\n    echo \"***\\n\\nCalculate vout***\"\n    option reltol=1e-3 vntol=1e-6 abstol=1e-12 temp=0 tnom=27 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 maxextiter=5\n\tdc vdc_sweep_tb_dc_vo 0 1.8 0.005\n\tlet deriv_out=deriv(v(xtb_dc_vo.out))\n\tmeas DC vout_max FIND v(xtb_dc_vo.out) WHEN deriv_out=-$threshold_outputrange FALL=1\n\tmeas DC vout_min FIND v(xtb_dc_vo.out) WHEN deriv_out=-$threshold_outputrange RISE=1\n\t*print out\n\n\t* set for slewrate calc\n\tset v_high=$&vout_max\n\tset v_low_rise = $&vout_min\n\tset v_low_fall = $&vout_min\n\n\twrite result_dc_vout.raw xtb_dc_vo.out, vout_min, vout_max\n\n\n\n.endc\n\n\n\n.control\n\tquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "spec_dc_gain": {
+          "min": 45,
+          "unit": "dB"
+        },
+        "spec_ft": {
+          "min": 60000000.0,
+          "unit": "Hz"
+        },
+        "spec_phaseMargin": {
+          "min": 60,
+          "unit": "deg"
+        },
+        "spec_P": {
+          "max": 0.007,
+          "unit": "W"
+        },
+        "spec_CMRR": {
+          "min": 45,
+          "unit": "dB"
+        },
+        "spec_PSRR": {
+          "min": 40,
+          "unit": "dB"
+        },
+        "spec_Voffset": {
+          "max": 0.005,
+          "unit": "V"
+        },
+        "spec_icmr_min": {
+          "max": 0.75,
+          "unit": "V"
+        },
+        "spec_icmr_max": {
+          "min": 1.6,
+          "unit": "V"
+        },
+        "spec_vout_min": {
+          "max": 0.7,
+          "unit": "V"
+        },
+        "spec_vout_max": {
+          "min": 1.0,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "tt_1p8v_27c_cl1pf__source_combined",
+      "score_group": "tt_1p8v_27c_cl1pf",
+      "corner": "tt",
+      "temperature_C": 27,
+      "measurement_kind": "source_combined",
+      "source_condition_id": "tt_1p8v_27c_cl1pf",
+      "deck": "** combined opamp testbenches\n* Exact decimal fields from FinalPOFfull.csv data row 466 (1-based, excluding header).\n.param param_lDiodeTransistorNmos1=3.2\n.param param_wDiodeTransistorNmos1=27.28\n.param param_mDiodeTransistorNmos1=1.0\n.param param_lDiodeTransistorNmos2=3.2\n.param param_wDiodeTransistorNmos2=27.28\n.param param_mDiodeTransistorNmos2=1.0\n.param param_lDiodeTransistorNmos3=0.25\n.param param_wDiodeTransistorNmos3=25.590000000000003\n.param param_mDiodeTransistorNmos3=1.0\n.param param_lDiodeTransistorPmos4=1.5099999999999998\n.param param_wDiodeTransistorPmos4=714.6999999999999\n.param param_mDiodeTransistorPmos4=1.0\n.param param_lDiodeTransistorPmos5=0.35\n.param param_wDiodeTransistorPmos5=8.08\n.param param_mDiodeTransistorPmos5=1.0\n.param param_lDiodeTransistorPmos6=2.8200000000000003\n.param param_wDiodeTransistorPmos6=117.87\n.param param_mDiodeTransistorPmos6=1.0\n.param param_lNormalTransistorNmos7=3.2\n.param param_wNormalTransistorNmos7=129.81\n.param param_mNormalTransistorNmos7=1.0\n.param param_lNormalTransistorNmos8=3.2\n.param param_wNormalTransistorNmos8=18.200000000000003\n.param param_mNormalTransistorNmos8=1.0\n.param param_lNormalTransistorNmos9=0.25\n.param param_wNormalTransistorNmos9=73.68\n.param param_mNormalTransistorNmos9=1.0\n.param param_lNormalTransistorPmos10=0.4399999999999999\n.param param_wNormalTransistorPmos10=615.74\n.param param_mNormalTransistorPmos10=1.0\n.param param_lNormalTransistorPmos11=6.89\n.param param_wNormalTransistorPmos11=503.0\n.param param_mNormalTransistorPmos11=1.0\n.param param_lNormalTransistorPmos12=0.4399999999999999\n.param param_wNormalTransistorPmos12=615.74\n.param param_mNormalTransistorPmos12=1.0\n.param param_lNormalTransistorPmos13=0.35\n.param param_wNormalTransistorPmos13=139.85\n.param param_mNormalTransistorPmos13=1.0\n.param param_lNormalTransistorPmos14=0.35\n.param param_wNormalTransistorPmos14=328.45000000000005\n.param param_mNormalTransistorPmos14=1.0\n.param param_lNormalTransistorPmos15=1.5099999999999998\n.param param_wNormalTransistorPmos15=102.91\n.param param_mNormalTransistorPmos15=1.0\n\n.param vdd=1.8\n.param Cload=1e-12\n.param ibias=10u\n\n.lib \"__MODEL_LIB__\" tt\n.include \"__DUT_NETLIST__\"\n\n\n\n*** Testbench 1 unity feedback for transient, op, icmr ***\n.subckt tb_tran net_vtran_vdc\nXOpAmp net_ibias inp inn out 0 vdd! SymmetricalOpAmp3\n\t* Voltage sources *\n\tvdd vdd! 0 DC {vdd}\n\tvtran inp net_vtran_vdc PULSE({-vdd/2} {vdd/2} .01u 1n 1n .5u 1u) DC 0\n\n\tvconnect inn out DC 0\n\n\t* Capacitor *\n\tCload out 0 {Cload}\n\n\t* Current source *\n\t*Ibias net_ibias 0 DC {ibias}\n\tIbias net_ibias 0 DC {ibias}\n.ends\nxtb_tran vdcin_xtb_vtran tb_tran\nvdc_xtb_tran vdcin_xtb_vtran 0 DC {vdd/2}\n*** end Testbench 1 ***\n\n*** Testbench 2 open loop for gain, ft, phase, psrr, cmrr ***\n.subckt tb_ac_vtran vdd! offset_point\n\t* OPAMP *\n\tXOpAmp net_ibias inp inn out 0 vdd! SymmetricalOpAmp3\n\n\t****Config AC****\n\t* Voltage sources *\n\t* DC-only servo: inn follows out through 1 GH at DC; 1 F holds inn at\n\t* offset_point above ~1 Hz (open loop). Replaces measured-offset cancellation.\n\tLFB out inn 1G\n\tCFB inn offset_point 1\n\tVtran inp offset_point AC 1 DC 0\n\t* Capacitor *\n\tCload out 0 {Cload}\n\t* Current source *\n\t*Ibias net_ibias 0 DC {ibias}\n\tIbias net_ibias 0 DC {ibias}\n\t*Rbias vdd! net_ibias 250M\n.ends\n\nVdd_source_tb_ac_vtran vdd_tb_ac_tran 0 DC {vdd} AC 0\nVdc_source_tb_ac_vtran offset_point_tb_ac_tran 0 DC {vdd/2} AC 0\nxtb_ac_vtran vdd_tb_ac_tran offset_point_tb_ac_tran tb_ac_vtran\n*** end Testbench 2 ***\n\n*** Testbench 3 for vout min/max ***\nvdc_sweep_tb_dc_vo vsweepin 0 DC {vdd/2}\n.subckt tb_dc_vo vsweepin\n\tXOpAmp net_ibias inp inn out 0 vdd! SymmetricalOpAmp3\n\n\t* Voltage sources *\n\tvdc_inp inp 0 DC {vdd/2}\n\tvdd vdd! 0 DC {vdd}\n\n\n\t* Capacitor *\n\tCload out 0 {Cload}\n\n\t* Current source *\n\t*Ibias net_ibias 0 DC {ibias}\n\tIbias net_ibias 0 DC {ibias}\n\n\t* Resistors for inverting amplifier\n\tR1 vsweepin inn 1G\n\tR2 inn out 10G\n.ends\nxtb_dc_vo vsweepin tb_dc_vo\n*** end Testbench 3 ***\n\n* SimulationInterface Setup *\n.control\n    echo \"remove old result_op.raw file if it exists\"\n    echo \"remove old result_dc.raw file if it exists\"\n    echo \"remove old result_ac_vtran.raw file if it exists\"\n    echo \"remove old result_ac_vdd.raw file if it exists\"\n    echo \"remove old result_ac_vdc.raw file if it exists\"\n    echo \"remove old result_dc_vout.raw file if it exists\"\n    echo \"remove old result_tran.raw file if it exists\"\n\n\n\t*set alternative display mode,so that (device) names do not get truncated like in tabular mode*\n\tset altshow\n\toption reltol=1e-3 vntol=1e-6 abstol=1e-12 temp=27 tnom=27 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3\n\toption maxextiter=5\n\n***Operating Point Calculation***\n    echo \"***\\n\\nCalculate Operating Point***\"\n\top\n\twrite result_op.raw v(xtb_tran.out) i(v.xtb_tran.vdd) v(xtb_tran.inn) xtb_tran.vdd!\n\n***Offset***\n    echo \"***\\n\\nCalculate Offset***\"\n    let offset=-(v(xtb_tran.inn)-v(xtb_tran.inp))\n\tprint $&offset\n\n\t* use offset voltage to net have trouble with some offset going into rail\n\t* configuration for sources inside of subcircuit can be found with the command \"listing e\"\n\n***ICMR***\n    echo \"***\\n\\nCalculate ICMR***\"\n\tdc vdc_xtb_tran 0 1.8 0.01\n\tlet vdiff=abs(xtb_tran.out-vdcin_xtb_vtran)\n\tmeas DC icmr_min FIND xtb_tran.out WHEN vdiff=0.01 FALL=1\n\tmeas DC icmr_max FIND xtb_tran.out WHEN vdiff=0.01 RISE=1\n\twrite result_dc.raw xtb_tran.out icmr_min icmr_max\n\n***Gain, FT, Phase***\n    echo \"***\\n\\nCalculate Gain, Ft, Phase***\"\n\tac dec 20 1 1G\n\t*print vdb(out) ph(out)\n\t* print mag(ac.out)\n\n\twrite result_ac_vtran.raw vdb(xtb_ac_vtran.out) ph(xtb_ac_vtran.out)\n\t\n\tlet dc_gain=xtb_ac_vtran.out[0]\n\tlet dc_gain_db=db(dc_gain)\n\techo \"dc_gain: $&dc_gain\"\n\techo \"dc_gain_db: $&dc_gain_db\"\n\t* calculate the theoretical dc-sweep-voltage derivative for the tb configuration of output voltage range sim with a 5% accuracy range\n\tlet threshold_outputrange_vec=1/(1/dc_gain + 1/10 + 1/dc_gain/10) * 0.95\n\t* switch to variable, so we don't have to bother with plots\n\tset threshold_outputrange=$&threshold_outputrange_vec\n\tset dc_gain_var=$&dc_gain_db\n\n***PSRR***\n    echo \"***\\n\\nCalculate PSRR***\"\n\t* 1 Hz AC (open loop under the DC-only servo) replaces the DC tf analysis.\n\talter @v.xtb_ac_vtran.vtran[acmag] = 0\n\talter @Vdd_source_tb_ac_vtran[acmag] = 1\n\tac lin 1 1 1\n\tlet gain_vdd=db(mag(v(xtb_ac_vtran.out)))\n\techo \"gain_vdd: $&gain_vdd\"\n\tlet psrr=$dc_gain_var - gain_vdd\n\techo \"psrr: $&psrr\"\n\twrite result_ac_vdd.raw gain_vdd psrr\n\n***CMRR***\n    echo \"***\\n\\nCalculate CMRR***\"\n\talter @Vdd_source_tb_ac_vtran[acmag] = 0\n\talter @Vdc_source_tb_ac_vtran[acmag] = 1\n\tac lin 1 1 1\n\tlet gain_commonmode=db(mag(v(xtb_ac_vtran.out)))\n\techo \"gain_commonmode: $&gain_commonmode\"\n\tlet cmrr=$dc_gain_var - gain_commonmode\n\techo \"cmrr: $&cmrr\"\n\twrite result_ac_vdc.raw gain_commonmode cmrr\n\t\n\n\t*reset *->this resets also alter commands!\n***vout_min/vout_max***\n    echo \"***\\n\\nCalculate vout***\"\n    option reltol=1e-3 vntol=1e-6 abstol=1e-12 temp=27 tnom=27 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 maxextiter=5\n\tdc vdc_sweep_tb_dc_vo 0 1.8 0.005\n\tlet deriv_out=deriv(v(xtb_dc_vo.out))\n\tmeas DC vout_max FIND v(xtb_dc_vo.out) WHEN deriv_out=-$threshold_outputrange FALL=1\n\tmeas DC vout_min FIND v(xtb_dc_vo.out) WHEN deriv_out=-$threshold_outputrange RISE=1\n\t*print out\n\n\t* set for slewrate calc\n\tset v_high=$&vout_max\n\tset v_low_rise = $&vout_min\n\tset v_low_fall = $&vout_min\n\n\twrite result_dc_vout.raw xtb_dc_vo.out, vout_min, vout_max\n\n\n\n.endc\n\n\n\n.control\n\tquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "spec_dc_gain": {
+          "min": 45,
+          "unit": "dB"
+        },
+        "spec_ft": {
+          "min": 60000000.0,
+          "unit": "Hz"
+        },
+        "spec_phaseMargin": {
+          "min": 60,
+          "unit": "deg"
+        },
+        "spec_P": {
+          "max": 0.007,
+          "unit": "W"
+        },
+        "spec_CMRR": {
+          "min": 45,
+          "unit": "dB"
+        },
+        "spec_PSRR": {
+          "min": 40,
+          "unit": "dB"
+        },
+        "spec_Voffset": {
+          "max": 0.005,
+          "unit": "V"
+        },
+        "spec_icmr_min": {
+          "max": 0.75,
+          "unit": "V"
+        },
+        "spec_icmr_max": {
+          "min": 1.6,
+          "unit": "V"
+        },
+        "spec_vout_min": {
+          "max": 0.7,
+          "unit": "V"
+        },
+        "spec_vout_max": {
+          "min": 1.0,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "tt_1p8v_85c_cl1pf__source_combined",
+      "score_group": "tt_1p8v_85c_cl1pf",
+      "corner": "tt",
+      "temperature_C": 85,
+      "measurement_kind": "source_combined",
+      "source_condition_id": "tt_1p8v_85c_cl1pf",
+      "deck": "** combined opamp testbenches\n* Exact decimal fields from FinalPOFfull.csv data row 466 (1-based, excluding header).\n.param param_lDiodeTransistorNmos1=3.2\n.param param_wDiodeTransistorNmos1=27.28\n.param param_mDiodeTransistorNmos1=1.0\n.param param_lDiodeTransistorNmos2=3.2\n.param param_wDiodeTransistorNmos2=27.28\n.param param_mDiodeTransistorNmos2=1.0\n.param param_lDiodeTransistorNmos3=0.25\n.param param_wDiodeTransistorNmos3=25.590000000000003\n.param param_mDiodeTransistorNmos3=1.0\n.param param_lDiodeTransistorPmos4=1.5099999999999998\n.param param_wDiodeTransistorPmos4=714.6999999999999\n.param param_mDiodeTransistorPmos4=1.0\n.param param_lDiodeTransistorPmos5=0.35\n.param param_wDiodeTransistorPmos5=8.08\n.param param_mDiodeTransistorPmos5=1.0\n.param param_lDiodeTransistorPmos6=2.8200000000000003\n.param param_wDiodeTransistorPmos6=117.87\n.param param_mDiodeTransistorPmos6=1.0\n.param param_lNormalTransistorNmos7=3.2\n.param param_wNormalTransistorNmos7=129.81\n.param param_mNormalTransistorNmos7=1.0\n.param param_lNormalTransistorNmos8=3.2\n.param param_wNormalTransistorNmos8=18.200000000000003\n.param param_mNormalTransistorNmos8=1.0\n.param param_lNormalTransistorNmos9=0.25\n.param param_wNormalTransistorNmos9=73.68\n.param param_mNormalTransistorNmos9=1.0\n.param param_lNormalTransistorPmos10=0.4399999999999999\n.param param_wNormalTransistorPmos10=615.74\n.param param_mNormalTransistorPmos10=1.0\n.param param_lNormalTransistorPmos11=6.89\n.param param_wNormalTransistorPmos11=503.0\n.param param_mNormalTransistorPmos11=1.0\n.param param_lNormalTransistorPmos12=0.4399999999999999\n.param param_wNormalTransistorPmos12=615.74\n.param param_mNormalTransistorPmos12=1.0\n.param param_lNormalTransistorPmos13=0.35\n.param param_wNormalTransistorPmos13=139.85\n.param param_mNormalTransistorPmos13=1.0\n.param param_lNormalTransistorPmos14=0.35\n.param param_wNormalTransistorPmos14=328.45000000000005\n.param param_mNormalTransistorPmos14=1.0\n.param param_lNormalTransistorPmos15=1.5099999999999998\n.param param_wNormalTransistorPmos15=102.91\n.param param_mNormalTransistorPmos15=1.0\n\n.param vdd=1.8\n.param Cload=1e-12\n.param ibias=10u\n\n.lib \"__MODEL_LIB__\" tt\n.include \"__DUT_NETLIST__\"\n\n\n\n*** Testbench 1 unity feedback for transient, op, icmr ***\n.subckt tb_tran net_vtran_vdc\nXOpAmp net_ibias inp inn out 0 vdd! SymmetricalOpAmp3\n\t* Voltage sources *\n\tvdd vdd! 0 DC {vdd}\n\tvtran inp net_vtran_vdc PULSE({-vdd/2} {vdd/2} .01u 1n 1n .5u 1u) DC 0\n\n\tvconnect inn out DC 0\n\n\t* Capacitor *\n\tCload out 0 {Cload}\n\n\t* Current source *\n\t*Ibias net_ibias 0 DC {ibias}\n\tIbias net_ibias 0 DC {ibias}\n.ends\nxtb_tran vdcin_xtb_vtran tb_tran\nvdc_xtb_tran vdcin_xtb_vtran 0 DC {vdd/2}\n*** end Testbench 1 ***\n\n*** Testbench 2 open loop for gain, ft, phase, psrr, cmrr ***\n.subckt tb_ac_vtran vdd! offset_point\n\t* OPAMP *\n\tXOpAmp net_ibias inp inn out 0 vdd! SymmetricalOpAmp3\n\n\t****Config AC****\n\t* Voltage sources *\n\t* DC-only servo: inn follows out through 1 GH at DC; 1 F holds inn at\n\t* offset_point above ~1 Hz (open loop). Replaces measured-offset cancellation.\n\tLFB out inn 1G\n\tCFB inn offset_point 1\n\tVtran inp offset_point AC 1 DC 0\n\t* Capacitor *\n\tCload out 0 {Cload}\n\t* Current source *\n\t*Ibias net_ibias 0 DC {ibias}\n\tIbias net_ibias 0 DC {ibias}\n\t*Rbias vdd! net_ibias 250M\n.ends\n\nVdd_source_tb_ac_vtran vdd_tb_ac_tran 0 DC {vdd} AC 0\nVdc_source_tb_ac_vtran offset_point_tb_ac_tran 0 DC {vdd/2} AC 0\nxtb_ac_vtran vdd_tb_ac_tran offset_point_tb_ac_tran tb_ac_vtran\n*** end Testbench 2 ***\n\n*** Testbench 3 for vout min/max ***\nvdc_sweep_tb_dc_vo vsweepin 0 DC {vdd/2}\n.subckt tb_dc_vo vsweepin\n\tXOpAmp net_ibias inp inn out 0 vdd! SymmetricalOpAmp3\n\n\t* Voltage sources *\n\tvdc_inp inp 0 DC {vdd/2}\n\tvdd vdd! 0 DC {vdd}\n\n\n\t* Capacitor *\n\tCload out 0 {Cload}\n\n\t* Current source *\n\t*Ibias net_ibias 0 DC {ibias}\n\tIbias net_ibias 0 DC {ibias}\n\n\t* Resistors for inverting amplifier\n\tR1 vsweepin inn 1G\n\tR2 inn out 10G\n.ends\nxtb_dc_vo vsweepin tb_dc_vo\n*** end Testbench 3 ***\n\n* SimulationInterface Setup *\n.control\n    echo \"remove old result_op.raw file if it exists\"\n    echo \"remove old result_dc.raw file if it exists\"\n    echo \"remove old result_ac_vtran.raw file if it exists\"\n    echo \"remove old result_ac_vdd.raw file if it exists\"\n    echo \"remove old result_ac_vdc.raw file if it exists\"\n    echo \"remove old result_dc_vout.raw file if it exists\"\n    echo \"remove old result_tran.raw file if it exists\"\n\n\n\t*set alternative display mode,so that (device) names do not get truncated like in tabular mode*\n\tset altshow\n\toption reltol=1e-3 vntol=1e-6 abstol=1e-12 temp=85 tnom=27 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3\n\toption maxextiter=5\n\n***Operating Point Calculation***\n    echo \"***\\n\\nCalculate Operating Point***\"\n\top\n\twrite result_op.raw v(xtb_tran.out) i(v.xtb_tran.vdd) v(xtb_tran.inn) xtb_tran.vdd!\n\n***Offset***\n    echo \"***\\n\\nCalculate Offset***\"\n    let offset=-(v(xtb_tran.inn)-v(xtb_tran.inp))\n\tprint $&offset\n\n\t* use offset voltage to net have trouble with some offset going into rail\n\t* configuration for sources inside of subcircuit can be found with the command \"listing e\"\n\n***ICMR***\n    echo \"***\\n\\nCalculate ICMR***\"\n\tdc vdc_xtb_tran 0 1.8 0.01\n\tlet vdiff=abs(xtb_tran.out-vdcin_xtb_vtran)\n\tmeas DC icmr_min FIND xtb_tran.out WHEN vdiff=0.01 FALL=1\n\tmeas DC icmr_max FIND xtb_tran.out WHEN vdiff=0.01 RISE=1\n\twrite result_dc.raw xtb_tran.out icmr_min icmr_max\n\n***Gain, FT, Phase***\n    echo \"***\\n\\nCalculate Gain, Ft, Phase***\"\n\tac dec 20 1 1G\n\t*print vdb(out) ph(out)\n\t* print mag(ac.out)\n\n\twrite result_ac_vtran.raw vdb(xtb_ac_vtran.out) ph(xtb_ac_vtran.out)\n\t\n\tlet dc_gain=xtb_ac_vtran.out[0]\n\tlet dc_gain_db=db(dc_gain)\n\techo \"dc_gain: $&dc_gain\"\n\techo \"dc_gain_db: $&dc_gain_db\"\n\t* calculate the theoretical dc-sweep-voltage derivative for the tb configuration of output voltage range sim with a 5% accuracy range\n\tlet threshold_outputrange_vec=1/(1/dc_gain + 1/10 + 1/dc_gain/10) * 0.95\n\t* switch to variable, so we don't have to bother with plots\n\tset threshold_outputrange=$&threshold_outputrange_vec\n\tset dc_gain_var=$&dc_gain_db\n\n***PSRR***\n    echo \"***\\n\\nCalculate PSRR***\"\n\t* 1 Hz AC (open loop under the DC-only servo) replaces the DC tf analysis.\n\talter @v.xtb_ac_vtran.vtran[acmag] = 0\n\talter @Vdd_source_tb_ac_vtran[acmag] = 1\n\tac lin 1 1 1\n\tlet gain_vdd=db(mag(v(xtb_ac_vtran.out)))\n\techo \"gain_vdd: $&gain_vdd\"\n\tlet psrr=$dc_gain_var - gain_vdd\n\techo \"psrr: $&psrr\"\n\twrite result_ac_vdd.raw gain_vdd psrr\n\n***CMRR***\n    echo \"***\\n\\nCalculate CMRR***\"\n\talter @Vdd_source_tb_ac_vtran[acmag] = 0\n\talter @Vdc_source_tb_ac_vtran[acmag] = 1\n\tac lin 1 1 1\n\tlet gain_commonmode=db(mag(v(xtb_ac_vtran.out)))\n\techo \"gain_commonmode: $&gain_commonmode\"\n\tlet cmrr=$dc_gain_var - gain_commonmode\n\techo \"cmrr: $&cmrr\"\n\twrite result_ac_vdc.raw gain_commonmode cmrr\n\t\n\n\t*reset *->this resets also alter commands!\n***vout_min/vout_max***\n    echo \"***\\n\\nCalculate vout***\"\n    option reltol=1e-3 vntol=1e-6 abstol=1e-12 temp=85 tnom=27 scale=1.0 gmin=1e-12 rforce=1 maxnotes=5 maxwarns=5 digits=5 cols=80 pivrel=1e-3 maxextiter=5\n\tdc vdc_sweep_tb_dc_vo 0 1.8 0.005\n\tlet deriv_out=deriv(v(xtb_dc_vo.out))\n\tmeas DC vout_max FIND v(xtb_dc_vo.out) WHEN deriv_out=-$threshold_outputrange FALL=1\n\tmeas DC vout_min FIND v(xtb_dc_vo.out) WHEN deriv_out=-$threshold_outputrange RISE=1\n\t*print out\n\n\t* set for slewrate calc\n\tset v_high=$&vout_max\n\tset v_low_rise = $&vout_min\n\tset v_low_fall = $&vout_min\n\n\twrite result_dc_vout.raw xtb_dc_vo.out, vout_min, vout_max\n\n\n\n.endc\n\n\n\n.control\n\tquit\n.endc\n\n.end\n",
+      "required_measurements": {
+        "spec_dc_gain": {
+          "min": 45,
+          "unit": "dB"
+        },
+        "spec_ft": {
+          "min": 60000000.0,
+          "unit": "Hz"
+        },
+        "spec_phaseMargin": {
+          "min": 60,
+          "unit": "deg"
+        },
+        "spec_P": {
+          "max": 0.007,
+          "unit": "W"
+        },
+        "spec_CMRR": {
+          "min": 45,
+          "unit": "dB"
+        },
+        "spec_PSRR": {
+          "min": 40,
+          "unit": "dB"
+        },
+        "spec_Voffset": {
+          "max": 0.005,
+          "unit": "V"
+        },
+        "spec_icmr_min": {
+          "max": 0.75,
+          "unit": "V"
+        },
+        "spec_icmr_max": {
+          "min": 1.6,
+          "unit": "V"
+        },
+        "spec_vout_min": {
+          "max": 0.7,
+          "unit": "V"
+        },
+        "spec_vout_max": {
+          "min": 1.0,
+          "unit": "V"
+        }
+      }
+    },
+    {
+      "id": "tt_1p8v_27c_cl1pf__step",
+      "score_group": "tt_1p8v_27c_cl1pf",
+      "corner": "tt",
+      "temperature_C": 27,
+      "measurement_kind": "closed_loop_step",
+      "source_condition_id": "tt_1p8v_27c_cl1pf",
+      "deck": "* Original independent closed-loop step conditions, TT 27C.\n.lib \"__MODEL_LIB__\" tt\n.include \"__DUT_NETLIST__\"\nVDD vdd 0 1.8\nVIN inp 0 PULSE(0.85 0.95 5u 10n 10n 5u 10u)\nIbias ibias 0 10u\nXDUT ibias inp out out 0 vdd SymmetricalOpAmp3\nCLOAD out 0 1p\n.temp 27\n.control\nset noaskquit\nset wr_singlescale\nset wr_vecnames\nset num_threads=1\ntran 1n 20u 0 1n\nwrdata transient.tsv v(inp) v(out)\nquit\n.endc\n.end\n",
+      "required_measurements": {
+        "spec_step_settled_error": {
+          "max": 0.005,
+          "unit": "V"
+        }
+      }
+    }
+  ],
+  "adaptation_notes": [
+    "Original template, fixed bias, load, sweep steps, control tolerances and metric algorithms retained.",
+    "DUT inline text replaced with supplied netlist include; source params inlined.",
+    "Original MOS-instance-specific saved operating vectors omitted: not used by accepted SPEC; PEX may rename devices.",
+    "TT27 step is a separate simulation but shares the same PVT score_group; 4 runs, 3 scored conditions.",
+    "No internal source MOS sizing/saturation constraints or source W*L proxy are added to scoring.",
+    "Both source and current Magic PDK subcircuit geometry use micrometre parameters/model scale 1e-6.",
+    "Source SR remains diagnostic; source phase calculation retained with independently required closed-loop step."
+  ],
+  "initialization": "set ngbehavior=hsa\nset skywaterpdk\nset ng_nomodcheck\noption sparse\nset num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice",
+  "evaluation_case_ids": [
+    "tt_1p8v_27c_cl1pf__step",
+    "tt_1p8v_27c_cl1pf__source_combined"
+  ]
+}

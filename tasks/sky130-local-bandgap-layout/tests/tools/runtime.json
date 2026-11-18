@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "inherit_image_runtime": true,
+  "execution": {
+    "mode": "image",
+    "output_roots": [
+      "/alb-workspace",
+      "/logs/verifier"
+    ]
+  },
+  "paths": {
+    "model_lib": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice"
+  },
+  "file_sha256": {
+    "model_lib": "c7e9fe87ffc2685bc56da02f92cd48b1403a5e9da85cc7978027fb0ca347d581"
+  }
+}

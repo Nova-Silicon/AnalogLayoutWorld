@@ -1,0 +1,119 @@
+{
+  "task": "sky130-adb-ahuja-compensated-two-stage-load-range-pvt-layout",
+  "top": "ahuja_ota",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XM1",
+        "XM2"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "fold_sources",
+      "devices": [
+        "XM3",
+        "XM4"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "nmos_mirror",
+      "devices": [
+        "XM5",
+        "XM6"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "p_cascodes",
+      "devices": [
+        "XM3C",
+        "XM4C"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "n_cascodes",
+      "devices": [
+        "XM5C",
+        "XM6C"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XMB1",
+        "XMT",
+        "XMS1"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "pbias_mirror",
+      "devices": [
+        "XMBC",
+        "XMS2"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "vout"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "f1",
+      "g1",
+      "va",
+      "vbp",
+      "vcp",
+      "vcn",
+      "iref"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "f1",
+      "f2",
+      "g1",
+      "va"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.000559,
+    "vss": 0.000559
+  },
+  "currents_note": "前仿 TT/1.8 V/27 °C（20 pF 跟随器条件）功耗 1.006 mW / 1.8 V ≈ 0.559 mA，含测试台从 vdd 注入 iref 的 50 uA；输出级 XM9 按 vbp 镜像比估算约 0.25-0.3 mA，没有 ≥1 mA 的功率器件"
+}

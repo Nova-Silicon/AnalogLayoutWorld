@@ -1,0 +1,1205 @@
+{
+  "schema_version": 1,
+  "protocol": "paper-v1",
+  "task_count": 40,
+  "field_notes": {
+    "imported_circuit_sha256": "Hash of the collected upstream solution, selected design-point SPICE snapshot, or extracted subcircuit as applicable.",
+    "fixed_circuit_sha256": "Hash of the actual fixed DUT released in the task environment and trusted tests.",
+    "netlist_adaptation": "Changes between imported reference and released fixed DUT. Model and terminal changes are not assumed electrically neutral."
+  },
+  "comparison_summary": {
+    "adb_byte_identical": 7,
+    "adb_ideal_passive_adapted": 22,
+    "adb_physical_resistor_remapped": 2
+  },
+  "sources": [
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-ahuja-compensated-two-stage-load-range-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-ahuja-compensated-two-stage-load-range-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-ahuja-compensated-two-stage-load-range-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-ahuja-compensated-two-stage-load-range-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-ahuja-compensated-two-stage-load-range-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "338d690801c1e2347c2bb32be31237b2a4c335cd3a6f62d763f47ccd9d90cc67",
+      "imported_circuit_sha256": "e095b83301852cdefd6bc9707093b5ab090bdb73bb471b126ccc53b852c7db37",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-ahuja-compensated-two-stage-load-range-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 2,
+        "ideal_capacitors_replaced": 4,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_high_po_1p41"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-buf-ppsf-bs-gain1-sfdr90",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-buf-ppsf-bs-gain1-sfdr90",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-buf-ppsf-bs-gain1-sfdr90/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-buf-ppsf-bs-gain1-sfdr90/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-buf-ppsf-bs-gain1-sfdr90-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "189a3956358be3e8ddc4dc33329f4acdf1df15e392ff9f4b604af667290dcd1c",
+      "imported_circuit_sha256": "af6cf0bf484bdbd8797f5980d61aaf7dfa424b0cbee97fe6873d1fbab86945b1",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-buf-ppsf-bs-gain1-sfdr90-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 8,
+        "ideal_capacitors_replaced": 8,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ],
+        "summary": "Eight ideal 1 MOhm resistors became generic-poly W=0.33 um, L=5684.65 um devices; eight ideal 5 pF capacitors became 49.85 um-square MIM devices. MOS statements and top-level ports were retained. Each resistor is about 5.685 mm in electrical length; this was not an area-optimized substitution."
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-bandgap-reference-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-bandgap-reference-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-bandgap-reference-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-bandgap-reference-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-bandgap-reference-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "71ec1febc6f81c5c5366c7a9ceacd97d60781a0eefb790500f8d2fd76402400e",
+      "imported_circuit_sha256": "1b867f47974ef41d0ffca6c10d9ba1e752e92f2ea873ca73f23bc58d6f2f8c23",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-bandgap-reference-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "physical_resistor_family_remapping",
+        "mos_devices_unchanged": true,
+        "summary": "Four already-physical high/xhigh-poly resistors were replaced by two-terminal generic-poly instances. Nominal reference resistances were approximately retained; device family, substrate-terminal representation and model-dependent behavior changed.",
+        "replaced_resistors": [
+          {
+            "instance": "XRPTAT",
+            "released_w_um": 0.33,
+            "released_l_um": 41.86
+          },
+          {
+            "instance": "XRREF",
+            "released_w_um": 0.33,
+            "released_l_um": 173.89
+          },
+          {
+            "instance": "XRBIAS",
+            "released_w_um": 0.33,
+            "released_l_um": 3116.14
+          },
+          {
+            "instance": "XRSTLEAK",
+            "released_w_um": 0.33,
+            "released_l_um": 119843.98
+          }
+        ],
+        "released_resistor_model": "sky130_fd_pr__res_generic_po",
+        "preserved_devices": "MOS, BJT and MIM instance statements"
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-beta-multiplier-reference-pvt-mc",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-beta-multiplier-reference-pvt-mc",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-beta-multiplier-reference-pvt-mc/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-beta-multiplier-reference-pvt-mc/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-beta-multiplier-reference-pvt-mc-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "9b632509633abcfa5fde52059cf7f8a2e670c3134b24bb2b9c28123d04654c9f",
+      "imported_circuit_sha256": "119a570ca2de4ad30f5ec5d5852e880fac1f4039c3f7dd0558f0cb04597c810b",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-beta-multiplier-reference-pvt-mc-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "physical_resistor_family_remapping",
+        "mos_devices_unchanged": true,
+        "summary": "Two already-physical high/xhigh-poly resistors were replaced by two-terminal generic-poly instances. The core nominal resistance changed from about 14.1849 kOhm to 14.7995 kOhm, and the startup pull-up from about 15.9 MOhm to 1 MOhm. This is an electrically adapted benchmark reference, not a name-only mapping.",
+        "replaced_resistors": [
+          {
+            "instance": "XR1",
+            "upstream_model": "sky130_fd_pr__res_high_po",
+            "upstream_w_um": 1,
+            "upstream_l_um": 42.5,
+            "released_model": "sky130_fd_pr__res_generic_po",
+            "released_w_um": 0.33,
+            "released_l_um": 84.13
+          },
+          {
+            "instance": "XRPU",
+            "upstream_model": "sky130_fd_pr__res_xhigh_po",
+            "upstream_w_um": 1,
+            "upstream_l_um": 7500,
+            "released_model": "sky130_fd_pr__res_generic_po",
+            "released_w_um": 0.33,
+            "released_l_um": 5684.65
+          }
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-capless-ldo-1v0-20ma-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-capless-ldo-1v0-20ma-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-capless-ldo-1v0-20ma-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-capless-ldo-1v0-20ma-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-capless-ldo-1v0-20ma-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "aa9b0c7fbc1708c44065e06616bc412952005480fffca7c9b0cceab39d13ec8d",
+      "imported_circuit_sha256": "5a64fa9df6bb593677774e14213b866b336a9d7102eedd1ffea9e96f805956c4",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-capless-ldo-1v0-20ma-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 11,
+        "ideal_capacitors_replaced": 4,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_high_po_1p41",
+          "sky130_fd_pr__res_high_po_5p73",
+          "sky130_fd_pr__res_xhigh_po_0p35"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-cml-divider-div2-range1gto10g",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-cml-divider-div2-range1gto10g",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-cml-divider-div2-range1gto10g/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-cml-divider-div2-range1gto10g/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-cml-divider-div2-range1gto10g-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "457b0f239a9f8c915650caa0fb3b9697a8051783a228ffe6f541fd575f64dc93",
+      "imported_circuit_sha256": "7fef8a3e27bb51cfdeb09a76c473c13661857b775076f67b0cf3db0cbe5ebd16",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-cml-divider-div2-range1gto10g-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 4,
+        "ideal_capacitors_replaced": 0,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": []
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-complementary-folded-cascode-ab-opamp-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-complementary-folded-cascode-ab-opamp-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-complementary-folded-cascode-ab-opamp-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-complementary-folded-cascode-ab-opamp-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-complementary-folded-cascode-ab-opamp-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "7e461fbcc7136b17ba3bbd799eade4a3d02bc23cbf380d509b9fd9edb3a6c2e0",
+      "imported_circuit_sha256": "6fdd1a53620a4ba4250207af75cdff0beaebed0a4e0ef9897168dd588f5dfa85",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-complementary-folded-cascode-ab-opamp-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 8,
+        "ideal_capacitors_replaced": 6,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-constant-gm-stable-gain-amplifier-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-constant-gm-stable-gain-amplifier-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-constant-gm-stable-gain-amplifier-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-constant-gm-stable-gain-amplifier-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-constant-gm-stable-gain-amplifier-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "20a4e0a80315988db7ba7bb6c5c515a89995f5e42ccf7b954114889def061ae2",
+      "imported_circuit_sha256": "ca62b9b17fa01b1bcc5f9e0e4aed60aa4d43da94c99f730ce78ed4f37b2d1b34",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-constant-gm-stable-gain-amplifier-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 3,
+        "ideal_capacitors_replaced": 0,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_high_po_1p41"
+        ],
+        "released_capacitor_models": []
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-current-starved-ring-vco-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-current-starved-ring-vco-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-current-starved-ring-vco-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-current-starved-ring-vco-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-current-starved-ring-vco-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "0b8d8d6772f3ce561b58fa1145cb4f29ec3f1a681e79a9d963ba60c40f6ab5c4",
+      "imported_circuit_sha256": "8ae4e96f92918e388b41be727c8a6b6c9f9af9862688374ea49c5037f072a174",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-current-starved-ring-vco-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 1,
+        "ideal_capacitors_replaced": 5,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_high_po_1p41"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-fct-residue-amplifier-900msps",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fct-residue-amplifier-900msps",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fct-residue-amplifier-900msps/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fct-residue-amplifier-900msps/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-fct-residue-amplifier-900msps-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "54719eddb35103c25307ec35f00d4662a6f12657ea9a61271fd8a0fffdb74c1f",
+      "imported_circuit_sha256": "c2ffc01f01bdd964c466ac5e6d50b543c999cf2aac25369482aae9fe97f86048",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-fct-residue-amplifier-900msps-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 0,
+        "ideal_capacitors_replaced": 14,
+        "released_resistor_models": [],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ],
+        "summary": "Fourteen ideal capacitors became explicit MIM instances sized on a 0.005 um geometry grid. MOS statements, clock subcircuits and signal connectivity were retained; this is a physical-passive adaptation rather than an untouched source netlist."
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-fd-sampling-feedback-ota-gain1-settling40ns-noise300uv-pvt-mc",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fd-sampling-feedback-ota-gain1-settling40ns-noise300uv-pvt-mc",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fd-sampling-feedback-ota-gain1-settling40ns-noise300uv-pvt-mc/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fd-sampling-feedback-ota-gain1-settling40ns-noise300uv-pvt-mc/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-fd-sampling-feedback-ota-gain1-settling40ns-noise300uv-pvt-mc-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "870f89c01b265134f3aad52233f605c95dedd5d941accf202aa545ce98890864",
+      "imported_circuit_sha256": "689b170f04273f93d34d42bc793a202150d9c12cd7b7306837ced563d8c98fba",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-fd-sampling-feedback-ota-gain1-settling40ns-noise300uv-pvt-mc-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 4,
+        "ideal_capacitors_replaced": 4,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_high_po_5p73",
+          "sky130_fd_pr__res_xhigh_po_0p35"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-fd-sampling-feedback-ota-gain8-settling10ns-noise1mv-pvt-mc",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fd-sampling-feedback-ota-gain8-settling10ns-noise1mv-pvt-mc",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fd-sampling-feedback-ota-gain8-settling10ns-noise1mv-pvt-mc/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fd-sampling-feedback-ota-gain8-settling10ns-noise1mv-pvt-mc/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-fd-sampling-feedback-ota-gain8-settling10ns-noise1mv-pvt-mc-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "4813fbf847a2a395cc9398cba7ce395a6bf48fa294fab11d0e29ed8088659db5",
+      "imported_circuit_sha256": "452765e6ef58248728ce064b577362f75178fb42d53b9ec347b5ef559085e39e",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-fd-sampling-feedback-ota-gain8-settling10ns-noise1mv-pvt-mc-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 4,
+        "ideal_capacitors_replaced": 4,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-fd-two-stage-miller-opamp-gain60-pm60-noise50uv-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fd-two-stage-miller-opamp-gain60-pm60-noise50uv-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fd-two-stage-miller-opamp-gain60-pm60-noise50uv-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-fd-two-stage-miller-opamp-gain60-pm60-noise50uv-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-fd-two-stage-miller-opamp-gain60-pm60-noise50uv-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "5cd0666a66b59543fad5f3bc773749081769ad90027ab63d541d3cc1060f9d93",
+      "imported_circuit_sha256": "c90c40295a92d9b1b9ea9c730dce33178009b24a860a3d54eaa7df11e8d9cad7",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-fd-two-stage-miller-opamp-gain60-pm60-noise50uv-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 4,
+        "ideal_capacitors_replaced": 4,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-folded-cascode-ota-gain130-pm60-noise50uv-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-folded-cascode-ota-gain130-pm60-noise50uv-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-folded-cascode-ota-gain130-pm60-noise50uv-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-folded-cascode-ota-gain130-pm60-noise50uv-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-folded-cascode-ota-gain130-pm60-noise50uv-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "e09e3fd8c54e0dd7e69804457ae8010174f77181ac6b132f67e0d5d5fa7f7264",
+      "imported_circuit_sha256": "1d65d90abc51e1f7c4fa130eb1d1cbb8ac294a1f8f8ba7d50fb8e47dbe6100de",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-folded-cascode-ota-gain130-pm60-noise50uv-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 7,
+        "ideal_capacitors_replaced": 3,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-gmr-degen-amp-constant-gm-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-gmr-degen-amp-constant-gm-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-gmr-degen-amp-constant-gm-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-gmr-degen-amp-constant-gm-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-gmr-degen-amp-constant-gm-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "8c93aa3e0dd2e1cc77e6e3a149c156cefe1d646395303a27c015258b1b53a890",
+      "imported_circuit_sha256": "59e6f8e31148bc9d91e8553cbe2f91b2a7894e1ba867c4f1bb93788fecb2c2a1",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-gmr-degen-amp-constant-gm-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 7,
+        "ideal_capacitors_replaced": 0,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_m1",
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": []
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-gmr-degenerated-diff-amp-gain2-bw70m-power1p2mw-sdr60",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-gmr-degenerated-diff-amp-gain2-bw70m-power1p2mw-sdr60",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-gmr-degenerated-diff-amp-gain2-bw70m-power1p2mw-sdr60/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-gmr-degenerated-diff-amp-gain2-bw70m-power1p2mw-sdr60/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-gmr-degenerated-diff-amp-gain2-bw70m-power1p2mw-sdr60-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "18daa545a164da7626f2ffeff5cbb06a2e373c2a178d67361521818bd0ba9834",
+      "imported_circuit_sha256": "0a39a51e427a8d41ee5860a76f195b6d85884e2eabdbcf72c6346c9a261946cb",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-gmr-degenerated-diff-amp-gain2-bw70m-power1p2mw-sdr60-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 4,
+        "ideal_capacitors_replaced": 0,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": []
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-ldo-ota5-robust-pvt-mc",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-ldo-ota5-robust-pvt-mc",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-ldo-ota5-robust-pvt-mc/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-ldo-ota5-robust-pvt-mc/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-ldo-ota5-robust-pvt-mc-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "40f5806d0eee86e3d9f4f7b78196c03e8e4fcc2443e66d2e6e346f38df3b2658",
+      "imported_circuit_sha256": "40f5806d0eee86e3d9f4f7b78196c03e8e4fcc2443e66d2e6e346f38df3b2658",
+      "released_circuit_matches_imported_bytes": true,
+      "released_circuit_path": "tasks/sky130-adb-ldo-ota5-robust-pvt-mc-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "byte_identical_to_pinned_solution",
+        "mos_devices_unchanged": true
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-low-power-line-driver-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-low-power-line-driver-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-low-power-line-driver-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-low-power-line-driver-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-low-power-line-driver-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "276b4ba337fe0b14c8819a075ebe4637826cd5257d3d324a0b39505a90f06ae4",
+      "imported_circuit_sha256": "9d563a6a769c9d88f1c27d60ee2fbe2852e54688709be9788e4fa01cb1d791d7",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-low-power-line-driver-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 4,
+        "ideal_capacitors_replaced": 2,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-low-power-oscillator-2mhz-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-low-power-oscillator-2mhz-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-low-power-oscillator-2mhz-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-low-power-oscillator-2mhz-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-low-power-oscillator-2mhz-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "480b33afbf244cab43ea0d897c4b9527efcd60b06db3241eeafc0be73dd11ef9",
+      "imported_circuit_sha256": "480b33afbf244cab43ea0d897c4b9527efcd60b06db3241eeafc0be73dd11ef9",
+      "released_circuit_matches_imported_bytes": true,
+      "released_circuit_path": "tasks/sky130-adb-low-power-oscillator-2mhz-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "byte_identical_to_pinned_solution",
+        "mos_devices_unchanged": true
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-nmos-pass-ldo-0p4v-pvt-mc",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-nmos-pass-ldo-0p4v-pvt-mc",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-nmos-pass-ldo-0p4v-pvt-mc/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-nmos-pass-ldo-0p4v-pvt-mc/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-nmos-pass-ldo-0p4v-pvt-mc-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "1b035a94437843bc8c59ad64f006e46a9130037dc169ab053f2dab05c366b832",
+      "imported_circuit_sha256": "1b035a94437843bc8c59ad64f006e46a9130037dc169ab053f2dab05c366b832",
+      "released_circuit_matches_imported_bytes": true,
+      "released_circuit_path": "tasks/sky130-adb-nmos-pass-ldo-0p4v-pvt-mc-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "byte_identical_to_pinned_solution",
+        "mos_devices_unchanged": true
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-ota-5t-gain40-pm60-noise50uv-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-ota-5t-gain40-pm60-noise50uv-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-ota-5t-gain40-pm60-noise50uv-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-ota-5t-gain40-pm60-noise50uv-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-ota-5t-gain40-pm60-noise50uv-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "aa8f71489b4dd819f3c6d0ea4883847f1124ffb071ef5a54e1de4271afe39aae",
+      "imported_circuit_sha256": "aa8f71489b4dd819f3c6d0ea4883847f1124ffb071ef5a54e1de4271afe39aae",
+      "released_circuit_matches_imported_bytes": true,
+      "released_circuit_path": "tasks/sky130-adb-ota-5t-gain40-pm60-noise50uv-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "byte_identical_to_pinned_solution",
+        "mos_devices_unchanged": true
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-pll-charge-pump-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-pll-charge-pump-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-pll-charge-pump-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-pll-charge-pump-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-pll-charge-pump-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "df06ee8f79d61c3b3d3ef2b1363a4aa134a8e6a19fb5ca19e9db17e6e8fedd9f",
+      "imported_circuit_sha256": "f55ee6623790a7b8136d20e412e2009959adbc8927d614b8e9a0946bd0ac2813",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-pll-charge-pump-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 0,
+        "ideal_capacitors_replaced": 8,
+        "released_resistor_models": [],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-programmable-icc-iptat-current-mirror-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-programmable-icc-iptat-current-mirror-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-programmable-icc-iptat-current-mirror-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-programmable-icc-iptat-current-mirror-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-programmable-icc-iptat-current-mirror-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "162621105527d331ad748bd98225d7b05422c99286d42178fdefe068520233a3",
+      "imported_circuit_sha256": "d4c75e2a7dc29d7615f90e6adc6a1522fee29a4cdcc50232785499fdf3466415",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-programmable-icc-iptat-current-mirror-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 1,
+        "ideal_capacitors_replaced": 0,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": []
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-regulated-charge-pump-10mhz-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-regulated-charge-pump-10mhz-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-regulated-charge-pump-10mhz-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-regulated-charge-pump-10mhz-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-regulated-charge-pump-10mhz-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "920e8bdba614debc664a454cc7e4c110fd1641d7a72ea5fe9621d6863a4add0b",
+      "imported_circuit_sha256": "920e8bdba614debc664a454cc7e4c110fd1641d7a72ea5fe9621d6863a4add0b",
+      "released_circuit_matches_imported_bytes": true,
+      "released_circuit_path": "tasks/sky130-adb-regulated-charge-pump-10mhz-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "byte_identical_to_pinned_solution",
+        "mos_devices_unchanged": true
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-telescopic-cascode-ota-pvt-fix",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-telescopic-cascode-ota-pvt-fix",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-telescopic-cascode-ota-pvt-fix/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-telescopic-cascode-ota-pvt-fix/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-telescopic-cascode-ota-pvt-fix-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "356edcefbcdd1db0963854d9bc939aeff1ca23444bf8b4f6290e1357ff5dacba",
+      "imported_circuit_sha256": "5d3e17a4bf921136eea04d6c97fea83bf9b52ce57d522cd2caed780c1cd0aff1",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-telescopic-cascode-ota-pvt-fix-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 6,
+        "ideal_capacitors_replaced": 4,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-three-stage-nested-miller-ota-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-three-stage-nested-miller-ota-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-three-stage-nested-miller-ota-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-three-stage-nested-miller-ota-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-three-stage-nested-miller-ota-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "fb6259a85e6c2dd4252f55cbaa0a4f533a5ebc9a1725f09de77207ee0a67e14e",
+      "imported_circuit_sha256": "b599dc90b1905987833e4ca77bd54ccb1cc61ccb40829d87e9febd68de949c9d",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-three-stage-nested-miller-ota-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 0,
+        "ideal_capacitors_replaced": 2,
+        "released_resistor_models": [],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-tia-zt8k-bw750m-noise5p-sfdr70-power5m-pt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-tia-zt8k-bw750m-noise5p-sfdr70-power5m-pt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-tia-zt8k-bw750m-noise5p-sfdr70-power5m-pt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-tia-zt8k-bw750m-noise5p-sfdr70-power5m-pt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-tia-zt8k-bw750m-noise5p-sfdr70-power5m-pt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "71380927ca70ad26c1ef015c4002d361284d34c66c5d4d4b057c3afc90971af8",
+      "imported_circuit_sha256": "794f38e6c78eb2ed7daefc72a06522c2f44acc68882d1a4e0039db3ba8c39911",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-tia-zt8k-bw750m-noise5p-sfdr70-power5m-pt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 4,
+        "ideal_capacitors_replaced": 0,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_high_po_1p41",
+          "sky130_fd_pr__res_xhigh_po_0p35"
+        ],
+        "released_capacitor_models": []
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-transistor-divide-by-2",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-transistor-divide-by-2",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-transistor-divide-by-2/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-transistor-divide-by-2/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-transistor-divide-by-2-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "b9210f47c5d783bffd17ea380a79ff8cde62d04e23d8c0314c175ef32a7c69d0",
+      "imported_circuit_sha256": "b9210f47c5d783bffd17ea380a79ff8cde62d04e23d8c0314c175ef32a7c69d0",
+      "released_circuit_matches_imported_bytes": true,
+      "released_circuit_path": "tasks/sky130-adb-transistor-divide-by-2-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "byte_identical_to_pinned_solution",
+        "mos_devices_unchanged": true
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-two-stage-miller-opamp-gain60-ugb200-pm60-noise50uv-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-two-stage-miller-opamp-gain60-ugb200-pm60-noise50uv-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-two-stage-miller-opamp-gain60-ugb200-pm60-noise50uv-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-two-stage-miller-opamp-gain60-ugb200-pm60-noise50uv-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-two-stage-miller-opamp-gain60-ugb200-pm60-noise50uv-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "104dc161cedda6bf24aff7497930a30bf72be71b17fb384d59afb716b94d14e4",
+      "imported_circuit_sha256": "b0ccf8c4f8b032241130eaabed822dad3e3dde84210606ed7bcec1acc5094842",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-two-stage-miller-opamp-gain60-ugb200-pm60-noise50uv-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 1,
+        "ideal_capacitors_replaced": 1,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_generic_po"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-two-stage-miller-opamp-gain70-ugb20-pm60-noise50uv-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-two-stage-miller-opamp-gain70-ugb20-pm60-noise50uv-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-two-stage-miller-opamp-gain70-ugb20-pm60-noise50uv-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-two-stage-miller-opamp-gain70-ugb20-pm60-noise50uv-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-two-stage-miller-opamp-gain70-ugb20-pm60-noise50uv-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "e55d761bd1cefac08fdd95932fc85e31a92c81ea8816de3587230a535d18d2f3",
+      "imported_circuit_sha256": "76ce15ec91c25ebab7d77295ae56c0c7725f0a27cdb249d2e06dc94ab5b1acd4",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-adb-two-stage-miller-opamp-gain70-ugb20-pm60-noise50uv-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "ideal_passives_replaced_with_pdk_devices",
+        "mos_devices_unchanged": true,
+        "ideal_resistors_replaced": 2,
+        "ideal_capacitors_replaced": 1,
+        "released_resistor_models": [
+          "sky130_fd_pr__res_high_po_1p41",
+          "sky130_fd_pr__res_high_po_5p73"
+        ],
+        "released_capacitor_models": [
+          "sky130_fd_pr__cap_mim_m3_1"
+        ]
+      }
+    },
+    {
+      "source": "Analog Design Bench",
+      "repository": "https://github.com/Arcadia-1/analog-design-bench",
+      "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+      "source_task_id": "sky130-unregulated-charge-pump-10mhz-pvt",
+      "source_url": "https://github.com/Arcadia-1/analog-design-bench/tree/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-unregulated-charge-pump-10mhz-pvt",
+      "netlist_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-unregulated-charge-pump-10mhz-pvt/solution/circuit.spi",
+      "instruction_url": "https://github.com/Arcadia-1/analog-design-bench/blob/972f7cd7c95381134387b250edf18f3bd23bdd25/tasks/sky130-unregulated-charge-pump-10mhz-pvt/instruction.md",
+      "content_license": "CC-BY-NC-4.0",
+      "code_license": "Apache-2.0",
+      "task_id": "sky130-adb-unregulated-charge-pump-10mhz-pvt-layout",
+      "source_group": "adb",
+      "fixed_circuit_sha256": "667d82b02cca6b384d1d45419b19dd2211e67c1f5ac5ba83669f55bd0c8b1872",
+      "imported_circuit_sha256": "667d82b02cca6b384d1d45419b19dd2211e67c1f5ac5ba83669f55bd0c8b1872",
+      "released_circuit_matches_imported_bytes": true,
+      "released_circuit_path": "tasks/sky130-adb-unregulated-charge-pump-10mhz-pvt-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "byte_identical_to_pinned_solution",
+        "mos_devices_unchanged": true
+      }
+    },
+    {
+      "repository": "https://github.com/ajcci/sky130_ajc_ip__por",
+      "revision": "db8745ef4d7d85a1852fc60c251ba34c6cebe497",
+      "license": "Apache-2.0",
+      "upstream_file": "netlist/schematic/sky130_ajc_ip__por.spice",
+      "subcircuit": "rc_osc",
+      "task_id": "sky130-internet-ajc-rc-osc-layout",
+      "source_group": "internet",
+      "fixed_circuit_sha256": "07a435efba9efeaeff4dfcd824dda747d725f0c745cc3dfb4150ad5ddd169bc0",
+      "imported_circuit_sha256": "07a435efba9efeaeff4dfcd824dda747d725f0c745cc3dfb4150ad5ddd169bc0",
+      "released_circuit_matches_imported_bytes": true,
+      "released_circuit_path": "tasks/sky130-internet-ajc-rc-osc-layout/environment/task/circuit.spice",
+      "initial_import_changes": [
+        "Extract named subcircuit into a standalone fixed-netlist task; retain every original instance including dummy devices, node, model and size.",
+        "Define new standalone benchmark measurement fixtures and proposed SPEC; original project did not publish these subblock-specific limits."
+      ],
+      "netlist_adaptation": {
+        "kind": "named_subcircuit_extraction",
+        "summary": "The named subcircuit was extracted from the pinned upstream full schematic netlist. Its active device statements, including dummy devices, are retained; benchmark-specific standalone testbenches and limits were defined separately."
+      }
+    },
+    {
+      "repository": "https://github.com/ajcci/sky130_ajc_ip__por",
+      "revision": "db8745ef4d7d85a1852fc60c251ba34c6cebe497",
+      "license": "Apache-2.0",
+      "upstream_file": "netlist/schematic/sky130_ajc_ip__por.spice",
+      "subcircuit": "schmitt_trigger",
+      "task_id": "sky130-internet-ajc-schmitt-layout",
+      "source_group": "internet",
+      "fixed_circuit_sha256": "c6c35ed0e5505a707545dba3b00e4b3dbdcb788c32d3430b594324de9ffc9f80",
+      "imported_circuit_sha256": "c6c35ed0e5505a707545dba3b00e4b3dbdcb788c32d3430b594324de9ffc9f80",
+      "released_circuit_matches_imported_bytes": true,
+      "released_circuit_path": "tasks/sky130-internet-ajc-schmitt-layout/environment/task/circuit.spice",
+      "initial_import_changes": [
+        "Extract named subcircuit into a standalone fixed-netlist task; retain every original instance including dummy devices, node, model and size.",
+        "Define new standalone benchmark measurement fixtures and proposed SPEC; original project did not publish these subblock-specific limits."
+      ],
+      "netlist_adaptation": {
+        "kind": "named_subcircuit_extraction",
+        "summary": "The named subcircuit was extracted from the pinned upstream full schematic netlist. Its active device statements, including dummy devices, are retained; benchmark-specific standalone testbenches and limits were defined separately."
+      }
+    },
+    {
+      "source_id": "SimpleOpAmp53",
+      "derived": true,
+      "bulk_adapted": true,
+      "paper": "https://arxiv.org/abs/2610.21591",
+      "dataset": "https://zenodo.org/records/21759759",
+      "dataset_doi": "10.5281/zenodo.21759759",
+      "license": "CC-BY-4.0",
+      "attribution": "Markus Leibl, Filipe Azevedo, Stefan Uhlich, Andrea Bonetti, Arun Venkitaraman, Chia-Yu Hsieh, Phuoc Pham, Lorenzo Servadei, Helmut Graeb, Ricardo Martins. LOADBench, DOI 10.5281/zenodo.21759759, CC BY 4.0. All local changes explicitly recorded.",
+      "MOS_sizing_unchanged": true,
+      "W_L_unit": "um with source model option scale=1e-6",
+      "original_nf": 1,
+      "task_id": "sky130-loadbench-simple-53-bulk-tied-layout",
+      "source_group": "loadbench",
+      "fixed_circuit_sha256": "7ce907616f3e31692251cb47048c898e9a7a009033d5ae91dd133eb1d4143f0a",
+      "imported_circuit_sha256": "ec9499766bdf38745c4f7ff1713776a1d0b4e37c871491fb596f727a995fcc90",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-loadbench-simple-53-bulk-tied-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "bulk_tied_derived_circuit",
+        "transformations": [
+          {
+            "kind": "nmos_body_reconnection",
+            "instance": "XDiodeTransistorNmos3",
+            "old_body": "FirstStageYinnerSourceLoad2",
+            "new_body": "sourceNmos",
+            "unchanged": [
+              "D",
+              "G",
+              "S",
+              "W",
+              "L",
+              "m",
+              "nf"
+            ]
+          },
+          {
+            "kind": "nmos_body_reconnection",
+            "instance": "XNormalTransistorNmos7",
+            "old_body": "FirstStageYinnerTransistorStack2Load2",
+            "new_body": "sourceNmos",
+            "unchanged": [
+              "D",
+              "G",
+              "S",
+              "W",
+              "L",
+              "m",
+              "nf"
+            ]
+          },
+          {
+            "kind": "nmos_body_reconnection",
+            "instance": "XNormalTransistorNmos9",
+            "old_body": "FirstStageYsourceTransconductance",
+            "new_body": "sourceNmos",
+            "unchanged": [
+              "D",
+              "G",
+              "S",
+              "W",
+              "L",
+              "m",
+              "nf"
+            ]
+          },
+          {
+            "kind": "nmos_body_reconnection",
+            "instance": "XNormalTransistorNmos10",
+            "old_body": "FirstStageYsourceTransconductance",
+            "new_body": "sourceNmos",
+            "unchanged": [
+              "D",
+              "G",
+              "S",
+              "W",
+              "L",
+              "m",
+              "nf"
+            ]
+          }
+        ],
+        "summary": "Selected NMOS body terminals were reconnected to sourceNmos. D/G/S, device models, W/L, multiplicities and finger counts were retained. A body reconnection changes the electrical circuit; no equivalence to the original body-connected circuit is claimed."
+      },
+      "source_table_filename": "FinalPOFfull.csv",
+      "source_pof_sha256": "ef20887c1ba2226bd44c2b9421b666fa6ce579259a9ac83bf488e288497a433f",
+      "pof_row_1based_excluding_header": 952,
+      "pof_row_count": 1024
+    },
+    {
+      "source_id": "SymmetricalOpAmp3",
+      "derived": false,
+      "bulk_adapted": false,
+      "paper": "https://arxiv.org/abs/2610.21591",
+      "dataset": "https://zenodo.org/records/21759759",
+      "dataset_doi": "10.5281/zenodo.21759759",
+      "license": "CC-BY-4.0",
+      "attribution": "Markus Leibl, Filipe Azevedo, Stefan Uhlich, Andrea Bonetti, Arun Venkitaraman, Chia-Yu Hsieh, Phuoc Pham, Lorenzo Servadei, Helmut Graeb, Ricardo Martins. LOADBench, DOI 10.5281/zenodo.21759759, CC BY 4.0. All local changes explicitly recorded.",
+      "MOS_sizing_unchanged": true,
+      "W_L_unit": "um with source model option scale=1e-6",
+      "original_nf": 1,
+      "task_id": "sky130-loadbench-sym3-layout",
+      "source_group": "loadbench",
+      "fixed_circuit_sha256": "879b618323baf498d477507a2a7388365f6677c655159c008c9d6e40a385d807",
+      "imported_circuit_sha256": "2c31d25f5f8ee34d83fd820c244354afa113cdbb692acc474c16e49f8247d2ba",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-loadbench-sym3-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "packaging_only",
+        "transformations": [],
+        "summary": "The selected SymmetricalOpAmp3 design point retains its active SPICE statements, body connections and MOS sizes. The file differs from the generated source snapshot in comments/formatting only; it is not byte-identical."
+      },
+      "source_table_filename": "FinalPOFfull.csv",
+      "source_pof_sha256": "3ac7f6d9e7cfee5295efdf8872bfd015af62a75ceb1fc08303e8227c79bc81c3",
+      "pof_row_1based_excluding_header": 466,
+      "pof_row_count": 1023
+    },
+    {
+      "source_id": "SimpleTwoStageOpAmp_SimpleOpAmp47_9",
+      "derived": true,
+      "bulk_adapted": true,
+      "paper": "https://arxiv.org/abs/2610.21591",
+      "dataset": "https://zenodo.org/records/21759759",
+      "dataset_doi": "10.5281/zenodo.21759759",
+      "license": "CC-BY-4.0",
+      "attribution": "Markus Leibl, Filipe Azevedo, Stefan Uhlich, Andrea Bonetti, Arun Venkitaraman, Chia-Yu Hsieh, Phuoc Pham, Lorenzo Servadei, Helmut Graeb, Ricardo Martins. LOADBench, DOI 10.5281/zenodo.21759759, CC BY 4.0. All local changes explicitly recorded.",
+      "MOS_sizing_unchanged": true,
+      "W_L_unit": "um with source model option scale=1e-6",
+      "original_nf": 1,
+      "task_id": "sky130-loadbench-two-stage-47-9-bulk-tied-layout",
+      "source_group": "loadbench",
+      "fixed_circuit_sha256": "95904f77ee80e11a908f83d17a88c7f1ae2bfc94a7fef1b069ce19b75bd17f12",
+      "imported_circuit_sha256": "22a54756df1f825fa1be4cdad8ef991681ab6d5112479dd7a2f8a32d26ad29eb",
+      "released_circuit_matches_imported_bytes": false,
+      "released_circuit_path": "tasks/sky130-loadbench-two-stage-47-9-bulk-tied-layout/environment/task/circuit.spice",
+      "netlist_adaptation": {
+        "kind": "bulk_tied_derived_circuit",
+        "transformations": [
+          {
+            "kind": "nmos_body_reconnection",
+            "instance": "XDiodeTransistorNmos1",
+            "old_body": "outSourceVoltageBiasXXnXX2",
+            "new_body": "sourceNmos",
+            "unchanged": [
+              "D",
+              "G",
+              "S",
+              "W",
+              "L",
+              "m",
+              "nf"
+            ]
+          },
+          {
+            "kind": "nmos_body_reconnection",
+            "instance": "XDiodeTransistorNmos2",
+            "old_body": "VoltageBiasXXnXX1Yinner",
+            "new_body": "sourceNmos",
+            "unchanged": [
+              "D",
+              "G",
+              "S",
+              "W",
+              "L",
+              "m",
+              "nf"
+            ]
+          },
+          {
+            "kind": "nmos_body_reconnection",
+            "instance": "XNormalTransistorNmos8",
+            "old_body": "outSourceVoltageBiasXXnXX1",
+            "new_body": "sourceNmos",
+            "unchanged": [
+              "D",
+              "G",
+              "S",
+              "W",
+              "L",
+              "m",
+              "nf"
+            ]
+          },
+          {
+            "kind": "nmos_body_reconnection",
+            "instance": "XNormalTransistorNmos9",
+            "old_body": "FirstStageYsourceGCC2",
+            "new_body": "sourceNmos",
+            "unchanged": [
+              "D",
+              "G",
+              "S",
+              "W",
+              "L",
+              "m",
+              "nf"
+            ]
+          },
+          {
+            "kind": "nmos_body_reconnection",
+            "instance": "XNormalTransistorNmos10",
+            "old_body": "FirstStageYsourceGCC1",
+            "new_body": "sourceNmos",
+            "unchanged": [
+              "D",
+              "G",
+              "S",
+              "W",
+              "L",
+              "m",
+              "nf"
+            ]
+          },
+          {
+            "kind": "ideal_capacitor_to_PDK_MIM",
+            "old": "Capacitor2 outFirstStage out 2.8e-12",
+            "new": "XMIM_Capacitor2 outFirstStage out sky130_fd_pr__cap_mim_m3_1 w=37.265 l=37.265 mult=1"
+          },
+          {
+            "kind": "MIM_geometry_grid_compatibility",
+            "old_w_l_um": 37.265,
+            "new_w_l_um": 37.27
+          }
+        ],
+        "summary": "Selected NMOS body terminals were reconnected to sourceNmos. D/G/S, device models, W/L, multiplicities and finger counts were retained. A body reconnection changes the electrical circuit; no equivalence to the original body-connected circuit is claimed. The ideal 2.8 pF compensation capacitor was replaced by a 37.27 um-square MIM instance; the initial 37.265 um proposal was rounded for PCell grid compatibility."
+      },
+      "source_table_filename": "FinalPOFfull.csv",
+      "source_pof_sha256": "734f8b77454017d111949f7b860d6635adca9e3ad81ca484c4c73b7dbde6ff4a",
+      "pof_row_1based_excluding_header": 46,
+      "pof_row_count": 1024
+    },
+    {
+      "task_id": "sky130-local-bandgap-layout",
+      "source_group": "local",
+      "source": "Team-provided circuit",
+      "local_design": "bandgap",
+      "license": "Apache-2.0",
+      "released_circuit_path": "tasks/sky130-local-bandgap-layout/environment/task/circuit.spice",
+      "fixed_circuit_sha256": "662bb5471a5b13c3cc3eb71cd693f2e93418fb7cb13a537aa17484ea9a4856bb",
+      "netlist_adaptation": {
+        "kind": "ported_fixed_sky130_circuit",
+        "summary": "A team-provided bandgap was ported to explicit SKY130 MOS/PNP, high-poly resistors and MIM capacitors. Passive values and geometries were adapted during the port; source-process targets are not evidence of SKY130 validation."
+      }
+    },
+    {
+      "task_id": "sky130-local-comparator-layout",
+      "source_group": "local",
+      "source": "Team-provided circuit",
+      "local_design": "comparator",
+      "license": "Apache-2.0",
+      "released_circuit_path": "tasks/sky130-local-comparator-layout/environment/task/circuit.spice",
+      "fixed_circuit_sha256": "896a3819f0fa8d0ea6baf56161746d8478dd72235c410fd0a1c6778bdb6306b3",
+      "netlist_adaptation": {
+        "kind": "ported_fixed_sky130_circuit",
+        "summary": "A team-provided comparator was ported to SKY130 1.8 V MOS devices and fixed as a separate SKY130 task. Source-process results do not certify the ported design."
+      }
+    },
+    {
+      "task_id": "sky130-local-fc-ota-layout",
+      "source_group": "local",
+      "source": "Team-provided circuit",
+      "local_design": "fc-ota",
+      "license": "Apache-2.0",
+      "released_circuit_path": "tasks/sky130-local-fc-ota-layout/environment/task/circuit.spice",
+      "fixed_circuit_sha256": "6fbc525b385832ecbca81dc5eb187e45da49b6ac9f1dfd4851f75a0b0adb2107",
+      "netlist_adaptation": {
+        "kind": "ported_fixed_sky130_circuit",
+        "summary": "A team-provided folded-cascode OTA was ported to SKY130 devices. The input-feedback polarity was corrected for this task; no equivalence to an unmodified source-process implementation is claimed."
+      }
+    },
+    {
+      "task_id": "sky130-local-two-stage-ota-layout",
+      "source_group": "local",
+      "source": "Team-provided circuit",
+      "local_design": "two-stage-ota",
+      "license": "Apache-2.0",
+      "released_circuit_path": "tasks/sky130-local-two-stage-ota-layout/environment/task/circuit.spice",
+      "fixed_circuit_sha256": "0363e2a36fb78a9461dfecf04d8bb0819a40793d8437269f1d57958bb1452431",
+      "netlist_adaptation": {
+        "kind": "ported_fixed_sky130_circuit",
+        "summary": "A team-provided two-stage OTA was ported to SKY130 devices, including explicit generic-poly compensation resistance and a MIM compensation capacitor. Passive geometry and the tested operating point were adapted during the port."
+      }
+    }
+  ]
+}

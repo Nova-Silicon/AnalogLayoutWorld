@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "suite": "adapter.py",
+  "initialization": "set ngbehavior=hsa\nset num_threads=1\n",
+  "model_library": "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/ngspice/sky130.lib.spice",
+  "evaluation_case_ids": [
+    "cmfb_recovery__tt__1.8__27",
+    "loop__tt__1.8__27",
+    "noise__tt__1.8__27",
+    "ranges__tt__1.8__27",
+    "settling__tt__1.8__27"
+  ],
+  "qualification_case_ids": [
+    "mc__tt__1.8__27__41000",
+    "mc__tt__1.8__27__41001",
+    "mc__tt__1.8__27__41002",
+    "mc__tt__1.8__27__41003",
+    "mc__tt__1.8__27__41004",
+    "mc__tt__1.8__27__41005",
+    "mc__tt__1.8__27__41006",
+    "mc__tt__1.8__27__41007",
+    "mc__tt__1.8__27__41008",
+    "mc__tt__1.8__27__41009",
+    "mc__tt__1.8__27__41010",
+    "mc__tt__1.8__27__41011",
+    "mc__tt__1.8__27__41012",
+    "mc__tt__1.8__27__41013",
+    "mc__tt__1.8__27__41014",
+    "mc__tt__1.8__27__41015",
+    "mc__tt__1.8__27__41016",
+    "mc__tt__1.8__27__41017",
+    "mc__tt__1.8__27__41018",
+    "mc__tt__1.8__27__41019"
+  ],
+  "qualification_note": "Mismatch/Monte Carlo analyses run only in reference presimulation as circuit qualification (complete fixed seed set, original statistical or per-sample limits). They are not part of post-layout scoring, because fixed seeds do not map to the same samples in an extracted netlist."
+}

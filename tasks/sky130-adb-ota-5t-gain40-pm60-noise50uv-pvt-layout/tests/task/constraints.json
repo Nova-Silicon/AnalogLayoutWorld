@@ -1,0 +1,13 @@
+{
+  "top": "ota_5t",
+  "ports": [
+    "vss",
+    "ibias",
+    "vdd",
+    "vinn",
+    "vinp",
+    "vout"
+  ],
+  "substrate": "vss",
+  "schema_version": 1
+}

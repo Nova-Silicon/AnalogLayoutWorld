@@ -1,0 +1,74 @@
+{
+  "task": "sky130-adb-two-stage-miller-opamp-gain60-ugb200-pm60-noise50uv-pvt-layout",
+  "top": "two_stage_miller_opamp",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XINN",
+        "XINP"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "load_mirror",
+      "devices": [
+        "XLOADD",
+        "XLOADM"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XREF",
+        "XTAIL",
+        "XOBN"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "vout"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "nleft",
+      "stage1",
+      "obias",
+      "iref"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "nleft",
+      "stage1"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.000858,
+    "vss": 0.000858
+  },
+  "currents_note": "前仿 TT/1.8 V/27 °C 功耗 1.544 mW / 1.8 V ≈ 0.858 mA，含测试台从 vdd 注入 iref 的 50 uA；输出级 XLOAD 估算约 0.6 mA，低于 1 mA，不列功率器件"
+}

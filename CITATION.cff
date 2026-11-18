@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Please cite the AnalogLayoutWorld paper when using this benchmark."
+title: "AnalogLayoutWorld: An Open Benchmark for Agentic Analog Layout Design"
+authors:
+  - name: "NovaSilicon Team"
+date-released: 2026-11-12
+doi: "10.48550/arXiv.2611.16991"
+url: "https://arxiv.org/abs/2611.16991"
+repository-code: "https://github.com/Nova-Silicon/AnalogLayoutWorld"
+identifiers:
+  - type: other
+    value: "arXiv:2611.16991"
+    description: "Paper describing the benchmark and evaluation protocol"

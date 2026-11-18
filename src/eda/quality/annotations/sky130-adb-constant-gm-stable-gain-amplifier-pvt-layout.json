@@ -1,0 +1,99 @@
+{
+  "task": "sky130-adb-constant-gm-stable-gain-amplifier-pvt-layout",
+  "top": "cgm_amp",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XA1",
+        "XA2"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "load_res",
+      "devices": [
+        "XRL1",
+        "XRL2"
+      ],
+      "kind": "pair",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "gain_ratio",
+      "devices": [
+        "XRB",
+        "XRL1",
+        "XRL2"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1.5
+    },
+    {
+      "name": "nb_mirror",
+      "devices": [
+        "XB1",
+        "XB2",
+        "XT"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1.5
+    },
+    {
+      "name": "p_loop_mirror",
+      "devices": [
+        "XBP1",
+        "XBP2"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 1.5
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "voutp",
+      "voutn"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "nb",
+      "nc",
+      "rb2"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "voutp",
+      "voutn"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ],
+      [
+        "voutp",
+        "voutn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.000183,
+    "vss": 0.000183
+  },
+  "currents_note": "前仿 TT/1.8 V/27 °C 功耗 0.330 mW / 1.8 V ≈ 0.183 mA，含测试台从 vdd 注入 iref 的 50 uA"
+}

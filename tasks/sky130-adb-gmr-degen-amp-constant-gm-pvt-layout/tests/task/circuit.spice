@@ -1,0 +1,30 @@
+* Reference source-degenerated local-feedback differential amplifier.
+* The resistors set the internal bias and closed-loop transconductance ratio.
+.subckt gmr_degen IREF VCM VDD VIN VIP VON VOP VSS
+
+* Preserve the declared reference-current port while the local loop uses VCM.
+RIREF IREF VSS sky130_fd_pr__res_generic_m1 w=0.50 l=3.72
+
+XNM9 net7 net8 net5 VSS sky130_fd_pr__nfet_01v8 w=10 l=1 m=8
+XNM5 net3 net8 VSS VSS sky130_fd_pr__nfet_01v8 w=10 l=1 m=10
+XNM8 net2 net8 VSS VSS sky130_fd_pr__nfet_01v8 w=10 l=1 m=2
+XNM2 net4 net8 VSS VSS sky130_fd_pr__nfet_01v8 w=10 l=1 m=2
+XNM4 net1 net8 VSS VSS sky130_fd_pr__nfet_01v8 w=10 l=1 m=10
+XPM4 net8 net9 VDD VDD sky130_fd_pr__pfet_01v8 w=10 l=1 m=2
+XPM3 net9 net9 VDD VDD sky130_fd_pr__pfet_01v8 w=10 l=1 m=2
+XPM2 net6 net6 VDD VDD sky130_fd_pr__pfet_01v8 w=10 l=1 m=2
+XPM1 VON net6 VDD VDD sky130_fd_pr__pfet_01v8 w=10 l=1 m=10
+XPM0 VOP net6 VDD VDD sky130_fd_pr__pfet_01v8 w=10 l=1 m=10
+XNM7 net6 VCM net4 VSS sky130_fd_pr__nfet_01v8_lvt w=10 l=1 m=2
+XNM6 net8 VCM net2 VSS sky130_fd_pr__nfet_01v8_lvt w=10 l=1 m=2
+XNM3 net9 VCM net7 VSS sky130_fd_pr__nfet_01v8_lvt w=10 l=1 m=2
+XNM1 VON VIN srcn VSS sky130_fd_pr__nfet_01v8_lvt w=10 l=1 m=16
+XNM0 VOP VIP srcp VSS sky130_fd_pr__nfet_01v8_lvt w=10 l=1 m=16
+XRDEGN srcn net3 sky130_fd_pr__res_generic_po w=1.00 l=2.74 m=1
+XRDEGP srcp net1 sky130_fd_pr__res_generic_po w=1.00 l=2.74 m=1
+
+XR2 net1 net3 sky130_fd_pr__res_generic_po w=1.00 l=23.50 m=1
+XR3 net5 VSS sky130_fd_pr__res_generic_po w=1.00 l=29.38 m=1
+XR1 VCM VON sky130_fd_pr__res_generic_po w=1.00 l=45.11 m=1
+XR0 VOP VCM sky130_fd_pr__res_generic_po w=1.00 l=45.11 m=1
+.ends gmr_degen

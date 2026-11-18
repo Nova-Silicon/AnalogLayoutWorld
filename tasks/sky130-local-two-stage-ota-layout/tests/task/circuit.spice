@@ -1,0 +1,17 @@
+* SKY130 schematic-characterized proposal; not layout-qualified.
+* MOS W/L below are micrometres; use .option scale=1e-6 in testbench.
+* m is explicit parallel multiplicity; nf=1. MOS dimensions preserved; physical R/C compensation documented in source.json.
+.subckt two_stage_ota vinp vinn vout ibias vdd vss
+XMNBIAS ibias ibias vss vss sky130_fd_pr__nfet_01v8 w=3 l=1 m=1 nf=1
+XMNSINKP vbias_p ibias vss vss sky130_fd_pr__nfet_01v8 w=3 l=1 m=1 nf=1
+XMPBIAS vbias_p vbias_p vdd vdd sky130_fd_pr__pfet_01v8 w=3 l=1 m=6 nf=1
+XMPTAIL ntail vbias_p vdd vdd sky130_fd_pr__pfet_01v8 w=3 l=1 m=16 nf=1
+XMP1 vx_l vinn ntail vdd sky130_fd_pr__pfet_01v8 w=4 l=1 m=4 nf=1
+XMP2 vx vinp ntail vdd sky130_fd_pr__pfet_01v8 w=4 l=1 m=4 nf=1
+XMN3 vx_l vx_l vss vss sky130_fd_pr__nfet_01v8 w=5 l=2 m=2 nf=1
+XMN4 vx vx_l vss vss sky130_fd_pr__nfet_01v8 w=5 l=2 m=2 nf=1
+XMN6 vout vx vss vss sky130_fd_pr__nfet_01v8 w=3 l=0.5 m=15 nf=1
+XMP6 vout vbias_p vdd vdd sky130_fd_pr__pfet_01v8 w=3 l=0.5 m=72 nf=1
+XRZ1 vx ncc sky130_fd_pr__res_generic_po w=1 l=20
+XCC1 ncc vout sky130_fd_pr__cap_mim_m3_1 w=22.2 l=22.2 m=1
+.ends two_stage_ota

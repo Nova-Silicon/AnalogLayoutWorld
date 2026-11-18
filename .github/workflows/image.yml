@@ -1,0 +1,168 @@
+name: clean-eda-image
+on:
+  push:
+    tags:
+      - 'eda-image/*'
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Push the checked image to GHCR (requires a separate publication decision)
+        type: boolean
+        required: true
+        default: false
+      tag:
+        description: Image tag (1-128 Docker tag characters; no registry or digest)
+        type: string
+        required: true
+        default: paper-v1
+permissions:
+  contents: read
+concurrency:
+  group: clean-eda-image-${{ github.ref }}-${{ inputs.tag }}
+  cancel-in-progress: false
+jobs:
+  build:
+    if: ${{ github.event_name == 'workflow_dispatch' || !github.event.deleted }}
+    runs-on: ubuntu-22.04
+    timeout-minutes: 90
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image_reference: ${{ steps.image.outputs.reference }}
+      image_id: ${{ steps.check.outputs.image_id }}
+      repo_digest: ${{ steps.push.outputs.repo_digest }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Validate the tag and prepare the repository-derived image name
+        id: image
+        shell: bash
+        env:
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          EVENT_NAME: ${{ github.event_name }}
+          SOURCE_REF: ${{ github.ref }}
+          REQUESTED_TAG: ${{ inputs.tag }}
+          REQUESTED_PUBLISH: ${{ inputs.publish }}
+        run: |
+          set -euo pipefail
+          case "$EVENT_NAME" in
+            push)
+              if [[ "$SOURCE_REF" != refs/tags/eda-image/* ]]; then
+                printf 'Only dedicated eda-image tags can request publication.\n' >&2
+                exit 1
+              fi
+              IMAGE_TAG="${SOURCE_REF#refs/tags/eda-image/}"
+              publish=true
+              ;;
+            workflow_dispatch)
+              IMAGE_TAG="$REQUESTED_TAG"
+              publish="$REQUESTED_PUBLISH"
+              [[ "$publish" == true || "$publish" == false ]]
+              ;;
+            *)
+              printf 'Unsupported image workflow event.\n' >&2
+              exit 1
+              ;;
+          esac
+          if [[ ! "$IMAGE_TAG" =~ ^[A-Za-z0-9_][A-Za-z0-9_.-]{0,127}$ ]]; then
+            printf 'Invalid tag: use 1-128 Docker tag characters, starting with a letter, digit or underscore.\n' >&2
+            exit 1
+          fi
+          image_name="ghcr.io/${SOURCE_REPOSITORY,,}"
+          printf 'publish=%s\n' "$publish" >> "$GITHUB_OUTPUT"
+          printf 'name=%s\n' "$image_name" >> "$GITHUB_OUTPUT"
+          printf 'reference=%s:%s\n' "$image_name" "$IMAGE_TAG" >> "$GITHUB_OUTPUT"
+      - name: Build and execute runtime component checks
+        shell: bash
+        env:
+          IMAGE_REFERENCE: ${{ steps.image.outputs.reference }}
+          SOURCE_REPOSITORY: ${{ github.repository }}
+          SOURCE_REVISION: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          docker build --platform linux/amd64 --build-arg BUILD_JOBS=2 \
+            --label "org.opencontainers.image.source=https://github.com/${SOURCE_REPOSITORY}" \
+            --label "org.opencontainers.image.revision=${SOURCE_REVISION}" \
+            -f docker/Dockerfile -t "$IMAGE_REFERENCE" .
+      - name: Verify installed image versions and assets
+        id: check
+        shell: bash
+        env:
+          IMAGE_REFERENCE: ${{ steps.image.outputs.reference }}
+        run: |
+          set -euo pipefail
+          docker run --rm --network none "$IMAGE_REFERENCE" \
+            /opt/analog-layout/python/bin/python -I -B \
+            /opt/analog-layout/build-checks/check_runtime.py --out /tmp/eda-check
+          image_id=$(docker image inspect --format '{{.Id}}' "$IMAGE_REFERENCE")
+          [[ "$image_id" =~ ^sha256:[0-9a-f]{64}$ ]]
+          printf 'image_id=%s\n' "$image_id" >> "$GITHUB_OUTPUT"
+          {
+            printf '## Checked EDA image\n\n'
+            printf 'Local reference: `%s`\n\n' "$IMAGE_REFERENCE"
+            printf 'Image ID: `%s` (not a registry digest)\n\n' "$image_id"
+            printf 'Build and runtime checks completed. Registry publication is a separate conditional step.\n'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Record build-only mode
+        if: ${{ steps.image.outputs.publish == 'false' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          printf '\nBuild-only mode: no GHCR login or push was requested.\n' >> "$GITHUB_STEP_SUMMARY"
+      - name: Log in to GHCR only for an explicitly requested publication
+        if: ${{ steps.image.outputs.publish == 'true' }}
+        shell: bash
+        env:
+          GHCR_USERNAME: ${{ github.actor }}
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          printf '%s' "$GHCR_TOKEN" | docker login ghcr.io \
+            --username "$GHCR_USERNAME" --password-stdin
+      - name: Push the checked image and record its registry digest
+        id: push
+        if: ${{ steps.image.outputs.publish == 'true' }}
+        shell: bash
+        env:
+          IMAGE_NAME: ${{ steps.image.outputs.name }}
+          IMAGE_REFERENCE: ${{ steps.image.outputs.reference }}
+          CHECKED_IMAGE_ID: ${{ steps.check.outputs.image_id }}
+        run: |
+          set -euo pipefail
+          actual_image_id=$(docker image inspect --format '{{.Id}}' "$IMAGE_REFERENCE")
+          if [[ "$actual_image_id" != "$CHECKED_IMAGE_ID" ]]; then
+            printf 'Refusing to push an image different from the checked image.\n' >&2
+            exit 1
+          fi
+          docker push "$IMAGE_REFERENCE"
+          repo_digests=$(docker image inspect --format '{{range .RepoDigests}}{{println .}}{{end}}' "$IMAGE_REFERENCE")
+          repo_digest=
+          while IFS= read -r candidate; do
+            if [[ "$candidate" == "$IMAGE_NAME"@sha256:* ]]; then
+              digest="${candidate#*@sha256:}"
+              [[ "$digest" =~ ^[0-9a-f]{64}$ ]]
+              if [[ -n "$repo_digest" && "$repo_digest" != "$candidate" ]]; then
+                printf 'Multiple registry digests found; resolve the published tag before pinning.\n' >&2
+                exit 1
+              fi
+              repo_digest="$candidate"
+            fi
+          done <<< "$repo_digests"
+          if [[ -z "$repo_digest" ]]; then
+            printf 'Push completed without a matching RepoDigest; do not substitute the Image ID.\n' >&2
+            exit 1
+          fi
+          printf 'repo_digest=%s\n' "$repo_digest" >> "$GITHUB_OUTPUT"
+          printf 'Published RepoDigest: %s\n' "$repo_digest"
+          {
+            printf '\n## Registry result\n\n'
+            printf 'Pushed tag: `%s`\n\n' "$IMAGE_REFERENCE"
+            printf 'RepoDigest to review and pin: `%s`\n\n' "$repo_digest"
+            printf 'No package visibility was changed. Confirm public visibility and anonymous pulling before advertising this image.\n'
+          } >> "$GITHUB_STEP_SUMMARY"
+      - name: Remove the GHCR login from the runner
+        if: ${{ always() && steps.image.outputs.publish == 'true' }}
+        shell: bash
+        run: docker logout ghcr.io

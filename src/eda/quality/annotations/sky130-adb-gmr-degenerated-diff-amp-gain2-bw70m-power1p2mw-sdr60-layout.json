@@ -1,0 +1,105 @@
+{
+  "task": "sky130-adb-gmr-degenerated-diff-amp-gain2-bw70m-power1p2mw-sdr60-layout",
+  "top": "gmr_degen",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XINP",
+        "XINN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "degen_pair",
+      "devices": [
+        "XRSP",
+        "XRSN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 2
+    },
+    {
+      "name": "load_res_pair",
+      "devices": [
+        "XRLP",
+        "XRLN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 2
+    },
+    {
+      "name": "gain_ratio",
+      "devices": [
+        "XRLP",
+        "XRLN",
+        "XRSP",
+        "XRSN"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1.5
+    },
+    {
+      "name": "tail_mirror",
+      "devices": [
+        "XREF",
+        "XTAIL"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "VOP",
+      "VON"
+    ],
+    "victims": [
+      "VIP",
+      "VIN",
+      "sp",
+      "sn",
+      "IREF"
+    ],
+    "critical": [
+      "VIP",
+      "VIN",
+      "sp",
+      "sn",
+      "VOP",
+      "VON"
+    ],
+    "diff_pairs": [
+      [
+        "VIP",
+        "VIN"
+      ],
+      [
+        "VOP",
+        "VON"
+      ],
+      [
+        "sp",
+        "sn"
+      ]
+    ],
+    "power": [
+      "VDD"
+    ],
+    "ground": [
+      "VSS"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "VDD": 0.000552,
+    "VSS": 0.000602
+  },
+  "currents_note": "前仿 TT 功耗 1.083 mW / 1.8 V = 0.60 mA（IREF 50 uA 由外部 vdd 节点注入，DUT VDD 脚约 0.55 mA）；尾电流约 0.55 mA，按对称估算每侧负载电阻支路约 0.28 mA"
+}

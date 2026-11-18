@@ -1,0 +1,21 @@
+{
+  "basis": "Trusted private inputs; public_files records the native fixture subset separately.",
+  "files": {
+    "circuit.spice": "896a3819f0fa8d0ea6baf56161746d8478dd72235c410fd0a1c6778bdb6306b3",
+    "constraints.json": "23ef1d5712355413f24da4d570789dc6be1fc862225def8ae376c0a001c77eb4",
+    "identity.json": "5aea0a05f44f7b8657e56048476cb1a86b7e8c75720370de6f8f4e3bd21b9cec",
+    "testbench/measurement.json": "53d0f6955f362e9874be48dfea3d7f0a0f1f4db889e3298820bceaf6a9ef694d"
+  },
+  "public_files": {
+    "circuit.spice": "896a3819f0fa8d0ea6baf56161746d8478dd72235c410fd0a1c6778bdb6306b3",
+    "testbench/README.md": "3a1099e934e7cca4b8e017af5ac78193c2b61da91e00f16fd37742ebfb1dbbf0",
+    "testbench/README.zh-CN.md": "85a92bf17cb44d6ac41fbeab7e937a5c25d40f17f7a345f409190d1ef2e2c176",
+    "testbench/tb_comparator.spi": "5c75bbe807d63b5df6c13ad50928302936560910712f87b60b5f31751d6eed8c"
+  },
+  "public_projection": {
+    "constraints": "physical fields only, if publicly present",
+    "physical_inputs": "byte-identical DUT and optional LVS reference",
+    "testbench": "published native fixtures and documentation; private graders excluded"
+  },
+  "schema_version": 2
+}

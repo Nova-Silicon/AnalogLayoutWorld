@@ -1,0 +1,379 @@
+Magic-8.3 Command Reference
+
+ext2spice, exttospice
+
+Convert extracted file(s) to a SPICE format file.
+
+Usage:
+
+ext2spice [option] [cellname]
+
+where option is one of the following:
+
+[run] [runtime_options]
+
+Run ext2spice on current cell, with command-line options
+(see Summary, below).
+
+default
+
+Reset to default values
+
+format hspice|spice2|spice3|ngspice|cdl
+
+Set output format. spice3 is the default,
+for compatibility with tclspice. This is a
+change from previous versions of magic, where the
+default was hspice. ngspice is set as
+default by the ext2spice lvs option. cdl
+format incorporates some common syntax used by CDL format
+files, including placing a slash between a subcircuit's
+pins and the subcircuit name.
+
+rthresh [value]
+
+Set resistance threshold value. Lumped resistances
+below this value will not be written to the output. The
+value is in ohms, or may be the keyword infinite
+to prohibit writing any lumped resistances to the output.
+
+cthresh [value]
+
+Set capacitance threshold value. The value is in femtofarads,
+any parasitic capacitances to the output.
+
+merge [merge_option]
+
+Merge parallel devices/transistors. The valid merge options are:
+
+conservative
+
+Merge transistors and capacitors having the same device
+type and node connections and having the same width and
+length. Device multipliers ("M=") are output for each
+set of merged devices.
+
+aggressive
+
+Merge transistors having the same node
+connections and having the same length. Widths
+are summed in the final output. Merge any capacitors
+having the same device type and node connections.
+Capacitance is summed in the final output.
+
+none
+
+Do not merge any devices.
+
+extresist on|off
+
+Incorporate output from the command extresist into
+the final SPICE file.
+
+resistor tee [on|off]
+
+Model resistor capacitance as a T-network. Each resistor
+device is split into two, with all substrate and overlap
+capacitance placed on the node between the two half-length
+devices. Without this option, resistor devices lose all
+parasitic capacitance information, and ext2spice
+may produce warnings about unknown nodes. However, use of
+this option may conflict with LVS (layout-vs.-schematic),
+when only one resistor is expected per drawn device.
+
+subcircuit [on|off]
+
+When set to on (the default), and if the cell selected
+for SPICE output has defined ports on the top level, then
+the cell becomes a subcircuit definition in the output, and
+the output has no top-level calls to any devices. This
+format is appropriate for including in a testbench netlist,
+for example. If the top-level cell does not have defined
+ports, then there is no way for magic to determine what
+the ports might be, or what order they may be in, making
+it impossible to generate a consistent subcircuit, so in
+the absence of ports, this option has no function.
+Ports are defined by the use of the port method for
+labeling input and output ports. When option
+subcircuit is set to off, the top-level
+circuit will be the top level of the netlist, and it
+will have no associated subcircuit definition.
+
+subcircuit top [on|off|auto]
+
+This variant of the subcircuit option controls
+whether or not ext2spice generates a .subckt wrapper
+around the top-level circuit. If on is specified,
+a ".subckt" wrapper will always be output, regardless of
+whether or not ports are defined in the layout. If
+off, no ".subckt" wrapper will be output, and
+ports will be ignored (They will be regular nets in the
+output netlist). If set to auto, magic will
+check whether or not ports are defined in the layout,
+and generate a ".subckt" wrapper only if ports have
+been defined.
+
+subcircuit descend [on|off]
+
+When set to off, the subcircuit descend
+option will not descend into any subcells below the
+top level, writing only the top-level circuit to the
+output. The default is on. This option can be
+useful for writing out digital circuits made from
+standard cells, since the digital subcircuits can usually
+be included from a vendor library.
+
+scale [on|off]
+
+When set to on, the scale value is set by the
+SPICE ".scale" card, recognized by some
+SPICE parsers. All device lengths, widths, and areas
+are then given in integer units (internal database
+units). When set to off, all device widths,
+lengths, and areas are given in unscaled, physical
+dimensions.
+
+short [voltage|resistor|none]
+
+Determines behavior with respect to ports with different
+names connected to the same net. SPICE does not have a
+universal method for describing a net with more than one
+name. A common way of handling this is by separating
+differently-named parts of a net with a zero-ohm ideal
+resistor or a zero-volt DC source. "ext2spice short"
+uses one of these methods to preserve duplicate port names.
+"ext2spice short resistor" uses the zero-ohm resistor
+method, which "ext2spice short voltage" uses the
+zero-volt source method. "ext2spice short none"
+reverts to the default behavior, which is to remove all
+port names except for one from the netlist.
+
+hierarchy [on|off]
+
+When set to on, magic will extract a hierarchical
+representation of the circuit, in which the cell hierarchy
+of the layout is represented in SPICE by
+".subckt" macros. "ext2spice hierarchy"
+does not require that subcircuits have port labels. Each
+subcircuit will be analyzed for port connections, and port
+connections will be consistent in the SPICE output between
+the subcircuit definition (".subckt") and instantiated
+calls ("X") to that subcircuit.
+
+blackbox [on|off]
+
+When set to "on", views marked as abstract will be output
+as subcircuit calls ("X") but there will be no associated
+subcircuit definition output. A circuit is considered
+"abstract" if at the time of extraction it has a property
+named "LEFview". A cell will automatically be given this
+property if it is read from a LEF input file. It may also
+be given this property using the "property" command.
+In order for the blackbox view to be meaningful, the
+subcell must declare ports (see the "port" command).
+
+renumber [on|off]
+
+When set to on, subcircuit calls (see above; only
+used for certain options such as "subcircuit", "hierarchy",
+or with extracted device types "subcircuit" or "rsubcircuit")
+are numbered sequentially "X1", "X2", etc., as encountered
+by the extractor. When set to off, subcircuit
+calls (when used with options "subcircuit" or "hierarchy",
+but not applying to low-level extracted subcircuit devices)
+will be rendered in the SPICE output file as "X" followed
+by the ID (name) of the cell instance.
+
+global [on|off]
+
+When set to on or default, unconnected global nets
+of the same name in subcells are merged in the output. When
+set to off, such nets are left unconnected.
+
+cellname
+
+Name of the cell to generate output for. This item is optional;
+if not specified, then ext2spice generates output for the
+current edit cell.
+
+lvs
+
+Apply settings appropriate for running LVS (layout vs. schematic).
+These settings are as follows:
+
+hierarchy on
+
+format ngspice
+
+cthresh infinite
+
+rthresh infinite
+
+renumber off
+
+scale off
+
+blackbox on
+
+subcircuit top auto
+
+global off
+
+This command applies the settings but does not generate output
+(i.e., does not run ext2spice), so that settings
+can be overridden if necessary.
+
+(The lvs option was introduced in version 8.2.79).
+
+help
+
+Print help information.
+
+Summary:
+
+Without options, or with the option run,
+the ext2spice command converts the hierarchical extracted
+netlist information produced by the extract command in
+a series of .ext files into a flattened representation
+in SPICE format, used for detailed analog simulation.
+
+runtime_options may be passed on the command line, and
+represent the original command-line options passed to the
+standalone version of ext2spice. A number of the original
+command-line options have been deprecated in the Tcl-based
+version, and some are duplicated by other ext2spice options.
+Valid runtime_options are:
+
+-M
+
+Aggressive merging of devices. If the lengths of FET
+devices connected in parallel are equal, then add their
+widths together to form a single device. Overrides any
+value specified by the "ext2spice merge" command option.
+
+-m
+
+Conservative merging of devices. If the lengths and
+widths of FET devices connected in parallel are equal,
+then add their widths together to form a single device.
+Overrides any value specified by the "ext2spice merge"
+command option.
+
+-o filename
+
+Save the output as file filename (filename
+must include any file extension, as there is no standard
+extension for SPICE files).
+
+-j device:class
+[/subclass] /subsnode
+
+Override values of resistance class, substrate resistance
+class, and substrate node name for device type device.
+Resistance classes are indexed by number and must match the
+definition in the technology file's extract section.
+
+-f spice2|spice3|hspice|ngspice|cdl
+
+Choose the output SPICE format for compatibility with
+different versions of SPICE.
+
+-d
+
+Distribute junction areas and perimeters. The Magic extractor
+computes area and perimter values per node, not per
+device. For devices that share a node, Magic cannot
+distinguish between the devices (for parasitic calculations,
+it's not necessary to distinguish between the devices).
+Normally, when generating device output, Magic writes the
+lumped area and perimeter values along with the first device
+attached to a node, and sets the area and perimeter values
+for all remaining devices on that node to zero. The -d
+option causes Magic to distribute the node area and perimeter
+evenly among all devices attached to that node.
+
+-B
+
+Don't output transistor or node attributes in the SPICE file.
+This option will also disable the output of information such
+as the area and perimeter of source and drain diffusion and
+the FET substrate.
+
+-F
+
+Don't output nodes that aren't connected to devices (floating
+nodes).
+
+-tchar
+
+Trim characters from node names when writing the output file.
+char should be either "#" or "!". The
+option may be used twice if both characters require trimming.
+
+-y num
+
+Select the precision for outputting capacitors. The default is
+1 which means that the capacitors will be printed to a precision
+of 0.1 fF.
+
+-J hier|flat
+
+Select the source/drain area and perimeter extraction algorithm.
+If hier is selected then the areas and perimeters are
+extracted only within each subcell. For each device in a
+subcell the area and perimeter of its source and drain within
+this subcell are output. If two or more devices share a
+source/drain node then the total area and perimeter will be
+output in only one of them and the other will have 0. If
+flat is selected the same rules apply, only the scope
+of search for area and perimeter is the whole netlist. In
+general, flat (which is the default) will give accurate
+results (it will take into account shared sources/drains).
+
+-p path
+
+Search the directory location path for .ext format
+files. This option is typically used with the "extract
+path path" command, because extraction and netlist
+generation are two independent steps. If this option is not
+specified, then by default the .ext file is expected to be in
+the same location as the corresponding .mag file, and failing
+that, the search path for .ext files is the same as the search
+path for .mag files.
+
+With options, the command sets various parameters affecting the
+output format and content.
+
+Implementation Notes:
+
+ext2spice is implemented as a separate loadable Tcl package,
+but one which depends on the presence of the standard "tclmagic"
+package. magic is set up with a placeholder command for
+ext2spice, and will automatically load the Tcl package when
+this command is invoked.
+
+exttospice is an alias for ext2spice, to satisfy the
+grammatically anal retentive.
+
+ext2spice is also implemented as a script to be run from
+the shell command line, where it executes magic in batch mode
+(i.e., using the -dnull option) and runs the ext2spice
+command automatically. With this usage, the syntax is:
+
+ext2spice [ magic_options -- ]
+ext2spice_runtime_options ext_file
+
+The double-dash separates command options passed to magic on
+startup (such as "-T technology" to specify the
+technology) from those runtime options (see above) passed to
+the ext2spice command.
+
+See Also:
+
+extract
+
+ext2sim
+
+Return to command index
+
+Last updated: September 17, 2021 at 10:12am

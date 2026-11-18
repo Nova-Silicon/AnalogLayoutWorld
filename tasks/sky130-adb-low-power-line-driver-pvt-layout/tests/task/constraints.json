@@ -1,0 +1,14 @@
+{
+  "top": "low_power_line_driver",
+  "ports": [
+    "vss",
+    "iref",
+    "vdd",
+    "vinn",
+    "vinp",
+    "vout"
+  ],
+  "substrate": "vss",
+  "schema_version": 1,
+  "lvs_mim_geometry_view": "mim_geometry_literal_um"
+}

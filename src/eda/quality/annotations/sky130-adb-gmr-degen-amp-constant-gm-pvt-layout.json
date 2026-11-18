@@ -1,0 +1,154 @@
+{
+  "task": "sky130-adb-gmr-degen-amp-constant-gm-pvt-layout",
+  "top": "gmr_degen",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XNM0",
+        "XNM1"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "tail_sinks",
+      "devices": [
+        "XNM4",
+        "XNM5"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "load_pair",
+      "devices": [
+        "XPM0",
+        "XPM1"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "degen_pair",
+      "devices": [
+        "XRDEGP",
+        "XRDEGN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "out_res_pair",
+      "devices": [
+        "XR0",
+        "XR1"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "gain_ratio",
+      "devices": [
+        "XR0",
+        "XR1",
+        "XRDEGP",
+        "XRDEGN",
+        "XR2",
+        "XR3"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "cgm_core",
+      "devices": [
+        "XNM9",
+        "XNM8"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1.5
+    },
+    {
+      "name": "cgm_pmirror",
+      "devices": [
+        "XPM3",
+        "XPM4"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 1
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XNM8",
+        "XNM2",
+        "XNM4",
+        "XNM5"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "VOP",
+      "VON"
+    ],
+    "victims": [
+      "VIP",
+      "VIN",
+      "net8",
+      "net6",
+      "net9",
+      "net5"
+    ],
+    "critical": [
+      "VIP",
+      "VIN",
+      "srcp",
+      "srcn",
+      "VOP",
+      "VON"
+    ],
+    "diff_pairs": [
+      [
+        "VIP",
+        "VIN"
+      ],
+      [
+        "VOP",
+        "VON"
+      ],
+      [
+        "srcp",
+        "srcn"
+      ],
+      [
+        "net1",
+        "net3"
+      ]
+    ],
+    "power": [
+      "VDD"
+    ],
+    "ground": [
+      "VSS"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "VDD": 0.000587,
+    "VSS": 0.000637
+  },
+  "currents_note": "前仿 TT 功耗 1.146 mW / 1.8 V = 0.637 mA（测试台把 VCM/VIN/VIP 功率也计入，量级可忽略；IREF 50 uA 由外部 vdd 节点注入，经 RIREF 入 VSS，DUT VDD 脚约 0.587 mA）；按镜像比估算每侧输出支路约 0.23 mA"
+}

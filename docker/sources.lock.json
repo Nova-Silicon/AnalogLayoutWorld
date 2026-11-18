@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "platform": "linux/amd64",
+  "base_image": "ubuntu:22.04@sha256:45e9ddc6895604674618a409ca9f73d301da8fdb75fe330e8e9a27b3b219e4ad",
+  "files": [
+    {
+      "name": "Python-3.12.14.tar.xz",
+      "version": "3.12.14",
+      "url": "https://www.python.org/ftp/python/3.12.14/Python-3.12.14.tar.xz",
+      "sha256": "5c8462af5790baf43a321a1559dbe0db06d1be4300fb85fb53c40060668e548a"
+    },
+    {
+      "name": "klayout_0.30.12-1_amd64.deb",
+      "version": "0.30.12",
+      "url": "https://www.klayout.org/downloads/Ubuntu-22/klayout_0.30.12-1_amd64.deb",
+      "source_url": "https://www.klayout.org/downloads/src/klayout-0.30.12.tar.gz",
+      "sha256": "c09637de6d82bfa2a102c2468e285d3d060fa59b86680f10393a0e9f69ab5763"
+    },
+    {
+      "name": "magic-bed8d4ff84333767aa923d469d339cd05c56a00a.tar.gz",
+      "version": "8.3.685",
+      "url": "https://codeload.github.com/RTimothyEdwards/magic/tar.gz/bed8d4ff84333767aa923d469d339cd05c56a00a",
+      "commit": "bed8d4ff84333767aa923d469d339cd05c56a00a",
+      "sha256": "a11f682818339061c198467c44d33dea8ccc38b7fa4aa7be1d5dadbd77e27719"
+    },
+    {
+      "name": "ngspice-46.tar.gz",
+      "version": "46",
+      "url": "https://downloads.sourceforge.net/project/ngspice/ng-spice-rework/old-releases/46/ngspice-46.tar.gz",
+      "sha256": "a0d1699af1940b06649276dcd6ff5a566c8c0cad01b2f7b5e99dedbb4d64c19b"
+    },
+    {
+      "name": "netgen-3cb047bd6b55ae09c8eefeb479b4fe746cfdb948.tar.gz",
+      "version": "1.5.324",
+      "url": "https://codeload.github.com/RTimothyEdwards/netgen/tar.gz/3cb047bd6b55ae09c8eefeb479b4fe746cfdb948",
+      "commit": "3cb047bd6b55ae09c8eefeb479b4fe746cfdb948",
+      "sha256": "47f190eb09d020f6b1ab0b408f52768b8cd6c73bd8c03a6676c4fed8429d1e81"
+    },
+    {
+      "name": "node-v22.23.3-linux-x64.tar.xz",
+      "version": "22.23.3",
+      "url": "https://nodejs.org/dist/v22.23.3/node-v22.23.3-linux-x64.tar.xz",
+      "checksum_source": "https://nodejs.org/dist/v22.23.3/SHASUMS256.txt",
+      "sha256": "df450af89261115ef9f9e3830c3eeb2cc9213b63c720b1af623cb5dcbe2e02de"
+    },
+    {
+      "name": "ripgrep-15.1.0-x86_64-unknown-linux-musl.tar.gz",
+      "version": "15.1.0",
+      "url": "https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-x86_64-unknown-linux-musl.tar.gz",
+      "checksum_source": "https://github.com/BurntSushi/ripgrep/releases/download/15.1.0/ripgrep-15.1.0-x86_64-unknown-linux-musl.tar.gz.sha256",
+      "sha256": "1c9297be4a084eea7ecaedf93eb03d058d6faae29bbc57ecdaf5063921491599"
+    },
+    {
+      "name": "ngspice-46-manual.pdf",
+      "version": "46",
+      "url": "https://ngspice.sourceforge.io/docs/ngspice-46-manual.pdf",
+      "sha256": "b5bc7c4f3aac00e670b01b1d1ab64ec87055a491014af1de828764bf98faf766"
+    }
+  ]
+}

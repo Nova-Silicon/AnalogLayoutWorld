@@ -1,0 +1,14 @@
+{
+  "top": "ahuja_ota",
+  "ports": [
+    "vss",
+    "iref",
+    "vdd",
+    "vinp",
+    "vinn",
+    "vout"
+  ],
+  "substrate": "vss",
+  "schema_version": 1,
+  "lvs_mim_geometry_view": "mim_geometry_literal_um"
+}

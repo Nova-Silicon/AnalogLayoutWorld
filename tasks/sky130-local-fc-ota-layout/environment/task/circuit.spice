@@ -1,0 +1,25 @@
+* SKY130 porting DRAFT: topology and W/L/m preserved; NOT qualified.
+* MOS W/L below are micrometres; use .option scale=1e-6 in testbench.
+* m is explicit parallel multiplicity; nf=1. No sizing optimization.
+.subckt folded_cascode_ota vinp vinn vout ibias vdd vss
+XMMNbias ibias ibias vss vss sky130_fd_pr__nfet_01v8 w=3.3 l=1 m=1 nf=1
+XMMPfold_bias vbias_fold vbias_fold vdd vdd sky130_fd_pr__pfet_01v8 w=5 l=2 m=4 nf=1
+XMMNfold_bias vbias_fold ibias vss vss sky130_fd_pr__nfet_01v8 w=3.3 l=1 m=1 nf=1
+XMMP_vbcp_1 vbc_p_mid vbc_p vdd vdd sky130_fd_pr__pfet_01v8 w=4 l=0.5 m=1 nf=1
+XMMP_vbcp_2 vbc_p vbc_p vbc_p_mid vdd sky130_fd_pr__pfet_01v8 w=4.45 l=3 m=2 nf=1
+XMMN_vbcp_sink vbc_p ibias vss vss sky130_fd_pr__nfet_01v8 w=3.3 l=1 m=1 nf=1
+XMMP_vbcn_src vbc_n vbias_fold vdd vdd sky130_fd_pr__pfet_01v8 w=5 l=2 m=4 nf=1
+XMMN_vbcn_2 vbc_n vbc_n vbc_n_mid vss sky130_fd_pr__nfet_01v8 w=4.55 l=2 m=2 nf=1
+XMMN_vbcn_1 vbc_n_mid vbc_n vss vss sky130_fd_pr__nfet_01v8 w=1 l=1 m=1 nf=1
+XMN1 vmid_left1 vinp ntail vss sky130_fd_pr__nfet_01v8 w=4.4 l=1 m=1 nf=1
+XMN2 vmid_right1 vinn ntail vss sky130_fd_pr__nfet_01v8 w=4.4 l=1 m=1 nf=1
+XMNtail ntail ibias vss vss sky130_fd_pr__nfet_01v8 w=3.3 l=1 m=2 nf=1
+XMP1_bottom vmid_left1 vbias_fold vdd vdd sky130_fd_pr__pfet_01v8 w=5 l=2 m=8 nf=1
+XMP3_bottom vmid_right1 vbias_fold vdd vdd sky130_fd_pr__pfet_01v8 w=5 l=2 m=8 nf=1
+XMP2_top vd_left vbc_p vmid_left1 vdd sky130_fd_pr__pfet_01v8 w=4.45 l=3 m=12 nf=1
+XMP4_top vout vbc_p vmid_right1 vdd sky130_fd_pr__pfet_01v8 w=4.45 l=3 m=12 nf=1
+XMN5_bottom vmid_left2 vd_left vss vss sky130_fd_pr__nfet_01v8 w=3 l=2 m=1 nf=1
+XMN7_bottom vmid_right2 vd_left vss vss sky130_fd_pr__nfet_01v8 w=3 l=2 m=1 nf=1
+XMN6_top vd_left vbc_n vmid_left2 vss sky130_fd_pr__nfet_01v8 w=4.55 l=2 m=2 nf=1
+XMN8_top vout vbc_n vmid_right2 vss sky130_fd_pr__nfet_01v8 w=4.55 l=2 m=2 nf=1
+.ends folded_cascode_ota

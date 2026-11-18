@@ -1,0 +1,86 @@
+{
+  "task": "sky130-adb-unregulated-charge-pump-10mhz-pvt-layout",
+  "top": "charge_pump_unregulate",
+  "matched_groups": [
+    {
+      "name": "pump_halves",
+      "devices": [
+        "XNM3",
+        "XNM4",
+        "XNM1",
+        "XNM0",
+        "XC1",
+        "XC0",
+        "XI4.Xmp0",
+        "XI3.Xmp0",
+        "XI4.Xmn0",
+        "XI3.Xmn0"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "CLK",
+      "net011",
+      "net06",
+      "net08",
+      "net012",
+      "net018"
+    ],
+    "victims": [],
+    "critical": [
+      "net012",
+      "net018",
+      "net06",
+      "net08"
+    ],
+    "diff_pairs": [
+      [
+        "net012",
+        "net018"
+      ],
+      [
+        "net06",
+        "net08"
+      ]
+    ],
+    "power": [
+      "AVDD",
+      "VOUT"
+    ],
+    "ground": [
+      "AVSS"
+    ]
+  },
+  "power_devices": [
+    "XNM3",
+    "XNM4",
+    "XNM0",
+    "XNM1",
+    "XI3.Xmp0",
+    "XI3.Xmn0",
+    "XI4.Xmp0",
+    "XI4.Xmn0"
+  ],
+  "currents_a": {
+    "AVDD": 0.000132,
+    "VOUT": 5e-05,
+    "AVSS": 8.2e-05,
+    "XNM3": 2.5e-05,
+    "XNM4": 2.5e-05,
+    "XNM0": 2.5e-05,
+    "XNM1": 2.5e-05,
+    "XI3.Xmp0": 2.5e-05,
+    "XI3.Xmn0": 2.5e-05,
+    "XI4.Xmp0": 2.5e-05,
+    "XI4.Xmn0": 2.5e-05
+  },
+  "currents_note": "规格负载 50 uA；前仿 TT/40 C/1.8 V：AVDD 平均 131.6 uA、VOUT 2.449 V、纹波 1.9 mVpp。开关与底板驱动（XI3/XI4 反相器）电流按倍压泵电荷守恒估算为每管平均 25 uA；AVSS≈131.6-50≈82 uA（估算）；均为平均值。supply_v 给出非 1.8 V 电源轨的标称电压，供 IR 压降百分比换算",
+  "supply_v": {
+    "VOUT": 2.45
+  },
+  "name_note": "底板驱动反相器 XI3/XI4 内的器件用点号路径，如 XI3.Xmp0"
+}

@@ -1,0 +1,121 @@
+{
+  "task": "sky130-local-comparator-layout",
+  "top": "comparator",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XMM5",
+        "XMM6"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "nmos_latch",
+      "devices": [
+        "XMM4",
+        "XMM3"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "pmos_latch",
+      "devices": [
+        "XMM14",
+        "XMM13"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "int_caps",
+      "devices": [
+        "XMM0",
+        "XMM22"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "reset_switches",
+      "devices": [
+        "XMM18",
+        "XMM2",
+        "XMM1",
+        "XMM12"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "output_inverters",
+      "devices": [
+        "XMM16",
+        "XMM17",
+        "XMM8",
+        "XMM15"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "clk",
+      "crossp",
+      "crossn",
+      "outp",
+      "outm"
+    ],
+    "victims": [
+      "net0",
+      "net1"
+    ],
+    "critical": [
+      "net0",
+      "net1",
+      "intern",
+      "interp",
+      "crossp",
+      "crossn"
+    ],
+    "diff_pairs": [
+      [
+        "net0",
+        "net1"
+      ],
+      [
+        "intern",
+        "interp"
+      ],
+      [
+        "crossp",
+        "crossn"
+      ],
+      [
+        "outp",
+        "outm"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "gnd"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 1.26e-05,
+    "gnd": 1.26e-05
+  },
+  "currents_note": "前仿 TT 1.8 V/27 C、50 MHz 时钟下 20~100 ns 平均功耗 22.7 uW / 1.8 V = 12.6 uA；本机 ngspice 测得复位沿 vdd 峰值约 0.67 mA（估算），不设功率器件"
+}

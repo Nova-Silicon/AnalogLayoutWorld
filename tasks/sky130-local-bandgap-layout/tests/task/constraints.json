@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "dimensions_are_frozen": true,
+  "preserve": [
+    "topology including startup",
+    "MOS W/L/m/nf",
+    "PNP cell size and1:8 multiplicity",
+    "high-poly series geometries",
+    "MIM geometries",
+    "ports"
+  ],
+  "external_not_in_DUT": [
+    "10pF load",
+    "100Meg measurement load",
+    "supply ramp"
+  ],
+  "layout_guidance": [
+    "PNP与两支路电阻注意匹配和热梯度；全部33段物理电阻必须进入DUT。",
+    "保留OTA补偿与启动连接，匹配对共享合理环境。",
+    "高阻poly与PNP衬底/阱连接按PDK做，先确认LVS/PEX器件识别。"
+  ],
+  "ports": [
+    "vdd",
+    "vss",
+    "vref"
+  ],
+  "top": "bandgap",
+  "lvs_mim_geometry_view": "mim_m3_literal_um_mult1",
+  "substrate": "vss",
+  "substrate_basis": "All flattened NMOS bulk terminals connect to this declared top port.",
+  "lvs_bjt_parallel_view": "pnp_0p68_integer_m",
+  "lvs_resistor_geometry_view": "high_po_0p35_literal_um"
+}

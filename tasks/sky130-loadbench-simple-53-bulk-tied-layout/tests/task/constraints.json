@@ -1,0 +1,14 @@
+{
+  "top": "SimpleOpAmp53_BulkTied",
+  "ports": [
+    "ibias",
+    "in1",
+    "in2",
+    "out",
+    "sourceNmos",
+    "sourcePmos"
+  ],
+  "substrate": "sourceNmos",
+  "schema_version": 1,
+  "lvs_reference_normalization": "supported_model_instance_names_only"
+}

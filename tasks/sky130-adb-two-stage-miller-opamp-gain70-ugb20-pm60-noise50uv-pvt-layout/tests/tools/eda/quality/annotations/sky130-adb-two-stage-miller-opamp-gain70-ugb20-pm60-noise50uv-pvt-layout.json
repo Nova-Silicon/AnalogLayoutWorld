@@ -1,0 +1,84 @@
+{
+  "task": "sky130-adb-two-stage-miller-opamp-gain70-ugb20-pm60-noise50uv-pvt-layout",
+  "top": "two_stage_miller_opamp",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XM1",
+        "XM2"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "load_mirror",
+      "devices": [
+        "XM3",
+        "XM4"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "p_cascodes",
+      "devices": [
+        "XMC3",
+        "XMC4"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XMB1",
+        "XM5",
+        "XMB7"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "vout"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "nb",
+      "na",
+      "vbp",
+      "iref"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "nb",
+      "na"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.000259,
+    "vss": 0.000259
+  },
+  "currents_note": "前仿 TT/1.8 V/27 °C 功耗 0.467 mW / 1.8 V ≈ 0.259 mA，含测试台从 vdd 注入 iref 的 50 uA；输出级 XM7 按 140:50 镜像估算约 0.14 mA"
+}

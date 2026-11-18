@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "top": "buf_ppsf_bs",
+  "ports": [
+    "IREF",
+    "VCM",
+    "VDD",
+    "VIN",
+    "VIP",
+    "VON",
+    "VOP",
+    "VSS"
+  ],
+  "substrate": "VSS",
+  "lvs_backend": "magic_netgen"
+}

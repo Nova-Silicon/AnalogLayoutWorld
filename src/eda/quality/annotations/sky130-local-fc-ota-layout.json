@@ -1,0 +1,121 @@
+{
+  "task": "sky130-local-fc-ota-layout",
+  "top": "folded_cascode_ota",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XMN1",
+        "XMN2"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "fold_sources",
+      "devices": [
+        "XMP1_bottom",
+        "XMP3_bottom"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "nmos_mirror",
+      "devices": [
+        "XMN5_bottom",
+        "XMN7_bottom"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "p_cascodes",
+      "devices": [
+        "XMP2_top",
+        "XMP4_top"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "n_cascodes",
+      "devices": [
+        "XMN6_top",
+        "XMN8_top"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XMMNbias",
+        "XMNtail",
+        "XMMNfold_bias",
+        "XMMN_vbcp_sink"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "pbias_mirror",
+      "devices": [
+        "XMMPfold_bias",
+        "XMMP_vbcn_src"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "vout"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "vbias_fold",
+      "vbc_p",
+      "vbc_n",
+      "ibias",
+      "vmid_left1",
+      "vmid_right1"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "vmid_left1",
+      "vmid_right1"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ],
+      [
+        "vmid_left1",
+        "vmid_right1"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.0003,
+    "vss": 0.0003
+  },
+  "currents_note": "前仿未测功耗，按偏置支路估算，量级 0.3 mA"
+}

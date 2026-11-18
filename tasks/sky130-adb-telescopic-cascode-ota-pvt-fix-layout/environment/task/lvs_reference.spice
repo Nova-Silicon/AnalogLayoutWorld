@@ -1,0 +1,56 @@
+* Sky130 fully differential NMOS-input telescopic-cascode OTA
+* 50 uA into iref is the only external bias; all rails generated internally.
+.subckt telescopic_cascode_ota vss iref vdd vinn vinp vocm voutn voutp
+
+* --- NMOS bias mirror reference (iref is the NMOS gate rail) ---
+XMREF iref iref vss vss sky130_fd_pr__nfet_01v8 l=0.5 w=48 nf=4
+
+* --- Telescopic signal path ---
+XMTAIL tail iref vss vss sky130_fd_pr__nfet_01v8 l=0.5 w=163.2 nf=12
+XMINP a1 vinp tail vss sky130_fd_pr__nfet_01v8 l=0.5 w=81.6 nf=6
+XMINN a2 vinn tail vss sky130_fd_pr__nfet_01v8 l=0.5 w=81.6 nf=6
+XMNCP voutn vcn a1 vss sky130_fd_pr__nfet_01v8 l=0.7 w=36.4 nf=2
+XMNCN voutp vcn a2 vss sky130_fd_pr__nfet_01v8 l=0.7 w=36.4 nf=2
+XMPCN voutn vbpc pn pn sky130_fd_pr__pfet_01v8 l=0.35 w=70.72 nf=4
+XMPCP voutp vbpc pp pp sky130_fd_pr__pfet_01v8 l=0.35 w=70.72 nf=4
+XMPTN pn vctrl vdd vdd sky130_fd_pr__pfet_01v8 l=0.7 w=130.56 nf=8
+XMPTP pp vctrl vdd vdd sky130_fd_pr__pfet_01v8 l=0.7 w=130.56 nf=8
+
+* --- Input-tracking replica: srep ~ tail node voltage ---
+XMR1 vdd vocm srep vss sky130_fd_pr__nfet_01v8 l=0.5 w=9.6 nf=1
+XMT1 srep iref vss vss sky130_fd_pr__nfet_01v8 l=0.5 w=19.2 nf=2
+
+* --- NMOS cascode gate rail: vcn = srep + I*R1 + Vgs(matched to ncasc) ---
+XMPB2 vcn vbp vdd vdd sky130_fd_pr__pfet_01v8 l=0.7 w=16 nf=1
+XMD1 vcn vcn x1 vss sky130_fd_pr__nfet_01v8 l=0.7 w=4.28 nf=1
+XRPH_R1 x1 srep sky130_fd_pr__res_generic_po w=0.33 l=113.69 m=1
+
+* --- PMOS cascode gate rail: vbpc = vdd - I*R2 - Vsg(matched to pcasc) ---
+XRB2 vdd x2 sky130_fd_pr__res_generic_po w=0.33 l=136.43 m=1
+XMDP1 vbpc vbpc x2 x2 sky130_fd_pr__pfet_01v8 l=0.35 w=8.32 nf=1
+XMT4 vbpc iref vss vss sky130_fd_pr__nfet_01v8 l=0.5 w=9.6 nf=1
+
+* --- PMOS mirror master rail ---
+XMPM vbp vbp vdd vdd sky130_fd_pr__pfet_01v8 l=0.7 w=19.2 nf=1
+XMT5 vbp iref vss vss sky130_fd_pr__nfet_01v8 l=0.5 w=11.52 nf=1
+
+* --- Common-mode sense ---
+XRSP voutp vcm_sense sky130_fd_pr__res_generic_po w=0.33 l=26717.84 m=1
+XRSN voutn vcm_sense sky130_fd_pr__res_generic_po w=0.33 l=26717.84 m=1
+CCSP voutp vcm_sense sky130_fd_pr__model__cap_mim a=72.25 p=34
+CCSN voutn vcm_sense sky130_fd_pr__model__cap_mim a=72.25 p=34
+
+* --- CMFB error amplifier (load density-matched to XPTN/XPTP) ---
+XMCMS dg vcm_sense cmt vss sky130_fd_pr__nfet_01v8 l=0.5 w=4.8 nf=1
+XMCMR vctrl vocm cmt vss sky130_fd_pr__nfet_01v8 l=0.5 w=4.8 nf=1
+XMCMT cmt iref vss vss sky130_fd_pr__nfet_01v8 l=0.5 w=9.6 nf=1
+XMCML dg dg vdd vdd sky130_fd_pr__pfet_01v8 l=0.7 w=7.68 nf=1
+XMCMLO vctrl dg vdd vdd sky130_fd_pr__pfet_01v8 l=0.7 w=7.68 nf=1
+
+* --- CM loop Miller compensation with series zero ---
+CCCP vctrl zp sky130_fd_pr__model__cap_mim a=190.44 p=55.2
+XRZP zp voutp sky130_fd_pr__res_generic_po w=0.33 l=17.05 m=1
+CCCN vctrl zn sky130_fd_pr__model__cap_mim a=190.44 p=55.2
+XRZN zn voutn sky130_fd_pr__res_generic_po w=0.33 l=17.05 m=1
+
+.ends telescopic_cascode_ota

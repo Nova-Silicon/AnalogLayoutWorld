@@ -1,0 +1,57 @@
+* SKY130 schematic-characterized proposal; not layout-qualified.
+* MOS W/L and passive geometry in um; .option scale=1e-6 required.
+.subckt bandgap vdd vss vref
+XMP1 na yg vdd vdd sky130_fd_pr__pfet_01v8 w=5 l=1 m=2 nf=1
+XMP2 nb yg vdd vdd sky130_fd_pr__pfet_01v8 w=5 l=1 m=2 nf=1
+XMP3 vref yg vdd vdd sky130_fd_pr__pfet_01v8 w=5 l=1 m=2 nf=1
+XR2a_0 na R2a_series1 vss sky130_fd_pr__res_high_po w=.35 l=73.965 m=1
+XR2a_1 R2a_series1 vss vss sky130_fd_pr__res_high_po w=.35 l=73.965 m=1
+XQ1 vss vss na sky130_fd_pr__pnp_05v5_W0p68L0p68 m=1
+XR2b_0 nb R2b_series1 vss sky130_fd_pr__res_high_po w=.35 l=73.965 m=1
+XR2b_1 R2b_series1 vss vss sky130_fd_pr__res_high_po w=.35 l=73.965 m=1
+XR1_0 nb ny vss sky130_fd_pr__res_high_po w=.35 l=19.105 m=1
+XQ2 vss vss ny sky130_fd_pr__pnp_05v5_W0p68L0p68 m=8
+.subckt bgr_ota vp vn vout vdd vss
+XM_TAIL cm bp vdd vdd sky130_fd_pr__pfet_01v8 w=4 l=4 m=1 nf=1
+XM1 d1 vp cm vdd sky130_fd_pr__pfet_01v8 w=4 l=2 m=1 nf=1
+XM2 d2 vn cm vdd sky130_fd_pr__pfet_01v8 w=4 l=2 m=1 nf=1
+XM3 d1 d1 vss vss sky130_fd_pr__nfet_01v8 w=2 l=2 m=1 nf=1
+XM4 d2 d1 vss vss sky130_fd_pr__nfet_01v8 w=2 l=2 m=1 nf=1
+XM_OUT vout d2 vss vss sky130_fd_pr__nfet_01v8 w=4 l=2 m=1 nf=1
+XM_LOAD vout bp vdd vdd sky130_fd_pr__pfet_01v8 w=4 l=4 m=1 nf=1
+XR_BIAS_0 vdd R_BIAS_series1 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_1 R_BIAS_series1 R_BIAS_series2 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_2 R_BIAS_series2 R_BIAS_series3 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_3 R_BIAS_series3 R_BIAS_series4 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_4 R_BIAS_series4 R_BIAS_series5 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_5 R_BIAS_series5 R_BIAS_series6 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_6 R_BIAS_series6 R_BIAS_series7 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_7 R_BIAS_series7 R_BIAS_series8 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_8 R_BIAS_series8 R_BIAS_series9 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_9 R_BIAS_series9 R_BIAS_series10 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_10 R_BIAS_series10 R_BIAS_series11 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_11 R_BIAS_series11 R_BIAS_series12 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_12 R_BIAS_series12 R_BIAS_series13 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_13 R_BIAS_series13 R_BIAS_series14 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_14 R_BIAS_series14 R_BIAS_series15 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_15 R_BIAS_series15 R_BIAS_series16 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_16 R_BIAS_series16 R_BIAS_series17 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_17 R_BIAS_series17 R_BIAS_series18 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_18 R_BIAS_series18 R_BIAS_series19 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_BIAS_19 R_BIAS_series19 bp vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XM_BIAS bp bp vss vss sky130_fd_pr__nfet_01v8 w=0.5 l=2 m=1 nf=1
+XRz_0 d2 nz vss sky130_fd_pr__res_high_po w=.35 l=19.105 m=1
+XCmiller vout nz sky130_fd_pr__cap_mim_m3_1 w=38.58 l=38.58 m=1
+.ends bgr_ota
+XAMP na nb yg vdd vss bgr_ota
+XR_STARTUP_0 vdd R_STARTUP_series1 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_STARTUP_1 R_STARTUP_series1 R_STARTUP_series2 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_STARTUP_2 R_STARTUP_series2 R_STARTUP_series3 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_STARTUP_3 R_STARTUP_series3 R_STARTUP_series4 vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XR_STARTUP_4 R_STARTUP_series4 v_sens vss sky130_fd_pr__res_high_po w=.35 l=99.385 m=1
+XMN_SENS v_sens vref vss vss sky130_fd_pr__nfet_01v8 w=5 l=1 m=1 nf=1
+XMN_KICK yg v_sens vss vss sky130_fd_pr__nfet_01v8 w=5 l=1 m=1 nf=1
+XR_OUTLOAD_0 vref R_OUTLOAD_series1 vss sky130_fd_pr__res_high_po w=.35 l=74.9 m=1
+XR_OUTLOAD_1 R_OUTLOAD_series1 vss vss sky130_fd_pr__res_high_po w=.35 l=74.9 m=1
+XCcomp yg vss sky130_fd_pr__cap_mim_m3_1 w=31.475 l=31.475 m=1
+.ends bandgap

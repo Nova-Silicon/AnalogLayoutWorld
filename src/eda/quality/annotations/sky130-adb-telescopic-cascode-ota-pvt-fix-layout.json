@@ -1,0 +1,161 @@
+{
+  "task": "sky130-adb-telescopic-cascode-ota-pvt-fix-layout",
+  "top": "telescopic_cascode_ota",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XINP",
+        "XINN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "p_loads",
+      "devices": [
+        "XPTP",
+        "XPTN"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "n_cascodes",
+      "devices": [
+        "XNCP",
+        "XNCN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "p_cascodes",
+      "devices": [
+        "XPCP",
+        "XPCN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "cm_sense",
+      "devices": [
+        "XRSP",
+        "XRSN",
+        "XCSP",
+        "XCSN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1.5
+    },
+    {
+      "name": "cmfb_pair",
+      "devices": [
+        "XCMS",
+        "XCMR"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "cmfb_load",
+      "devices": [
+        "XCML",
+        "XCMLO"
+      ],
+      "kind": "mirror",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "cm_comp",
+      "devices": [
+        "XRZP",
+        "XRZN",
+        "XCCP",
+        "XCCN"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XREF",
+        "XTAIL",
+        "XT1",
+        "XT4",
+        "XT5",
+        "XCMT"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "voutp",
+      "voutn"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "a1",
+      "a2",
+      "vctrl",
+      "vocm",
+      "vcn",
+      "vbpc",
+      "vbp",
+      "srep",
+      "iref"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "a1",
+      "a2",
+      "voutp",
+      "voutn"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ],
+      [
+        "a1",
+        "a2"
+      ],
+      [
+        "voutp",
+        "voutn"
+      ],
+      [
+        "zp",
+        "zn"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.000252,
+    "vss": 0.000252
+  },
+  "currents_note": "前仿 TT/1.8 V/27 °C 功耗 0.454 mW / 1.8 V ≈ 0.252 mA，含测试台从 vdd 注入 iref 的 50 uA"
+}

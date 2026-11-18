@@ -1,0 +1,45 @@
+* buf_ppsf_bs.scs - translated from Spectre by netlist-crawler
+* Library name: Analog_Bench
+* Cell name: buf_ppsf_bs
+* View name: schematic
+.subckt buf_ppsf_bs IREF VCM VDD VIN VIP VON VOP VSS
+XNM11 net20 VBN2 net15 net15 sky130_fd_pr__nfet_01v8_lvt w=3 l=0.5 m=1
+XNM10 net15 VBN2 VCM VCM sky130_fd_pr__nfet_01v8_lvt w=3 l=0.5 m=1
+XNM9 VBN2 VBN2 net20 net20 sky130_fd_pr__nfet_01v8_lvt w=5 l=0.5 m=5
+XNM7 IREF IREF VSS VSS sky130_fd_pr__nfet_01v8_lvt w=5 l=0.5 m=5
+XNM6 net14 IREF VSS VSS sky130_fd_pr__nfet_01v8_lvt w=5 l=0.5 m=5
+XNM5 VBP1 IREF VSS VSS sky130_fd_pr__nfet_01v8_lvt w=5 l=0.5 m=5
+XNM4 VBN1 VBN1 VCM VCM sky130_fd_pr__nfet_01v8_lvt w=5 l=0.5 m=5
+XNM8 VBP2 IREF VSS VSS sky130_fd_pr__nfet_01v8_lvt w=5 l=0.5 m=5
+XNM0 net3 net7 VOP VOP sky130_fd_pr__nfet_01v8_lvt w=5 l=0.55 m=50
+XNM2 net4 net11 VON VON sky130_fd_pr__nfet_01v8_lvt w=5 l=0.55 m=50
+XNM1 VDD net8 net3 net3 sky130_fd_pr__nfet_01v8_lvt w=5 l=0.5 m=50
+XNM3 VDD net12 net4 net4 sky130_fd_pr__nfet_01v8_lvt w=5 l=0.5 m=50
+XC7 net9 VON sky130_fd_pr__cap_mim_m3_1 w=49.85 l=49.85
+XC6 net10 VIN sky130_fd_pr__cap_mim_m3_1 w=49.85 l=49.85
+XC5 net12 VON sky130_fd_pr__cap_mim_m3_1 w=49.85 l=49.85
+XC4 net11 VIN sky130_fd_pr__cap_mim_m3_1 w=49.85 l=49.85
+XC3 net6 VOP sky130_fd_pr__cap_mim_m3_1 w=49.85 l=49.85
+XC2 net5 VIP sky130_fd_pr__cap_mim_m3_1 w=49.85 l=49.85
+XC1 net8 VOP sky130_fd_pr__cap_mim_m3_1 w=49.85 l=49.85
+XC0 net7 VIP sky130_fd_pr__cap_mim_m3_1 w=49.85 l=49.85
+XR7 VBP2 net9 sky130_fd_pr__res_generic_po w=0.33 l=5684.65
+XR6 VBP1 net10 sky130_fd_pr__res_generic_po w=0.33 l=5684.65
+XR5 VBN1 net11 sky130_fd_pr__res_generic_po w=0.33 l=5684.65
+XR4 VBN2 net12 sky130_fd_pr__res_generic_po w=0.33 l=5684.65
+XR3 VBP2 net6 sky130_fd_pr__res_generic_po w=0.33 l=5684.65
+XR2 VBP1 net5 sky130_fd_pr__res_generic_po w=0.33 l=5684.65
+XR1 VBN1 net7 sky130_fd_pr__res_generic_po w=0.33 l=5684.65
+XR0 VBN2 net8 sky130_fd_pr__res_generic_po w=0.33 l=5684.65
+XPM11 VBP2 VBP2 net17 net17 sky130_fd_pr__pfet_01v8_lvt w=10 l=0.5 m=5
+XPM10 VBN2 net14 VDD VDD sky130_fd_pr__pfet_01v8_lvt w=10 l=0.5 m=5
+XPM9 net17 VBP2 net16 net16 sky130_fd_pr__pfet_01v8_lvt w=15 l=0.5 m=1
+XPM8 net16 VBP2 VCM VCM sky130_fd_pr__pfet_01v8_lvt w=15 l=0.5 m=1
+XPM7 net14 net14 VDD VDD sky130_fd_pr__pfet_01v8_lvt w=10 l=0.5 m=5
+XPM3 VSS net9 net1 net1 sky130_fd_pr__pfet_01v8_lvt w=10 l=0.5 m=50
+XPM5 VBP1 VBP1 VCM VCM sky130_fd_pr__pfet_01v8_lvt w=10 l=0.5 m=5
+XPM2 net1 net10 VON VON sky130_fd_pr__pfet_01v8_lvt w=10 l=0.55 m=50
+XPM1 VSS net6 net2 net2 sky130_fd_pr__pfet_01v8_lvt w=10 l=0.5 m=50
+XPM6 VBN1 net14 VDD VDD sky130_fd_pr__pfet_01v8_lvt w=10 l=0.5 m=5
+XPM0 net2 net5 VOP VOP sky130_fd_pr__pfet_01v8_lvt w=10 l=0.55 m=50
+.ends buf_ppsf_bs

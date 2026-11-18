@@ -1,0 +1,11 @@
+{
+  "top": "beta_multiplier_reference",
+  "ports": [
+    "vss",
+    "vdd",
+    "vref",
+    "iout"
+  ],
+  "substrate": "vss",
+  "schema_version": 1
+}

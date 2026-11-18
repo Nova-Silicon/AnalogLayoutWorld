@@ -1,0 +1,114 @@
+{
+  "task": "sky130-loadbench-sym3-layout",
+  "top": "SymmetricalOpAmp3",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XNormalTransistorPmos12",
+        "XNormalTransistorPmos10"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "first_stage_loads",
+      "devices": [
+        "XDiodeTransistorNmos2",
+        "XDiodeTransistorNmos1"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "left_mirror",
+      "devices": [
+        "XDiodeTransistorNmos2",
+        "XNormalTransistorNmos8"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "right_mirror",
+      "devices": [
+        "XDiodeTransistorNmos1",
+        "XNormalTransistorNmos7"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "pmos_out_mirror",
+      "devices": [
+        "XDiodeTransistorPmos4",
+        "XNormalTransistorPmos15"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "ibias_mirror",
+      "devices": [
+        "XDiodeTransistorPmos5",
+        "XNormalTransistorPmos13",
+        "XNormalTransistorPmos14"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "out"
+    ],
+    "victims": [
+      "in1",
+      "in2",
+      "FirstStageYsourceTransconductance",
+      "ibias",
+      "outVoltageBiasXXpXX1",
+      "outVoltageBiasXXnXX0"
+    ],
+    "critical": [
+      "in1",
+      "in2",
+      "outFirstStage",
+      "inTransconductanceComplementarySecondStage",
+      "inStageBiasComplementarySecondStage"
+    ],
+    "diff_pairs": [
+      [
+        "in1",
+        "in2"
+      ],
+      [
+        "outFirstStage",
+        "inTransconductanceComplementarySecondStage"
+      ]
+    ],
+    "power": [
+      "sourcePmos"
+    ],
+    "ground": [
+      "sourceNmos"
+    ]
+  },
+  "power_devices": [
+    "XNormalTransistorNmos7",
+    "XDiodeTransistorPmos4"
+  ],
+  "currents_a": {
+    "sourcePmos": 0.00277,
+    "sourceNmos": 0.00276,
+    "XNormalTransistorNmos7": 0.001,
+    "XDiodeTransistorPmos4": 0.001
+  },
+  "currents_note": "前仿 TT 27 C 静态功耗 4.99 mW / 1.8 V = 2.77 mA（ibias 10 uA 经 ibias 脚流出到外部地）；XNormalTransistorNmos7/XDiodeTransistorPmos4 支路按镜像比（半尾电流约 0.2 mA 的 4.8 倍）估算约 1.0 mA，为全电路最大支路"
+}

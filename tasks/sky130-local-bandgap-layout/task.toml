@@ -1,0 +1,41 @@
+schema_version = "1.4"
+artifacts = [{source = "/alb-workspace/submission", destination = "submission"}]
+
+[task]
+name = "analoglayoutworld/sky130-local-bandgap-layout"
+version = "1.0.0"
+description = "Layout a 1.2 V bandgap reference"
+keywords = ["analog-layout", "sky130", "fixed-netlist"]
+
+[metadata]
+benchmark = "AnalogLayoutWorld"
+protocol = "paper-v1"
+number = 37
+source = "local"
+
+[agent]
+timeout_sec = 10800.0
+
+[verifier]
+environment_mode = "separate"
+timeout_sec = 3600.0
+
+[verifier.env]
+ALB_VERIFIER_NO_TIMEOUT = "1"
+ALB_VERIFIER_BUDGET_SEC = "3300"
+ALB_VERIFIER_RECOVER_COMPLETED = "1"
+ALB_VERIFIER_SOLVER_POLICY = "auto"
+
+[environment]
+cpus = 6
+memory_mb = 32768
+gpus = 0
+workdir = "/alb-workspace"
+
+[environment.env]
+PYTHONDONTWRITEBYTECODE = "1"
+ALB_PYTHON = "/opt/analog-layout/python/bin/python3.12"
+PATH = "/opt/analog-layout/python/bin:/opt/analog-layout/tools/bin:/opt/analog-layout/agent/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+PYTHONPATH = "/opt/analog-layout/pdks/sky130/python"
+PDK_ROOT = "/opt/analog-layout/pdks/sky130"
+MPLBACKEND = "Agg"

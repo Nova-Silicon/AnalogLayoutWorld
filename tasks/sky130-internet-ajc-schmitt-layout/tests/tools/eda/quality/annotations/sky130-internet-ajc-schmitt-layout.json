@@ -1,0 +1,53 @@
+{
+  "task": "sky130-internet-ajc-schmitt-layout",
+  "top": "schmitt_trigger",
+  "matched_groups": [
+    {
+      "name": "p_input_feedback",
+      "devices": [
+        "XM3",
+        "XM4"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "n_input_feedback",
+      "devices": [
+        "XM1",
+        "XM2"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "out",
+      "m"
+    ],
+    "victims": [
+      "in"
+    ],
+    "critical": [
+      "in",
+      "m",
+      "out"
+    ],
+    "diff_pairs": [],
+    "power": [
+      "dvdd"
+    ],
+    "ground": [
+      "dvss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "dvdd": 1.92e-05,
+    "dvss": 1.92e-05
+  },
+  "currents_note": "前仿 TT 1.8 V/27 C、45 us 三角波输入下平均功耗 34.6 uW / 1.8 V = 19 uA（主要是输入缓变经过阈值时的直通电流）；本机 ngspice 测得直通峰值约 0.2 mA（估算），不设功率器件"
+}

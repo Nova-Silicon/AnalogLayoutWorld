@@ -1,0 +1,12 @@
+* Fixed subblock extracted from ajcci/sky130_ajc_ip__por
+* Numerical W/L are micrometres; harness sets scale=1e-6.
+.subckt schmitt_trigger dvdd in out dvss
+XM1 m in dvss dvss sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 m=2
+XM3 m in dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.5 W=1 nf=1 m=6
+XM2 m out dvss dvss sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 m=1
+XM4 m out dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.5 W=1 nf=1 m=3
+XM5 out m dvss dvss sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 m=1
+XM6 out m dvdd dvdd sky130_fd_pr__pfet_01v8 L=0.5 W=1 nf=1 m=3
+XMdum0 m dvss dvss dvss sky130_fd_pr__nfet_01v8 L=0.5 W=1 nf=1 m=1
+XMdum1 dvdd dvdd m dvdd sky130_fd_pr__pfet_01v8 L=0.5 W=1 nf=1 m=1
+.ends

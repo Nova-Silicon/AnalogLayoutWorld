@@ -1,0 +1,31 @@
+{
+  "basis": "Trusted private inputs; public_files records the native fixture subset separately.",
+  "files": {
+    "circuit.spice": "aa8f71489b4dd819f3c6d0ea4883847f1124ffb071ef5a54e1de4271afe39aae",
+    "constraints.json": "a265cab127a966892fc60bc34b20da7d172c7966eb2c3abaa0efb1fc46a819f4",
+    "identity.json": "16e7285a214d4664ed0b27f0eff7984216997438e9f889e7d3389937f9a56b11",
+    "testbench/adapter.py": "b4fcc5f34f7bc048c7dcaf47f5dc9cc065e8d9f5bfb93793fb6ec5a1674910c8",
+    "testbench/measurement.json": "76aaa9c4a598891c1c96be3edefc0567b477b17fd1c46758534832bb2608f5d9",
+    "testbench/upstream/benches/tb_cmrr.spi": "f4195b38b0b979405b083db62fadf5428f7951c2001bae00a87cd24b633fc4be",
+    "testbench/upstream/benches/tb_op_ac_noise.spi": "6e2f7bfa2fd6418da8dd69c90c2c8ce533c7d020f44ee3935983d7aeda7e31e7",
+    "testbench/upstream/benches/tb_psrr_minus.spi": "a5f159e021add86e899e362223ff7ff8a8051e021f4ee706d6112131d15de62b",
+    "testbench/upstream/benches/tb_psrr_plus.spi": "8c8646a8b2b51d545152532038d4328c4efe61242edba42f358db77f3a4150db",
+    "testbench/upstream/utils.py": "8f9909aa283429e11d3d5b55b33d5e55d5c54f4bad33aaa599f1c8a35a99e299",
+    "testbench/upstream/verify.py": "04905dd2649e600842260bf61108d38a94f1bd351b0f490cfcf84ff7f0c4ba39"
+  },
+  "public_files": {
+    "circuit.spice": "aa8f71489b4dd819f3c6d0ea4883847f1124ffb071ef5a54e1de4271afe39aae",
+    "testbench/README.md": "844cf36f73dd937ba74893355b1dfbc7e27ae827ab9c5a0268cecf118c435cb6",
+    "testbench/README.zh-CN.md": "95e535039a6cfee5dc35e8f947ed08496135657106a1b80166e57586932f02e4",
+    "testbench/tb_cmrr.spi": "9184ec731e271b7fe026e7288cec05dbffe1fee626b9726da4e99e8924ef859a",
+    "testbench/tb_op_ac_noise.spi": "2ea856a3e22585f5cfc74d0deda2e5c1ae04119128bdf03997b3e774b0231a61",
+    "testbench/tb_psrr_minus.spi": "b8875b897e88724997253ace47c6136217142424b9c16fc57aa7513c2a3746b0",
+    "testbench/tb_psrr_plus.spi": "36ebe109d666960caefdc4e4b8ec177eff62d63f3a33bac0176d932533ab12d9"
+  },
+  "public_projection": {
+    "constraints": "physical fields only, if publicly present",
+    "physical_inputs": "byte-identical DUT and optional LVS reference",
+    "testbench": "published native fixtures and documentation; private graders excluded"
+  },
+  "schema_version": 2
+}

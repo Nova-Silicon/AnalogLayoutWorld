@@ -1,0 +1,45 @@
+{
+  "task": "sky130-adb-tia-zt8k-bw750m-noise5p-sfdr70-power5m-pt-layout",
+  "top": "tia",
+  "matched_groups": [
+    {
+      "name": "stage2_gain_ratio",
+      "devices": [
+        "XRFB2",
+        "XRIN2"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "VOUT",
+      "N1"
+    ],
+    "victims": [
+      "IN",
+      "NBUF"
+    ],
+    "critical": [
+      "IN",
+      "N1",
+      "NBUF",
+      "VOUT"
+    ],
+    "diff_pairs": [],
+    "power": [
+      "VDD"
+    ],
+    "ground": [
+      "VSS"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "VDD": 0.00123,
+    "VSS": 0.00125
+  },
+  "currents_note": "前仿 TT 功耗 2.248 mW / 1.8 V = 1.25 mA（IREF 20 uA 由外部 vdd 节点注入，经 XREF 入 VSS，DUT VDD 脚约 1.23 mA）；按 W/L 估算第一级反相器约 0.7 mA、第二级约 0.5 mA，均低于 1 mA，未列功率器件"
+}

@@ -1,0 +1,37 @@
+{
+  "task": "sky130-internet-ajc-rc-osc-layout",
+  "top": "rc_osc",
+  "matched_groups": [],
+  "nets": {
+    "aggressors": [
+      "out",
+      "m",
+      "n",
+      "vr"
+    ],
+    "victims": [
+      "in"
+    ],
+    "critical": [
+      "in",
+      "m",
+      "n",
+      "out",
+      "vr"
+    ],
+    "diff_pairs": [],
+    "power": [
+      "dvdd"
+    ],
+    "ground": [
+      "dvss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "dvdd": 3.2e-05,
+    "dvss": 3.2e-05
+  },
+  "currents_note": "前仿 TT 1.8 V/27 C 使能期平均功耗 57.9 uW / 1.8 V = 32 uA（主要是定时节点缓变经过阈值时的直通电流），关断期小于 0.1 nA；输出级为 L=0.5 um 的单位弱管，开关峰值估算小于 0.3 mA，未仿真，不设功率器件",
+  "name_note": "电路里唯一值得成组的是 XR1~XR10 十段串联高阻（应同向等距成列、加端头 dummy），但 KLayout LVS 会把串联电阻合并成一个器件（参考网表只剩 XR9），评分程序无法逐段解析，故不列匹配组；其余为数字式反相器/锁存与使能开关，无匹配要求。XMdum* 是原设计的 dummy 管"
+}

@@ -1,0 +1,16 @@
+{
+  "top": "gmr_degen",
+  "ports": [
+    "IREF",
+    "VCM",
+    "VDD",
+    "VIN",
+    "VIP",
+    "VON",
+    "VOP",
+    "VSS"
+  ],
+  "substrate": "VSS",
+  "schema_version": 1,
+  "lvs_reference_normalization": "supported_model_instance_names_only"
+}

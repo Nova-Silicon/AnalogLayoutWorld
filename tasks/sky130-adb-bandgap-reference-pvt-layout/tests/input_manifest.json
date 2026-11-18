@@ -1,0 +1,35 @@
+{
+  "basis": "Trusted private inputs; public_files records the native fixture subset separately.",
+  "files": {
+    "circuit.spice": "71ec1febc6f81c5c5366c7a9ceacd97d60781a0eefb790500f8d2fd76402400e",
+    "constraints.json": "f802fcab468a8c28dbe65b6c6c05f6c042e3c3333fc63980da4a8dc84a131f7f",
+    "identity.json": "ba650ee2b8b6637c381bfd1dff92a2327a876b114694778479bde99485a90e8c",
+    "testbench/adapter.py": "3e10b1eef0efb06dbeb4ffc9494df55e1771af4b721e9a81769b598eed39b4c3",
+    "testbench/measurement.json": "89a2ea29eea6b0fd3a482cc40e24813baee01968f9db846313193fa1fe9de485",
+    "testbench/upstream/benches/tb_ac.spi": "94b6fcfdc02998d9ef15d5903e28f8e75aedd435623a9f5dc497980445a1e4c2",
+    "testbench/upstream/benches/tb_line_step.spi": "1c384ff7bdb8c4f934ea29e65cd9fb68b5262adfd852d11fe871c38cd0e648c8",
+    "testbench/upstream/benches/tb_mc.spi": "ead70f51f359b5892e6331b085b05cb546c85c59760d825c205465c181181b49",
+    "testbench/upstream/benches/tb_noise.spi": "9613357af9d7a6ef1bc4827cb7ccb2a489faf67fb58a2a2e869bb4c3f3b2f4e9",
+    "testbench/upstream/benches/tb_op.spi": "7b6885c2b90be788b76fe20b378f3e7855aa8aac218ee24e701bd518eda008b5",
+    "testbench/upstream/benches/tb_startup.spi": "8991664b485e4dfb22f78e8f7bf60e41462516853930a46755686f26ca471844",
+    "testbench/upstream/verify.py": "dbfb1b62848a23b67780365135ef38ebaa87c5a0c1997d50721328631b38d8a5"
+  },
+  "public_files": {
+    "circuit.spice": "71ec1febc6f81c5c5366c7a9ceacd97d60781a0eefb790500f8d2fd76402400e",
+    "lvs_reference.spice": "6570832a6ec9d2873ecc935890462036ecbe903c147b278e4f0f85cbcc9370db",
+    "testbench/README.md": "f875d6309190f93be8e00ef6a06e41e1f7e9535e6f4e2dc57be993572227373e",
+    "testbench/README.zh-CN.md": "f8f9e3e39e10ef440cb7887769c6c128e42e25a675ed7733450404336b27c216",
+    "testbench/tb_ac.spi": "ddde37b4cb35da3853dd2380c2c7f98d7f1667738b684aa00882c0e0b4eb2d9d",
+    "testbench/tb_line_step.spi": "b38ad33cd5dca0933e64e2cb509674cf9330696144ccba5775e41b479ed7c798",
+    "testbench/tb_mc.spi": "026e2a275ee67b92e077a07dd760fd3bddf53eb0252ea14fc2ba8c8596254f1d",
+    "testbench/tb_noise.spi": "fcc75a8972689876e4014637e28bf2547b82266ee018adb8848b8fe912fc788a",
+    "testbench/tb_op.spi": "9db22e03e169225f7ba8ce875905dfd834f5760e4680f7043cdf0df8e9cdc0ee",
+    "testbench/tb_startup.spi": "68b41fd01f248b4bc76e45d2c4a03fbf7cbd6810156907d052618e0675003c9d"
+  },
+  "public_projection": {
+    "constraints": "physical fields only, if publicly present",
+    "physical_inputs": "byte-identical DUT and optional LVS reference",
+    "testbench": "published native fixtures and documentation; private graders excluded"
+  },
+  "schema_version": 2
+}

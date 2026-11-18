@@ -1,0 +1,3530 @@
+{
+  "entry": "sky130A/libs.tech/ngspice/sky130.lib.spice",
+  "reference_root": "sky130A",
+  "all_corner_sections_scanned": true,
+  "file_count": 319,
+  "edge_count": 704,
+  "model_bytes": 35537351,
+  "edges": [
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__ff.corner.spice",
+      "line": 96,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__fs.corner.spice",
+      "line": 96,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__sf.corner.spice",
+      "line": 96,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__ss.corner.spice",
+      "line": 96,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__tt.corner.spice",
+      "line": 96,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5__ff.corner.spice",
+      "line": 313,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5__fs.corner.spice",
+      "line": 313,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5__sf.corner.spice",
+      "line": 313,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5__ss.corner.spice",
+      "line": 313,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5__tt.corner.spice",
+      "line": 313,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5__ff.corner.spice",
+      "line": 235,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5__fs.corner.spice",
+      "line": 235,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5__sf.corner.spice",
+      "line": 235,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5__ss.corner.spice",
+      "line": 235,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5__tt.corner.spice",
+      "line": 235,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__ff.corner.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__ff.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__fs.corner.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__fs.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__sf.corner.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__sf.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__ss.corner.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__ss.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__tt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__ff.corner.spice",
+      "line": 234,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__fs.corner.spice",
+      "line": 234,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__sf.corner.spice",
+      "line": 234,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__ss.corner.spice",
+      "line": 234,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__tt.corner.spice",
+      "line": 234,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__ff.corner.spice",
+      "line": 280,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__fs.corner.spice",
+      "line": 280,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__sf.corner.spice",
+      "line": 280,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__ss.corner.spice",
+      "line": 280,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__tt.corner.spice",
+      "line": 280,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__fs_discrete.corner.spice",
+      "line": 36,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__fs_discrete.corner.spice",
+      "line": 37,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_iso__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__fs_discrete.corner.spice",
+      "line": 38,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__fs_discrete.corner.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__sf_discrete.corner.spice",
+      "line": 36,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__sf_discrete.corner.spice",
+      "line": 37,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_iso__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__sf_discrete.corner.spice",
+      "line": 38,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__sf_discrete.corner.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__subcircuit.pm3.spice",
+      "line": 16,
+      "includes": "libs.tech/ngspice/parasitics/sky130_fd_pr__model__parasitic__diode_pw2dn__extended_drain.model.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__subcircuit.pm3.spice",
+      "line": 17,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_05v5__extended_drain.model.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__tt_discrete.corner.spice",
+      "line": 42,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__tt_discrete.corner.spice",
+      "line": 43,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_iso__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__tt_discrete.corner.spice",
+      "line": 44,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__tt_discrete.corner.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_iso__subcircuit.pm3.spice",
+      "line": 16,
+      "includes": "libs.tech/ngspice/parasitics/sky130_fd_pr__model__parasitic__diode_ps2dn__extended_drain.model.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_iso__subcircuit.pm3.spice",
+      "line": 17,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_reverse_iso__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__fs_discrete.corner.spice",
+      "line": 25,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__sf_discrete.corner.spice",
+      "line": 25,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__subcircuit.pm3.spice",
+      "line": 16,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__parasitic__diode_ps2dn.model.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__tt_discrete.corner.spice",
+      "line": 25,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__fs_discrete.corner.spice",
+      "line": 32,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__sf_discrete.corner.spice",
+      "line": 32,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__subcircuit.pm3.spice",
+      "line": 16,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__parasitic__diode_ps2dn__extended_drain.model.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__tt_discrete.corner.spice",
+      "line": 32,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__ff.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__ff.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__fs.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__fs.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__sf.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__sf.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__ss.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__ss.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__tt.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__tt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__ff_discrete.corner.spice",
+      "line": 152,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__ff_discrete.corner.spice",
+      "line": 153,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__fs_discrete.corner.spice",
+      "line": 152,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__fs_discrete.corner.spice",
+      "line": 153,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__sf_discrete.corner.spice",
+      "line": 153,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__sf_discrete.corner.spice",
+      "line": 154,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__ss_discrete.corner.spice",
+      "line": 152,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__ss_discrete.corner.spice",
+      "line": 153,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__tt_discrete.corner.spice",
+      "line": 161,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__tt_discrete.corner.spice",
+      "line": 162,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__ff.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__ff.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__fs.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__fs.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__sf.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__sf.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__ss.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__ss.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__ff.corner.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__ff.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__fs.corner.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__fs.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__sf.corner.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__sf.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__ss.corner.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__ss.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__tt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__fs_discrete.corner.spice",
+      "line": 35,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__sf_discrete.corner.spice",
+      "line": 35,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__subcircuit.pm3.spice",
+      "line": 16,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__parasitic__diode_pw2dn.model.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__tt_discrete.corner.spice",
+      "line": 35,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__ff.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__ff.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__fs.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__fs.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__sf.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__sf.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__ss.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__ss.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__tt.corner.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__tt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__ff.corner.spice",
+      "line": 335,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__fs.corner.spice",
+      "line": 335,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__sf.corner.spice",
+      "line": 335,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__ss.corner.spice",
+      "line": 335,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__tt.corner.spice",
+      "line": 335,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__ff.corner.spice",
+      "line": 361,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__fs.corner.spice",
+      "line": 361,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__sf.corner.spice",
+      "line": 361,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__ss.corner.spice",
+      "line": 361,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__tt.corner.spice",
+      "line": 361,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__ff.corner.spice",
+      "line": 173,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__fs.corner.spice",
+      "line": 173,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__sf.corner.spice",
+      "line": 173,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__ss.corner.spice",
+      "line": 173,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__tt.corner.spice",
+      "line": 173,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__ff.corner.spice",
+      "line": 343,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__fs.corner.spice",
+      "line": 343,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__sf.corner.spice",
+      "line": 343,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__ss.corner.spice",
+      "line": 343,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__tt.corner.spice",
+      "line": 343,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__ff_discrete.corner.spice",
+      "line": 86,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_mvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__fs_discrete.corner.spice",
+      "line": 86,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_mvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__sf_discrete.corner.spice",
+      "line": 86,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_mvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__ss_discrete.corner.spice",
+      "line": 86,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_mvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__tt_discrete.corner.spice",
+      "line": 86,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_mvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__ff.corner.spice",
+      "line": 39,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__ss.corner.spice",
+      "line": 39,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt.pm3.spice"
+    },
+    {
+      "file": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__tt.corner.spice",
+      "line": 39,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 3,
+      "includes": "libs.tech/ngspice/parameters/lod.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 34,
+      "includes": "libs.tech/ngspice/parasitics/sky130_fd_pr__model__parasitic__diode_ps2nw.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 35,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_05v5.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 36,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pd2nw_05v5.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 37,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pd2nw_05v5_hvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 38,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_11v0.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 39,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pd2nw_11v0.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 40,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_05v5_nvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 41,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_05v5_lvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 42,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pd2nw_05v5_lvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 43,
+      "includes": "libs.tech/ngspice/parasitics/sky130_fd_pr__model__parasitic__diode_pw2dn.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 44,
+      "includes": "libs.tech/ngspice/parasitics/sky130_fd_pr__model__parasitic__diode_ps2dn.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 45,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0__parasitic__diode_pw2dn.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 47,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pnp_05v5_W0p68L0p68.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 48,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 49,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_05v5_W1p00L1p00.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 50,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_05v5_W1p00L2p00.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 51,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_11v0_W1p00L1p00.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 52,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 53,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 54,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_var_lvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 55,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_var_hvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 56,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_iso_pw.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 57,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_l1m1m2_noshield_o1.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 58,
+      "includes": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_mim.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 59,
+      "includes": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_mos.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 60,
+      "includes": "libs.tech/ngspice/sonos_p/begin_of_life/mm.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 61,
+      "includes": "libs.tech/ngspice/sonos_e/begin_of_life/mm.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 63,
+      "includes": "libs.tech/ngspice/head.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 64,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 65,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_latch.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 66,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_latch.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 67,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_flash.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 68,
+      "includes": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_pq.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 69,
+      "includes": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 70,
+      "includes": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 76,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 77,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 78,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 79,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/all.spice",
+      "line": 80,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_mim.model.spice",
+      "line": 16,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_mim_m3_1.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_mim.model.spice",
+      "line": 17,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_mim_m3_2.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_mos.model.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2_noshield_o1nhv.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_mos.model.spice",
+      "line": 21,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2_noshield_o1phv.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 23,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2m3m4_shieldm5.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 24,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2m3m4_shieldpom5.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 25,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m2m3m4_shieldl1m5.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 26,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m4_noshield.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 27,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m2m3m4_shieldm5.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 28,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_m1m2m3_shieldl1m5_floatm4.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 29,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2m3_shieldl1m5_floatm4.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 30,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m2m3_shieldl1m5_floatm4.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 31,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 32,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p3x11p8_l1m1m2m3m4_shieldm5_nhv__base.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 33,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2m3m4_shieldpom5_x.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 34,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p9x06p1_m1m2m3m4_shieldl1_fingercap2.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 35,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p7x11p1_m1m2m3m4_shieldl1_fingercap.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 36,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p7x21p1_m1m2m3m4_shieldl1_fingercap.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 37,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p7x41p1_m1m2m3m4_shieldl1_fingercap.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 38,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_02p7x06p1_m1m2m3m4_shieldl1_fingercap.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 39,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p3x11p3_m1m2m3m4_shieldl1_wafflecap.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 40,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_05p9x05p9_m1m2m3m4_shieldl1_wafflecap.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice",
+      "line": 41,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_44p7x23p1_pol1m1m2m3m4m5_noshield.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_pq.model.spice",
+      "line": 24,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_m1m2m3_shieldl1.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_pq.model.spice",
+      "line": 25,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_04p4x04p6_m1m2m3_shieldl1.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_pq.model.spice",
+      "line": 26,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_m1m2m3_shieldl1.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_pq.model.spice",
+      "line": 27,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2m3_shieldm4.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_pq.model.spice",
+      "line": 28,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_11p5x11p7_l1m1m2m3_shieldpom4.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_pq.model.spice",
+      "line": 29,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_06p8x06p1_l1m1m2m3_shieldpom4.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_pq.model.spice",
+      "line": 30,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_06p8x06p1_m1m2m3_shieldl1m4.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 2,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__ff.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 3,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 4,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 5,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 6,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 7,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 8,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 9,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 10,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 11,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 12,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 13,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 14,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 15,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__ff.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 16,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 17,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 18,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 21,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 22,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 23,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__ff_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 24,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 25,
+      "includes": "libs.tech/ngspice/corners/ff/nonfet.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 26,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__fs_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 27,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__sf_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 28,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__sf_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 29,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_05v5__f.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 30,
+      "includes": "libs.tech/ngspice/all.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff.spice",
+      "line": 31,
+      "includes": "libs.tech/ngspice/corners/ff/rf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/rf.spice",
+      "line": 3,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/rf.spice",
+      "line": 4,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/rf.spice",
+      "line": 5,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/rf.spice",
+      "line": 6,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/rf.spice",
+      "line": 7,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/rf.spice",
+      "line": 8,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/rf.spice",
+      "line": 9,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/rf.spice",
+      "line": 10,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/rf.spice",
+      "line": 11,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__ff_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/rf.spice",
+      "line": 12,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/specialized_cells.spice",
+      "line": 130,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_latch__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/specialized_cells.spice",
+      "line": 131,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/specialized_cells.spice",
+      "line": 132,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_flash__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/specialized_cells.spice",
+      "line": 133,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_latch__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ff/specialized_cells.spice",
+      "line": 134,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 2,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__fs.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 3,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 4,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 5,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 6,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 7,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 8,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 9,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 10,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 11,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 12,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 13,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 14,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 15,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__fs.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 16,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 17,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 18,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 21,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 22,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 23,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__fs_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 24,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 25,
+      "includes": "libs.tech/ngspice/corners/fs/nonfet.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 26,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__fs_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 27,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__fs_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 28,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__fs_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 29,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_05v5__t.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 30,
+      "includes": "libs.tech/ngspice/all.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs.spice",
+      "line": 31,
+      "includes": "libs.tech/ngspice/corners/fs/rf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/rf.spice",
+      "line": 3,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/rf.spice",
+      "line": 4,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/rf.spice",
+      "line": 5,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/rf.spice",
+      "line": 6,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__fs.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/rf.spice",
+      "line": 7,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/rf.spice",
+      "line": 8,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/rf.spice",
+      "line": 9,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/rf.spice",
+      "line": 10,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/rf.spice",
+      "line": 11,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__fs_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/rf.spice",
+      "line": 12,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/specialized_cells.spice",
+      "line": 130,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_latch__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/specialized_cells.spice",
+      "line": 131,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/specialized_cells.spice",
+      "line": 132,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_flash__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/specialized_cells.spice",
+      "line": 133,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_latch__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/fs/specialized_cells.spice",
+      "line": 134,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 2,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__sf.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 3,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 4,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 5,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 6,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 7,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 8,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 9,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 10,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 11,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 12,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 13,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 14,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 15,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__sf.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 16,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 17,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 18,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 21,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 22,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 23,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__sf_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 24,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 25,
+      "includes": "libs.tech/ngspice/corners/sf/nonfet.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 26,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__sf_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 27,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__sf_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 28,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__sf_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 29,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_05v5__t.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 30,
+      "includes": "libs.tech/ngspice/all.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf.spice",
+      "line": 31,
+      "includes": "libs.tech/ngspice/corners/sf/rf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/rf.spice",
+      "line": 3,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/rf.spice",
+      "line": 4,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/rf.spice",
+      "line": 5,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/rf.spice",
+      "line": 6,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__sf.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/rf.spice",
+      "line": 7,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/rf.spice",
+      "line": 8,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/rf.spice",
+      "line": 9,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/rf.spice",
+      "line": 10,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/rf.spice",
+      "line": 11,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__sf_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/rf.spice",
+      "line": 12,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/specialized_cells.spice",
+      "line": 130,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_latch__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/specialized_cells.spice",
+      "line": 131,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/specialized_cells.spice",
+      "line": 132,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_flash__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/specialized_cells.spice",
+      "line": 133,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_latch__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/sf/specialized_cells.spice",
+      "line": 134,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__ff.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 2,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__ss.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 3,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 4,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 5,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 6,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 7,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 8,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 9,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 10,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 11,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 12,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 13,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 14,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 15,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__ss.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 16,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 17,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 18,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 21,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 22,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 23,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__ss_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 24,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 25,
+      "includes": "libs.tech/ngspice/corners/ss/nonfet.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 26,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__sf_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 27,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__fs_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 28,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__fs_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 29,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_05v5__s.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 30,
+      "includes": "libs.tech/ngspice/all.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss.spice",
+      "line": 31,
+      "includes": "libs.tech/ngspice/corners/ss/rf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/rf.spice",
+      "line": 3,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/rf.spice",
+      "line": 4,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/rf.spice",
+      "line": 5,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/rf.spice",
+      "line": 6,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/rf.spice",
+      "line": 7,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/rf.spice",
+      "line": 8,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/rf.spice",
+      "line": 9,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/rf.spice",
+      "line": 10,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/rf.spice",
+      "line": 11,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__ss_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/rf.spice",
+      "line": 12,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/specialized_cells.spice",
+      "line": 130,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_latch__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/specialized_cells.spice",
+      "line": 131,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/specialized_cells.spice",
+      "line": 132,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_flash__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/specialized_cells.spice",
+      "line": 133,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_latch__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/ss/specialized_cells.spice",
+      "line": 134,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__ss.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 2,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__tt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 3,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 4,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 5,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 6,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 7,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 8,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 9,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 10,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 11,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 12,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 13,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 14,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 15,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__tt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 16,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 17,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 18,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 19,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 20,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 21,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 22,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 23,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__tt_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 24,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 25,
+      "includes": "libs.tech/ngspice/corners/tt/nonfet.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 26,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__tt_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 27,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__tt_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 28,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__tt_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 29,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_05v5__t.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 30,
+      "includes": "libs.tech/ngspice/all.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt.spice",
+      "line": 31,
+      "includes": "libs.tech/ngspice/corners/tt/rf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/rf.spice",
+      "line": 3,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/rf.spice",
+      "line": 4,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/rf.spice",
+      "line": 5,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/rf.spice",
+      "line": 6,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/rf.spice",
+      "line": 7,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/rf.spice",
+      "line": 8,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/rf.spice",
+      "line": 9,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/rf.spice",
+      "line": 10,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/rf.spice",
+      "line": 11,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__tt_discrete.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/rf.spice",
+      "line": 12,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/specialized_cells.spice",
+      "line": 130,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_latch__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/specialized_cells.spice",
+      "line": 131,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/specialized_cells.spice",
+      "line": 132,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_flash__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/specialized_cells.spice",
+      "line": 133,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_latch__mismatch.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/corners/tt/specialized_cells.spice",
+      "line": 134,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt__tt.corner.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 3,
+      "includes": "libs.tech/ngspice/parameters/invariant.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12734,
+      "includes": "libs.tech/ngspice/parasitics/sky130_fd_pr__model__parasitic__diode_ps2dn.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12735,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0__parasitic__diode_pw2dn.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12736,
+      "includes": "libs.tech/ngspice/parasitics/sky130_fd_pr__model__parasitic__diode_pw2dn.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12737,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_flash.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12738,
+      "includes": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12739,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_05v5.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12740,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_11v0.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12741,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_05v5_lvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12742,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pw2nd_05v5_nvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12743,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12744,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12745,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_05v0_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12746,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8_lvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12747,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass_lvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12748,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_pass.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12749,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_nfet_latch.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12750,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_05v5_W1p00L1p00.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12751,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_05v5_W1p00L2p00.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12752,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__npn_11v0_W1p00L1p00.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12753,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12754,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_nfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12755,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_03v3_nvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12756,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12757,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_g5v0d16v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12758,
+      "includes": "libs.tech/ngspice/parasitics/sky130_fd_pr__model__parasitic__diode_ps2nw.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12759,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pd2nw_05v5.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12760,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pd2nw_11v0.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12761,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pd2nw_05v5_hvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12762,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__diode_pd2nw_05v5_lvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12763,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_hvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12764,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12765,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__esd_pfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12766,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_lvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12767,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pnp_05v5_W0p68L0p68.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12768,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pnp_05v5_W3p40L3p40.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12769,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__special_pfet_latch.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12770,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12771,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12772,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_g5v0d16v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12773,
+      "includes": "libs.tech/ngspice/sonos_e/begin_of_life.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12774,
+      "includes": "libs.tech/ngspice/sonos_p/begin_of_life.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12775,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_vpp_08p6x07p8_l1m1m2_noshield_o1.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12776,
+      "includes": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_mos.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12777,
+      "includes": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_p.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12778,
+      "includes": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_vpp_only_pq.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12779,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_var_lvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12780,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__cap_var_hvt.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12781,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_iso_pw.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12782,
+      "includes": "libs.tech/ngspice/capacitors/sky130_fd_pr__model__cap_mim.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12783,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12784,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_g5v0d10v5_b.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12785,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12786,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_lvt_b.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12787,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12788,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_nfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12789,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_01v8_mvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12790,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_mvt.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12791,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12792,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__rf_pfet_01v8_b.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12793,
+      "includes": "libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12794,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12795,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_nvt_iso__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12796,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12797,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_iso__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12798,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__nfet_20v0_zvt__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/parameters/montecarlo.spice",
+      "line": 12799,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__pfet_20v0__subcircuit.pm3.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/r+c/res_high__cap_high.spice",
+      "line": 46,
+      "includes": "libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/r+c/res_high__cap_high.spice",
+      "line": 47,
+      "includes": "libs.tech/ngspice/parameters/slow_70p.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/r+c/res_high__cap_low.spice",
+      "line": 46,
+      "includes": "libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/r+c/res_high__cap_low.spice",
+      "line": 47,
+      "includes": "libs.tech/ngspice/parameters/fast.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/r+c/res_low__cap_high.spice",
+      "line": 46,
+      "includes": "libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/r+c/res_low__cap_high.spice",
+      "line": 47,
+      "includes": "libs.tech/ngspice/parameters/slow.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/r+c/res_low__cap_low.spice",
+      "line": 46,
+      "includes": "libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/r+c/res_low__cap_low.spice",
+      "line": 47,
+      "includes": "libs.tech/ngspice/parameters/fast_70p.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice",
+      "line": 46,
+      "includes": "libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice",
+      "line": 47,
+      "includes": "libs.tech/ngspice/parameters/typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 22,
+      "includes": "libs.tech/ngspice/corners/tt.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 24,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 25,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 27,
+      "includes": "libs.tech/ngspice/corners/tt/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 35,
+      "includes": "libs.tech/ngspice/corners/sf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 37,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 38,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 40,
+      "includes": "libs.tech/ngspice/corners/sf/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 48,
+      "includes": "libs.tech/ngspice/corners/ff.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 50,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 51,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 53,
+      "includes": "libs.tech/ngspice/corners/ff/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 61,
+      "includes": "libs.tech/ngspice/corners/ss.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 63,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 64,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 66,
+      "includes": "libs.tech/ngspice/corners/ss/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 74,
+      "includes": "libs.tech/ngspice/corners/fs.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 76,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 77,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 79,
+      "includes": "libs.tech/ngspice/corners/fs/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 87,
+      "includes": "libs.tech/ngspice/corners/tt.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 89,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 90,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 92,
+      "includes": "libs.tech/ngspice/corners/tt/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 100,
+      "includes": "libs.tech/ngspice/corners/tt.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 102,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 103,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 105,
+      "includes": "libs.tech/ngspice/corners/tt/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 113,
+      "includes": "libs.tech/ngspice/corners/tt.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 115,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 116,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 118,
+      "includes": "libs.tech/ngspice/corners/tt/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 126,
+      "includes": "libs.tech/ngspice/corners/tt.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 128,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 129,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 131,
+      "includes": "libs.tech/ngspice/corners/tt/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 139,
+      "includes": "libs.tech/ngspice/corners/sf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 141,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 142,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 144,
+      "includes": "libs.tech/ngspice/corners/sf/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 152,
+      "includes": "libs.tech/ngspice/corners/sf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 154,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 155,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 157,
+      "includes": "libs.tech/ngspice/corners/sf/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 165,
+      "includes": "libs.tech/ngspice/corners/sf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 167,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 168,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 170,
+      "includes": "libs.tech/ngspice/corners/sf/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 178,
+      "includes": "libs.tech/ngspice/corners/sf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 180,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 181,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 183,
+      "includes": "libs.tech/ngspice/corners/sf/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 191,
+      "includes": "libs.tech/ngspice/corners/ff.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 193,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 194,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 196,
+      "includes": "libs.tech/ngspice/corners/ff/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 204,
+      "includes": "libs.tech/ngspice/corners/ff.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 206,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 207,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 209,
+      "includes": "libs.tech/ngspice/corners/ff/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 217,
+      "includes": "libs.tech/ngspice/corners/ff.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 219,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 220,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 222,
+      "includes": "libs.tech/ngspice/corners/ff/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 230,
+      "includes": "libs.tech/ngspice/corners/ff.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 232,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 233,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 235,
+      "includes": "libs.tech/ngspice/corners/ff/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 243,
+      "includes": "libs.tech/ngspice/corners/ss.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 245,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 246,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 248,
+      "includes": "libs.tech/ngspice/corners/ss/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 256,
+      "includes": "libs.tech/ngspice/corners/ss.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 258,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 259,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 261,
+      "includes": "libs.tech/ngspice/corners/ss/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 269,
+      "includes": "libs.tech/ngspice/corners/ss.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 271,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 272,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 274,
+      "includes": "libs.tech/ngspice/corners/ss/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 282,
+      "includes": "libs.tech/ngspice/corners/ss.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 284,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 285,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 287,
+      "includes": "libs.tech/ngspice/corners/ss/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 295,
+      "includes": "libs.tech/ngspice/corners/fs.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 297,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 298,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 300,
+      "includes": "libs.tech/ngspice/corners/fs/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 308,
+      "includes": "libs.tech/ngspice/corners/fs.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 310,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 311,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 313,
+      "includes": "libs.tech/ngspice/corners/fs/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 321,
+      "includes": "libs.tech/ngspice/corners/fs.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 323,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 324,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 326,
+      "includes": "libs.tech/ngspice/corners/fs/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 334,
+      "includes": "libs.tech/ngspice/corners/fs.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 336,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 337,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 339,
+      "includes": "libs.tech/ngspice/corners/fs/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 347,
+      "includes": "libs.tech/ngspice/corners/tt.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 349,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 350,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 352,
+      "includes": "libs.tech/ngspice/corners/tt/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 360,
+      "includes": "libs.tech/ngspice/corners/sf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 362,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 363,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 365,
+      "includes": "libs.tech/ngspice/corners/sf/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 373,
+      "includes": "libs.tech/ngspice/corners/ff.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 375,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 376,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 378,
+      "includes": "libs.tech/ngspice/corners/ff/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 386,
+      "includes": "libs.tech/ngspice/corners/ss.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 388,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 389,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 391,
+      "includes": "libs.tech/ngspice/corners/ss/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 399,
+      "includes": "libs.tech/ngspice/corners/fs.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 401,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 402,
+      "includes": "libs.tech/ngspice/r+c/res_typical__cap_typical__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 404,
+      "includes": "libs.tech/ngspice/corners/fs/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 412,
+      "includes": "libs.tech/ngspice/corners/tt.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 414,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 415,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 417,
+      "includes": "libs.tech/ngspice/corners/tt/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 425,
+      "includes": "libs.tech/ngspice/corners/tt.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 427,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 428,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 430,
+      "includes": "libs.tech/ngspice/corners/tt/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 438,
+      "includes": "libs.tech/ngspice/corners/tt.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 440,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 441,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 443,
+      "includes": "libs.tech/ngspice/corners/tt/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 451,
+      "includes": "libs.tech/ngspice/corners/tt.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 453,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 454,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 456,
+      "includes": "libs.tech/ngspice/corners/tt/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 464,
+      "includes": "libs.tech/ngspice/corners/sf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 466,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 467,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 469,
+      "includes": "libs.tech/ngspice/corners/sf/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 477,
+      "includes": "libs.tech/ngspice/corners/sf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 479,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 480,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 482,
+      "includes": "libs.tech/ngspice/corners/sf/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 490,
+      "includes": "libs.tech/ngspice/corners/sf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 492,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 493,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 495,
+      "includes": "libs.tech/ngspice/corners/sf/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 503,
+      "includes": "libs.tech/ngspice/corners/sf.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 505,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 506,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 508,
+      "includes": "libs.tech/ngspice/corners/sf/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 516,
+      "includes": "libs.tech/ngspice/corners/ff.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 518,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 519,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 521,
+      "includes": "libs.tech/ngspice/corners/ff/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 529,
+      "includes": "libs.tech/ngspice/corners/ff.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 531,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 532,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 534,
+      "includes": "libs.tech/ngspice/corners/ff/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 542,
+      "includes": "libs.tech/ngspice/corners/ff.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 544,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 545,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 547,
+      "includes": "libs.tech/ngspice/corners/ff/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 555,
+      "includes": "libs.tech/ngspice/corners/ff.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 557,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 558,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 560,
+      "includes": "libs.tech/ngspice/corners/ff/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 568,
+      "includes": "libs.tech/ngspice/corners/ss.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 570,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 571,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 573,
+      "includes": "libs.tech/ngspice/corners/ss/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 581,
+      "includes": "libs.tech/ngspice/corners/ss.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 583,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 584,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 586,
+      "includes": "libs.tech/ngspice/corners/ss/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 594,
+      "includes": "libs.tech/ngspice/corners/ss.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 596,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 597,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 599,
+      "includes": "libs.tech/ngspice/corners/ss/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 607,
+      "includes": "libs.tech/ngspice/corners/ss.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 609,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 610,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 612,
+      "includes": "libs.tech/ngspice/corners/ss/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 620,
+      "includes": "libs.tech/ngspice/corners/fs.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 622,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 623,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 625,
+      "includes": "libs.tech/ngspice/corners/fs/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 633,
+      "includes": "libs.tech/ngspice/corners/fs.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 635,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 636,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 638,
+      "includes": "libs.tech/ngspice/corners/fs/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 646,
+      "includes": "libs.tech/ngspice/corners/fs.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 648,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 649,
+      "includes": "libs.tech/ngspice/r+c/res_high__cap_low__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 651,
+      "includes": "libs.tech/ngspice/corners/fs/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 659,
+      "includes": "libs.tech/ngspice/corners/fs.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 661,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 662,
+      "includes": "libs.tech/ngspice/r+c/res_low__cap_high__lin.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 664,
+      "includes": "libs.tech/ngspice/corners/fs/specialized_cells.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 674,
+      "includes": "libs.tech/ngspice/parameters/critical.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130.lib.spice",
+      "line": 675,
+      "includes": "libs.tech/ngspice/parameters/montecarlo.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 28,
+      "includes": "libs.tech/ngspice/parasitics/sky130_fd_pr__model__parasitic__res_po.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 29,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_xhigh_po.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 30,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_high_po.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 31,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_xhigh_po_0p35.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 32,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_xhigh_po_0p69.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 33,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_xhigh_po_1p41.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 34,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_xhigh_po_2p85.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 35,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_xhigh_po_5p73.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 36,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_xhigh_po__base.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 37,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_high_po_0p35.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 38,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_high_po_0p69.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 39,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_high_po_1p41.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 40,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_high_po_2p85.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__linear.model.spice",
+      "line": 41,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_high_po_5p73.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice",
+      "line": 152,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_generic_nd.model.spice"
+    },
+    {
+      "file": "libs.tech/ngspice/sky130_fd_pr__model__r+c.model.spice",
+      "line": 153,
+      "includes": "libs.ref/sky130_fd_pr/spice/sky130_fd_pr__res_generic_pd.model.spice"
+    }
+  ]
+}

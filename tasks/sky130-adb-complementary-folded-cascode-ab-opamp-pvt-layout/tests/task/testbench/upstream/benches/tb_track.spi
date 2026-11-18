@@ -1,0 +1,110 @@
+* Loaded rail-to-rail tracking, input range, and full-sweep static power.
+.lib "/opt/sky130/continuous/sky130.lib.spice" tt
+.include "/app/circuit.spi"
+.options reltol=1e-4 abstol=1e-12 vntol=1e-6
+.temp 27
+.param supply=1.8
+VSS vss 0 0
+VDD vdd vss {supply}
+IREF vdd iref 20u
+VLO clo vss 0
+VHI chi vss 0
+BIN vinp vss V=v(vmid)-v(clo)+v(chi)
+RFB vout vinn 1m
+XAMP vss iref vdd vinn vinp vout complementary_folded_cascode_ab_opamp
+CL vout vss 4p
+RL vout vmid 10k
+VMID vmid vss {supply/2}
+
+.control
+set noaskquit
+op
+let quiescent_current_a = -vdd#branch
+let static_power_w = v(vdd)*quiescent_current_a
+print quiescent_current_a static_power_w
+* Sweep outward from mid-supply (the easiest operating point) instead of from the
+* ground rail. vinp = vmid - v(clo) + v(chi); both swept sources ascend, so the
+* measurement scales stay monotonic. Limits and reported names are unchanged.
+let vsup = v(vdd)
+let vhalf = vsup/2
+let lim_band = vhalf-0.1
+let lim_core = vhalf-0.2
+let lim_edge = vhalf-0.005
+let lim_zero = vhalf-1e-7
+* Shell variables survive the plot change made by each dc sweep.
+set vhalf_s = $&vhalf
+set lim_band_s = $&lim_band
+set lim_core_s = $&lim_core
+set lim_edge_s = $&lim_edge
+set lim_zero_s = $&lim_zero
+dc VLO 0 $vhalf_s 0.005
+let tracking_error_v = abs(v(vout)-v(vinp))
+let sweep_power_w = v(vdd)*(-vdd#branch)
+meas dc lo_band MAX tracking_error_v FROM=0 TO=$lim_band_s
+meas dc lo_core MAX tracking_error_v FROM=0 TO=$lim_core_s
+meas dc lo_out FIND v(vout) AT=$lim_band_s
+meas dc lo_power MAX sweep_power_w
+meas dc lo_icmr_zero FIND tracking_error_v AT=$lim_zero_s
+meas dc lo_icmr_max MAX tracking_error_v
+set lo_band_s = $&lo_band
+set lo_core_s = $&lo_core
+set lo_out_s = $&lo_out
+set lo_power_s = $&lo_power
+set lo_icmr_zero_s = $&lo_icmr_zero
+set lo_icmr_max_s = $&lo_icmr_max
+set lo_cross_s = -1
+if lo_icmr_max > 0.02
+  meas dc lo_cross WHEN tracking_error_v=0.02 RISE=1
+  set lo_cross_s = $&lo_cross
+end
+alter VLO dc = 0
+dc VHI 0 $vhalf_s 0.005
+let tracking_error_v = abs(v(vout)-v(vinp))
+let sweep_power_w = v(vdd)*(-vdd#branch)
+meas dc hi_band MAX tracking_error_v FROM=0 TO=$lim_band_s
+meas dc hi_core MAX tracking_error_v FROM=0 TO=$lim_core_s
+meas dc hi_out FIND v(vout) AT=$lim_band_s
+meas dc hi_power MAX sweep_power_w
+meas dc hi_icmr_supply FIND tracking_error_v AT=$lim_edge_s
+meas dc hi_icmr_max MAX tracking_error_v FROM=0 TO=$lim_edge_s
+set hi_cross_s = -1
+if hi_icmr_max > 0.02
+  meas dc hi_cross WHEN tracking_error_v=0.02 RISE=1
+  set hi_cross_s = $&hi_cross
+end
+let track_error_band_v = $lo_band_s
+if hi_band > track_error_band_v
+  let track_error_band_v = hi_band
+end
+let track_error_core_v = $lo_core_s
+if hi_core > track_error_core_v
+  let track_error_core_v = hi_core
+end
+let output_low_v = $lo_out_s
+let output_high_v = hi_out
+let tracking_power_w = $lo_power_s
+if hi_power > tracking_power_w
+  let tracking_power_w = hi_power
+end
+let icmr_error_at_zero_v = $lo_icmr_zero_s
+let icmr_error_at_supply_v = hi_icmr_supply
+let icmr_max_error_v = $lo_icmr_max_s
+if hi_icmr_max > icmr_max_error_v
+  let icmr_max_error_v = hi_icmr_max
+end
+print track_error_band_v track_error_core_v output_low_v output_high_v
+print icmr_error_at_zero_v icmr_error_at_supply_v icmr_max_error_v
+let lo_cross_v = $lo_cross_s
+if lo_cross_v >= 0
+  let icmr_low_cross_v = $vhalf_s-lo_cross_v
+  print icmr_low_cross_v
+end
+let hi_cross_v = $hi_cross_s
+if hi_cross_v >= 0
+  let icmr_high_cross_v = $vhalf_s+hi_cross_v
+  print icmr_high_cross_v
+end
+print tracking_power_w
+quit
+.endc
+.end

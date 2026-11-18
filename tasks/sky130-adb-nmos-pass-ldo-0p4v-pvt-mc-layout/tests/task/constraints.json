@@ -1,0 +1,16 @@
+{
+  "top": "nmos_pass_ldo",
+  "ports": [
+    "vdd",
+    "vout",
+    "vss",
+    "vref",
+    "ibias",
+    "loop_out",
+    "pass_gate"
+  ],
+  "substrate": "vss",
+  "schema_version": 1,
+  "lvs_reference_normalization": "supported_model_instance_names_only",
+  "lvs_mim_geometry_view": "mim_geometry_literal_um"
+}

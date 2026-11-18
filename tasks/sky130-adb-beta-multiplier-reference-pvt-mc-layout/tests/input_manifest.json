@@ -1,0 +1,29 @@
+{
+  "basis": "Trusted private inputs; public_files records the native fixture subset separately.",
+  "files": {
+    "circuit.spice": "9b632509633abcfa5fde52059cf7f8a2e670c3134b24bb2b9c28123d04654c9f",
+    "constraints.json": "5a4e2601ed83af694b80454a9d143008d68fd72a0c0a715aa7c9d20c48c11554",
+    "identity.json": "533cb97d257a0628cf00840b86ea7e6ac2d73990072f32aa68b2c0da24a3ebba",
+    "testbench/adapter.py": "0c6ede73d61e450faec001004fb5d6f14089110b7976415c4f97e55a068fa611",
+    "testbench/measurement.json": "a784d1d00d39eb209ede94c8c2bc79ff6622e2667d1ddca07faea5b9721cce2c",
+    "testbench/upstream/benches/tb_compliance.spi": "fc1e25f03155922f76e9740acdd37ef83732b7b0d7d9ac729cb01fa351c16ee8",
+    "testbench/upstream/benches/tb_mc.spi": "b5098cd9f1a07644ccedf4786e08a275f76c6df1a787cc728e09cf8270a15c62",
+    "testbench/upstream/benches/tb_startup.spi": "7a90634d38ae7aa574387a08a532f8684effa5b530ce035ffb1702d390a5621b",
+    "testbench/upstream/models/sky130_mc_mm.lib.spice": "d1cac494614ce0d8997251c5c2eb5a0eda0d6b46b9bef230aa8100fc92e2a3b0",
+    "testbench/upstream/verify.py": "1ebf689c0cc6373aae3338674975d55d25aaa287085c25c03189b0fabd570a20"
+  },
+  "public_files": {
+    "circuit.spice": "9b632509633abcfa5fde52059cf7f8a2e670c3134b24bb2b9c28123d04654c9f",
+    "testbench/README.md": "8bd368f4ecc3ef3154d8d0d4424153f63658185937f81cccbfc6b107a805b170",
+    "testbench/README.zh-CN.md": "eb8bfe642703789999dcbd6fd8af718b753bf143c22596f302bc447a6ee70ff9",
+    "testbench/tb_compliance.spi": "d5ebedf611ea1a6fc1b7b1a85db1d3951e781338cfb92d91db4722be967d2806",
+    "testbench/tb_mc.spi": "864eec63b622fb07daa355036f047865a49d25f67af18dccf744492f9f793af6",
+    "testbench/tb_startup.spi": "5e2a1fbfef318f4b4d00594a8d67f6840ed1d22b4e617f292ca98025e7fa1d10"
+  },
+  "public_projection": {
+    "constraints": "physical fields only, if publicly present",
+    "physical_inputs": "byte-identical DUT and optional LVS reference",
+    "testbench": "published native fixtures and documentation; private graders excluded"
+  },
+  "schema_version": 2
+}

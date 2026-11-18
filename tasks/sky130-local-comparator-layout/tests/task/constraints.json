@@ -1,0 +1,19 @@
+{
+  "top": "comparator",
+  "ports": [
+    "clk",
+    "gnd",
+    "vdd",
+    "net0",
+    "net1",
+    "net069",
+    "intern",
+    "interp",
+    "crossp",
+    "crossn",
+    "outm",
+    "outp"
+  ],
+  "substrate": "gnd",
+  "schema_version": 1
+}

@@ -1,0 +1,43 @@
+* Diagnostic characterization
+.lib "/opt/analog-layout/pdks/sky130/sky130A/libs.tech/combined/continuous/sky130.lib.spice" tt
+.include "dut.spice"
+.option scale=1e-6
+.temp 27
+VDD vdd 0 1.8
+VINP inp 0 PWL(0 0.905 40n 0.905 41n 0.895 80n 0.895 81n 0.905)
+VINN inn 0 PWL(0 0.895 40n 0.895 41n 0.905 80n 0.905 81n 0.895)
+VCLK clk 0 PULSE(0 1.8 10n 100p 100p 9.8n 20n)
+XDUT clk 0 vdd inp inn tail intp intn cp cn outm outp comparator
+CLOADP outp 0 20f
+CLOADM outm 0 20f
+.control
+set num_threads=1
+tran 20p 100n
+meas tran outp_eval1 FIND v(outp) AT=18n
+meas tran outm_eval1 FIND v(outm) AT=18n
+meas tran outp_eval2 FIND v(outp) AT=38n
+meas tran outm_eval2 FIND v(outm) AT=38n
+meas tran outp_eval3 FIND v(outp) AT=58n
+meas tran outm_eval3 FIND v(outm) AT=58n
+meas tran outp_eval4 FIND v(outp) AT=78n
+meas tran outm_eval4 FIND v(outm) AT=78n
+meas tran outp_eval5 FIND v(outp) AT=98n
+meas tran outm_eval5 FIND v(outm) AT=98n
+meas tran outp_reset1 FIND v(outp) AT=8n
+meas tran outm_reset1 FIND v(outm) AT=8n
+meas tran outp_reset2 FIND v(outp) AT=28n
+meas tran outm_reset2 FIND v(outm) AT=28n
+meas tran outp_reset3 FIND v(outp) AT=48n
+meas tran outm_reset3 FIND v(outm) AT=48n
+meas tran outp_reset4 FIND v(outp) AT=68n
+meas tran outm_reset4 FIND v(outm) AT=68n
+meas tran outp_reset5 FIND v(outp) AT=88n
+meas tran outm_reset5 FIND v(outm) AT=88n
+meas tran delay_positive_first TRIG v(clk) VAL=0.9 RISE=1 TARG v(outp) VAL=0.9 RISE=1
+meas tran delay_negative_after_flip TRIG v(clk) VAL=0.9 RISE=3 TARG v(outm) VAL=0.9 RISE=1
+meas tran delay_positive_after_flip TRIG v(clk) VAL=0.9 RISE=5 TARG v(outp) VAL=0.9 RISE=3
+meas tran supply_current AVG i(vdd) FROM=20n TO=100n
+quit
+.endc
+
+.end

@@ -1,0 +1,10 @@
+* Reference solution: Sky130 LDO with a five-transistor error amplifier.
+.subckt ldo_ota5 vin vout vss vref ibias fb gate_drive gate
+XMINP nleft fb tail vss sky130_fd_pr__nfet_01v8 l=1.0 w=64 nf=8
+XMINN gate_drive vref tail vss sky130_fd_pr__nfet_01v8 l=1.0 w=64 nf=8
+XMLOAD nleft nleft vin vin sky130_fd_pr__pfet_01v8 l=0.4 w=64 nf=8
+XMLOUT gate_drive nleft vin vin sky130_fd_pr__pfet_01v8 l=0.4 w=64 nf=8
+XMTAIL tail ibias vss vss sky130_fd_pr__nfet_01v8 l=0.5 w=128 nf=16
+XMBIAS ibias ibias vss vss sky130_fd_pr__nfet_01v8 l=0.5 w=64 nf=8
+XMPASS vout gate vin vin sky130_fd_pr__pfet_01v8 l=0.15 w=256 nf=32 m=10
+.ends ldo_ota5

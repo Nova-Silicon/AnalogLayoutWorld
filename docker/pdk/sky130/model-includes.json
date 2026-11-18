@@ -1,0 +1,864 @@
+{
+  "entry": "sky130A/libs.tech/combined/continuous/sky130.lib.spice",
+  "all_corner_sections_scanned": true,
+  "file_count": 18,
+  "edge_count": 171,
+  "model_bytes": 2131997,
+  "edges": [
+    {
+      "file": "sky130.lib.spice",
+      "line": 56,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 57,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 58,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 61,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 62,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 63,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 64,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 65,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 66,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 77,
+      "includes": "parameters_fet_sf.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 78,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 79,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 82,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 83,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 84,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 85,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 86,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 87,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 98,
+      "includes": "parameters_fet_ff.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 99,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 100,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 103,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 104,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 105,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 106,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 107,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 108,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 119,
+      "includes": "parameters_fet_ss.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 120,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 121,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 124,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 125,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 126,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 127,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 128,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 129,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 140,
+      "includes": "parameters_fet_fs.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 141,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 142,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 145,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 146,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 147,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 148,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 149,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 150,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 161,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 162,
+      "includes": "parameters_res_low.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 163,
+      "includes": "parameters_cap_low.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 166,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 167,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 168,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 169,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 170,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 171,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 182,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 183,
+      "includes": "parameters_res_high.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 184,
+      "includes": "parameters_cap_high.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 187,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 188,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 189,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 190,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 191,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 192,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 203,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 204,
+      "includes": "parameters_res_high.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 205,
+      "includes": "parameters_cap_low.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 208,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 209,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 210,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 211,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 212,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 213,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 224,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 225,
+      "includes": "parameters_res_low.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 226,
+      "includes": "parameters_cap_high.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 229,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 230,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 231,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 232,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 233,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 234,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 245,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 246,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 247,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 250,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 251,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 252,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 253,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 254,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 255,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 266,
+      "includes": "parameters_fet_sf.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 267,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 268,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 271,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 272,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 273,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 274,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 275,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 276,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 287,
+      "includes": "parameters_fet_ff.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 288,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 289,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 292,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 293,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 294,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 295,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 296,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 297,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 308,
+      "includes": "parameters_fet_ss.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 309,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 310,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 313,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 314,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 315,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 316,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 317,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 318,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 329,
+      "includes": "parameters_fet_fs.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 330,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 331,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 334,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 335,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 336,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 337,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 338,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 339,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 350,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 351,
+      "includes": "parameters_res_low.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 352,
+      "includes": "parameters_cap_low.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 355,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 356,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 357,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 358,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 359,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 360,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 371,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 372,
+      "includes": "parameters_res_high.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 373,
+      "includes": "parameters_cap_high.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 376,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 377,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 378,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 379,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 380,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 381,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 392,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 393,
+      "includes": "parameters_res_high.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 394,
+      "includes": "parameters_cap_low.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 397,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 398,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 399,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 400,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 401,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 402,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 413,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 414,
+      "includes": "parameters_res_low.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 415,
+      "includes": "parameters_cap_high.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 418,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 419,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 420,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 421,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 422,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 423,
+      "includes": "models_capacitors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 434,
+      "includes": "parameters_fet_tt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 435,
+      "includes": "parameters_res_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 436,
+      "includes": "parameters_cap_nom.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 439,
+      "includes": "models_global.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 440,
+      "includes": "models_fet.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 441,
+      "includes": "models_bjt.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 442,
+      "includes": "models_diodes.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 443,
+      "includes": "models_resistors.spice"
+    },
+    {
+      "file": "sky130.lib.spice",
+      "line": 444,
+      "includes": "models_capacitors.spice"
+    }
+  ]
+}

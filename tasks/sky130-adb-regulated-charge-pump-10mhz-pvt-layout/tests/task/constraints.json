@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "qualified_original_physical_reference_selected_public_testbench",
+  "top": "charge_pump_regulated",
+  "ordered_ports": [
+    "AVDD",
+    "AVSS",
+    "CLK",
+    "EN",
+    "IBN1U",
+    "VOUT"
+  ],
+  "fixed_netlist": "circuit.spice",
+  "preserve_topology": true,
+  "preserve_device_models": true,
+  "preserve_W_L_nf_m": true,
+  "external_fixture_policy": "Keep upstream stimulus, load, bias, reference and fixed transistor blocks outside the DUT unless explicitly redefined and revalidated.",
+  "area_policy": "After electrical acceptance, minimize GDS bounding area; the benchmark fixed-effective-area utilization policy is configured centrally, not reconstructed from the upstream circuit-sizing score.",
+  "source_sizing_freedom_is_not_inherited": true,
+  "qualification_scope": "Original physical DUT passes the one supplied public transient. Native resistor DRC/LVS controls and extracted-model binding qualified without changing the DUT, PDK or process rules. This is not a complete-circuit layout or full original SPEC pass.",
+  "ports": [
+    "AVDD",
+    "AVSS",
+    "CLK",
+    "EN",
+    "IBN1U",
+    "VOUT"
+  ],
+  "substrate_connection": {
+    "status": "common_substrate",
+    "ground_net": "AVSS",
+    "ground_nets": [
+      "AVSS"
+    ],
+    "policy": "Preserve every resolved MOS body net. Identifying a ground port does not authorize tying other body nets to it. Non-ground NMOS body nets need an explicit isolated-well strategy and PDK/PCell/LVS regression."
+  },
+  "lvs_reference_normalization": "supported_model_instance_names_only",
+  "substrate": "AVSS",
+  "substrate_basis": "All flattened NMOS bulk terminals connect to this declared top port.",
+  "lvs_resistor_geometry_view": "xhigh_po_0p69_literal_um",
+  "lvs_mim_geometry_view": "mim_m3_literal_um_mult1"
+}

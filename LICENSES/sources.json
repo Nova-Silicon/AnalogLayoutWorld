@@ -1,0 +1,19 @@
+{
+  "CC-BY-4.0.txt": {
+    "url": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/CC-BY-4.0.txt",
+    "sha256": "d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744"
+  },
+  "CC-BY-NC-4.0.txt": {
+    "url": "https://raw.githubusercontent.com/Arcadia-1/analog-design-bench/972f7cd7c95381134387b250edf18f3bd23bdd25/LICENSES/CC-BY-NC-4.0.txt",
+    "sha256": "cc97a2c4ff7723a1f25179dc7c18f676fa84191bbb36ea7d0061acaf3c102559"
+  },
+  "Apache-2.0.txt": {
+    "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  "Analog-Design-Bench-LICENSING.txt": {
+    "repository": "https://github.com/Arcadia-1/analog-design-bench",
+    "revision": "972f7cd7c95381134387b250edf18f3bd23bdd25",
+    "sha256": "7d4a87942d5adc7c8a43fb0db75cfa5155f3cdcee8190179a293643c4366a562"
+  }
+}

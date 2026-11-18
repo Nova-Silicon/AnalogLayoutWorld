@@ -1,0 +1,23 @@
+{
+  "basis": "Trusted private inputs; public_files records the native fixture subset separately.",
+  "files": {
+    "circuit.spice": "0363e2a36fb78a9461dfecf04d8bb0819a40793d8437269f1d57958bb1452431",
+    "constraints.json": "5b9d2ea642379da3e5b736584c4e9e5edc3a95b90f11cc06819adb63a275c5f3",
+    "identity.json": "5d1d3bd7f5f54cdcc1bef58ec5ec405d071db2507a28ed093f0f2a9d0c287960",
+    "testbench/measurement.json": "a01c44c84229e4127a41faffeb867d0c25620888958e5f3b1cd2f3acb6ceec3f"
+  },
+  "public_files": {
+    "circuit.spice": "0363e2a36fb78a9461dfecf04d8bb0819a40793d8437269f1d57958bb1452431",
+    "lvs_reference.spice": "6c88d0ed0d5909f2bdbb5b3decaaa6b7e50ad06f8756135979182bd7e87983d2",
+    "testbench/README.md": "0bab6fdb22abfbb82e54061286645d9be3705607ab21518acc32ff10bb502944",
+    "testbench/README.zh-CN.md": "fdad17b0d511ceae4958029bf038c4c2541d0de95daee3faf92172b855a79eab",
+    "testbench/tb_ac.spi": "84dd232470ada1fb60b4fb71150544570a7d1e3bac6551bff2e1bb80c7de40f9",
+    "testbench/tb_follower.spi": "7c873083f2a0cda3e25012d1f2662d5401b352477d1b6b9c926a103d51d24aa5"
+  },
+  "public_projection": {
+    "constraints": "physical fields only, if publicly present",
+    "physical_inputs": "byte-identical DUT and optional LVS reference",
+    "testbench": "published native fixtures and documentation; private graders excluded"
+  },
+  "schema_version": 2
+}

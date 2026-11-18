@@ -1,0 +1,103 @@
+{
+  "task": "sky130-local-bandgap-layout",
+  "top": "bandgap",
+  "matched_groups": [
+    {
+      "name": "pmos_mirror",
+      "devices": [
+        "XMP1",
+        "XMP2",
+        "XMP3"
+      ],
+      "kind": "array",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "bjt_array",
+      "devices": [
+        "XQ1",
+        "XQ2"
+      ],
+      "kind": "ratio",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "r2_pair",
+      "devices": [
+        "XR2a_0",
+        "XR2a_1",
+        "XR2b_0",
+        "XR2b_1"
+      ],
+      "kind": "pair",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "r_ratio",
+      "devices": [
+        "XR1_0",
+        "XR2b_0",
+        "XR2b_1"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 2
+    },
+    {
+      "name": "ota_input_pair",
+      "devices": [
+        "XAMP.XM1",
+        "XAMP.XM2"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "ota_mirror",
+      "devices": [
+        "XAMP.XM3",
+        "XAMP.XM4"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 1.5
+    }
+  ],
+  "nets": {
+    "aggressors": [],
+    "victims": [
+      "na",
+      "nb",
+      "yg",
+      "vref"
+    ],
+    "critical": [
+      "na",
+      "nb",
+      "vref"
+    ],
+    "diff_pairs": [
+      [
+        "na",
+        "nb"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 6e-05,
+    "vss": 6e-05
+  },
+  "currents_note": "前仿未测功耗，按三路镜像约 3x15 uA 加放大器估算",
+  "name_note": "层次器件用点号路径，如 XAMP.XM1 表示子电路实例 XAMP 内的 XM1"
+}

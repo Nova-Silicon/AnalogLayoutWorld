@@ -1,0 +1,111 @@
+{
+  "task": "sky130-loadbench-simple-53-bulk-tied-layout",
+  "top": "SimpleOpAmp53_BulkTied",
+  "matched_groups": [
+    {
+      "name": "input_pair",
+      "devices": [
+        "XNormalTransistorNmos9",
+        "XNormalTransistorNmos10"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "fold_sources",
+      "devices": [
+        "XNormalTransistorPmos14",
+        "XNormalTransistorPmos15"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "nmos_mirror",
+      "devices": [
+        "XDiodeTransistorNmos2",
+        "XNormalTransistorNmos8"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "p_cascodes",
+      "devices": [
+        "XNormalTransistorPmos13",
+        "XNormalTransistorPmos12"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "n_cascodes",
+      "devices": [
+        "XDiodeTransistorNmos3",
+        "XNormalTransistorNmos7"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XDiodeTransistorNmos1",
+        "XNormalTransistorNmos6",
+        "XNormalTransistorNmos11"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "out"
+    ],
+    "victims": [
+      "in1",
+      "in2",
+      "FirstStageYsourceGCC1",
+      "FirstStageYsourceGCC2",
+      "FirstStageYout1",
+      "inputVoltageBiasXXpXX1",
+      "outSourceVoltageBiasXXpXX1",
+      "ibias"
+    ],
+    "critical": [
+      "in1",
+      "in2",
+      "FirstStageYsourceGCC1",
+      "FirstStageYsourceGCC2",
+      "FirstStageYout1"
+    ],
+    "diff_pairs": [
+      [
+        "in1",
+        "in2"
+      ],
+      [
+        "FirstStageYsourceGCC1",
+        "FirstStageYsourceGCC2"
+      ]
+    ],
+    "power": [
+      "sourcePmos"
+    ],
+    "ground": [
+      "sourceNmos"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "sourcePmos": 6.35e-05,
+    "sourceNmos": 6.35e-05
+  },
+  "currents_note": "前仿 TT/1.8 V/27 °C 跟随器工作点功耗 0.114 mW / 1.8 V ≈ 63.5 uA，含测试台从 VDD 注入 ibias 的 10 uA；测试中 sourcePmos 接 VDD、sourceNmos 接地"
+}

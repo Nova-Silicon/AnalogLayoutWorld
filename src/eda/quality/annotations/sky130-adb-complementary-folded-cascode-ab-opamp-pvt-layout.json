@@ -1,0 +1,203 @@
+{
+  "task": "sky130-adb-complementary-folded-cascode-ab-opamp-pvt-layout",
+  "top": "complementary_folded_cascode_ab_opamp",
+  "matched_groups": [
+    {
+      "name": "n_input_pair",
+      "devices": [
+        "XMN8",
+        "XMN9"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "p_input_pair",
+      "devices": [
+        "XMP6",
+        "XMP7"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 3
+    },
+    {
+      "name": "n_degen",
+      "devices": [
+        "XRN8",
+        "XRN9"
+      ],
+      "kind": "pair",
+      "intent": "interdigitated",
+      "weight": 1.5
+    },
+    {
+      "name": "p_degen",
+      "devices": [
+        "XRP6",
+        "XRP7"
+      ],
+      "kind": "pair",
+      "intent": "interdigitated",
+      "weight": 1.5
+    },
+    {
+      "name": "fold_sinks",
+      "devices": [
+        "XMN15",
+        "XMN16"
+      ],
+      "kind": "pair",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "p_mirror",
+      "devices": [
+        "XMP13",
+        "XMP14"
+      ],
+      "kind": "mirror",
+      "intent": "common_centroid",
+      "weight": 2
+    },
+    {
+      "name": "n_cascodes",
+      "devices": [
+        "XBIAS_N1",
+        "XBIAS_N2"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "p_cascodes",
+      "devices": [
+        "XMP15",
+        "XMP16"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    },
+    {
+      "name": "swn_mirror",
+      "devices": [
+        "XMP8",
+        "XMP9",
+        "XMP12"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "swp_mirror",
+      "devices": [
+        "XMN11",
+        "XMN12",
+        "XMN13"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "nbias_mirror",
+      "devices": [
+        "XMN1",
+        "XMN2",
+        "XMN4",
+        "XMN6",
+        "XBIAS_N4"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "pbias_mirror",
+      "devices": [
+        "XMP1",
+        "XMP2",
+        "XMP4",
+        "XMP11",
+        "XMP18"
+      ],
+      "kind": "ratio",
+      "intent": "interdigitated",
+      "weight": 1
+    },
+    {
+      "name": "cm_bootstrap",
+      "devices": [
+        "XRCM1",
+        "XRCM2",
+        "XCCM1",
+        "XCCM2"
+      ],
+      "kind": "pair",
+      "intent": "mirror_symmetric",
+      "weight": 1
+    }
+  ],
+  "nets": {
+    "aggressors": [
+      "vout"
+    ],
+    "victims": [
+      "vinp",
+      "vinn",
+      "fp1",
+      "fp2",
+      "fn1",
+      "fn2",
+      "ml",
+      "gp",
+      "gn",
+      "vbpd",
+      "vcn",
+      "vcp",
+      "vbsink",
+      "vabn",
+      "vabp",
+      "vrefn",
+      "vrefp",
+      "iref"
+    ],
+    "critical": [
+      "vinp",
+      "vinn",
+      "fp1",
+      "fp2",
+      "fn1",
+      "fn2",
+      "gp",
+      "gn"
+    ],
+    "diff_pairs": [
+      [
+        "vinp",
+        "vinn"
+      ],
+      [
+        "cmin",
+        "cmip"
+      ]
+    ],
+    "power": [
+      "vdd"
+    ],
+    "ground": [
+      "vss"
+    ]
+  },
+  "power_devices": [],
+  "currents_a": {
+    "vdd": 0.000475,
+    "vss": 0.000475
+  },
+  "currents_note": "前仿 TT/1.8 V/27 °C 静态电流 0.475 mA（静态功耗 0.856 mW，含 20 uA 参考支路）；输入 0-VDD 扫描下最大功耗 1.005 mW（约 0.56 mA）；输出负载 10 kΩ‖4 pF，输出级电流估算 < 0.1 mA，没有 ≥1 mA 的功率器件"
+}

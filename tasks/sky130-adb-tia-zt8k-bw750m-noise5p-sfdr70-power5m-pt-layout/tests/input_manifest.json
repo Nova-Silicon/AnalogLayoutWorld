@@ -1,0 +1,33 @@
+{
+  "basis": "Trusted private inputs; public_files records the native fixture subset separately.",
+  "files": {
+    "circuit.spice": "71380927ca70ad26c1ef015c4002d361284d34c66c5d4d4b057c3afc90971af8",
+    "constraints.json": "3c4bae36f788ed065e185d0bc1ceaf76c7b550af992204230a3948fe2f64b311",
+    "identity.json": "3a27626d3e304acefd55cfcd0d4ff1d87b4a7f6d84fb08331c8e183b4a64ae58",
+    "lvs_reference.spice": "0d4c33f3cb0ef59d0eb1e15bc75c3da9acc0abc4f774727bf4951a0c97baf202",
+    "testbench/adapter.py": "f87c76151622701240b0d7124000714f34b736b4944c2b111a621b6f53b0fc2f",
+    "testbench/measure_sfdr.py": "8100fea91560f7cdb6db2809c7e7b7ed9615f69b2d1e7fa8a54feba3413c1e03",
+    "testbench/measurement.json": "1fa99f75838debc141ed52f1f363c7a414e4304726ae186bad4b7d9cb15f30f5",
+    "testbench/public_sfdr.spi": "ea79f8cf134630759173cc895fb3c9c8bb21e24a6851258f236cb1188608cb98",
+    "testbench/upstream/benches/tb_ac_power.spi": "f985b79b868e4fce19c5d20e1517720cbeeefe446b13ccb204d6829cb417e6ab",
+    "testbench/upstream/benches/tb_noise.spi": "af5d1d9bfd95794464a880f2266468e5dbd1d29839bab50dc40e4bed64a2d60f",
+    "testbench/upstream/benches/tb_sfdr.spi": "1183a1aee285b010658ed667520f8513e248c7b763d22a69bd5a745e4ca07639",
+    "testbench/upstream/utils.py": "8f9909aa283429e11d3d5b55b33d5e55d5c54f4bad33aaa599f1c8a35a99e299",
+    "testbench/upstream/verify.py": "189bf23abe81b23eefef0c7c7fcf2806e01bc97d12533c127873fd802b04ecf2"
+  },
+  "public_files": {
+    "circuit.spice": "71380927ca70ad26c1ef015c4002d361284d34c66c5d4d4b057c3afc90971af8",
+    "lvs_reference.spice": "0d4c33f3cb0ef59d0eb1e15bc75c3da9acc0abc4f774727bf4951a0c97baf202",
+    "testbench/README.md": "946c4e21dc426f91af4e101f49cb88fa0ff4c48f9156624e51b01efdc382620f",
+    "testbench/README.zh-CN.md": "7a2d49492d33a814c859e1bde0cc373cfb30601e60abe437eacc82996f787f83",
+    "testbench/tb_ac_tt.spi": "48d4f22dd82fed65898d8f7aca765a3c0d6730e7753efb597e034650009a6a2a",
+    "testbench/tb_noise_tt.spi": "3227d08d2015b79daa8f4f7752e0ee3af53be2a92f7e5831eadd4f0546258922",
+    "testbench/tb_sfdr_tt.spi": "b21316ba4da4b9155f8f97425807f0f9a8e02639e0828fff9ce0b192e5813465"
+  },
+  "public_projection": {
+    "constraints": "physical fields only, if publicly present",
+    "physical_inputs": "byte-identical DUT and optional LVS reference",
+    "testbench": "published native fixtures and documentation; private graders excluded"
+  },
+  "schema_version": 2
+}
